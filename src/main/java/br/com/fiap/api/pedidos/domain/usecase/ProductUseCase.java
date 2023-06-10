@@ -43,7 +43,7 @@ public class ProductUseCase implements ProductUseCasePort {
     @Override
     public ProductResponse updateProduct(UpdateProductRequest request) {
         Product entity = mapper.map(request, Product.class);
-        productRepository.save(entity);
+        productRepository.update(entity);
         return mapper.map(entity, ProductResponse.class);
     }
 
