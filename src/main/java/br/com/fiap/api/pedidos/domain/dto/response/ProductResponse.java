@@ -9,15 +9,17 @@ public class ProductResponse {
     private String productName;
     private String productDesc;
     private BigDecimal price;
+    private String category;
 
     public ProductResponse() {
     }
 
-    public ProductResponse(UUID productId, String productName, String productDesc, BigDecimal price) {
+    public ProductResponse(UUID productId, String productName, String productDesc, BigDecimal price, String category) {
         this.productId = productId;
         this.productName = productName;
         this.productDesc = productDesc;
         this.price = price;
+        this.category = category;
     }
 
     public UUID getProductId() {
@@ -50,5 +52,13 @@ public class ProductResponse {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

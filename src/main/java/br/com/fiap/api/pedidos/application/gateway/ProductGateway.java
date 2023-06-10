@@ -24,6 +24,10 @@ public class ProductGateway {
         return productUseCasePort.getAllProducts();
     }
 
+    public List<ProductResponse> getAllProductsByCategory(String category) {
+        return productUseCasePort.getByCategory(category);
+    }
+
     public ProductResponse getProductById(@PathVariable UUID id) {
         return productUseCasePort.getProductById(id);
     }
