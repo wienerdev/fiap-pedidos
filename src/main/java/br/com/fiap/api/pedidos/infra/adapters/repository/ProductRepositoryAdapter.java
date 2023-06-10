@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Component
 public class ProductRepositoryAdapter implements ProductRepositoryPort {
@@ -22,7 +21,13 @@ public class ProductRepositoryAdapter implements ProductRepositoryPort {
     @Override
     public List<Product> getAll() {
         List<ProductEntity> entities = this.productRepository.findAll();
-        return entities.stream().map(ProductEntity::toProduct).collect(Collectors.toList());
+        return entities.stream().map(ProductEntity::toProduct).toList();
+    }
+
+    @Override
+    public List<Product> getByCategory(String category) {
+        List<ProductEntity> entities = this.productRepository.findAllByCategory(category);
+        return entities.stream().map(ProductEntity::toProduct).toList();
     }
 
     @Override

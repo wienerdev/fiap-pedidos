@@ -10,6 +10,7 @@ import java.util.UUID;
 public interface ProductUseCasePort {
 
     List<ProductResponse> getAllProducts();
+    List<ProductResponse> getByCategory(String category);
     ProductResponse getProductById(UUID id);
     ProductResponse saveProduct(CreateProductRequest request);
     ProductResponse updateProduct(UpdateProductRequest request);
