@@ -24,7 +24,16 @@ public class ProductUseCase implements ProductUseCasePort {
 
     @Override
     public List<ProductResponse> getAllProducts() {
-        return productRepository.getAll().stream().map(product ->mapper.map(product, ProductResponse.class)).toList();
+        return productRepository.getAll().stream()
+                .map(product -> mapper.map(product, ProductResponse.class))
+                .toList();
+    }
+
+    @Override
+    public List<ProductResponse> getByCategory(String category) {
+        return productRepository.getByCategory(category).stream()
+                .map(product -> mapper.map(product, ProductResponse.class))
+                .toList();
     }
 
     @Override
@@ -43,7 +52,7 @@ public class ProductUseCase implements ProductUseCasePort {
     @Override
     public ProductResponse updateProduct(UpdateProductRequest request) {
         Product entity = mapper.map(request, Product.class);
-        productRepository.save(entity);
+        productRepository.update(entity);
         return mapper.map(entity, ProductResponse.class);
     }
 

@@ -10,14 +10,17 @@ public class Product {
     private String productDesc;
     private BigDecimal price;
 
+    private String category;
+
     public Product() {
     }
 
-    public Product(UUID productId, String productName, String productDesc, BigDecimal price) {
+    public Product(UUID productId, String productName, String productDesc, BigDecimal price, String category) {
         this.productId = productId;
         this.productName = productName;
         this.productDesc = productDesc;
         this.price = price;
+        this.category = category;
     }
 
     public UUID getProductId() {
@@ -51,4 +54,14 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
 }
