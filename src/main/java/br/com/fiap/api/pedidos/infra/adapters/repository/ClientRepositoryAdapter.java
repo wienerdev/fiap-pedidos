@@ -1,10 +1,10 @@
 package br.com.fiap.api.pedidos.infra.adapters.repository;
 
 import br.com.fiap.api.pedidos.domain.Client;
+import br.com.fiap.api.pedidos.domain.exception.ClientAlreadyRegistered;
 import br.com.fiap.api.pedidos.domain.exception.ClientNotFoundException;
 import br.com.fiap.api.pedidos.domain.port.repository.ClientRepositoryPort;
 import br.com.fiap.api.pedidos.infra.adapters.entity.ClientEntity;
-import br.com.fiap.api.pedidos.infra.adapters.entity.ProductEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -30,7 +30,11 @@ public class ClientRepositoryAdapter implements ClientRepositoryPort {
 
     @Override
     public Client cadastrarCliente(Client client) {
-        ClientEntity clientEntity = new ClientEntity(client);
-        return clientRepository.save(clientEntity).toClient();
+        Optional<ClientEntity> clientEntity = this.clientRepository.findByClientCpf(client.getClientCpf());
+        if (clientEntity.isPresent()) {
+            throw new ClientAlreadyRegistered("Customer already registered");
+        }
+        ClientEntity clientEntitySave = new ClientEntity(client);
+        return clientRepository.save(clientEntitySave).toClient();
     }
 }

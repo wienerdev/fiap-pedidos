@@ -1,9 +1,7 @@
 package br.com.fiap.api.pedidos.application.gateway;
 
 import br.com.fiap.api.pedidos.domain.dto.request.CreateClientRequest;
-import br.com.fiap.api.pedidos.domain.dto.request.CreateProductRequest;
 import br.com.fiap.api.pedidos.domain.dto.response.ClientResponse;
-import br.com.fiap.api.pedidos.domain.dto.response.ProductResponse;
 import br.com.fiap.api.pedidos.domain.port.usecase.ClientUseCasePort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
