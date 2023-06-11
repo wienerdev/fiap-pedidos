@@ -1,10 +1,10 @@
 package br.com.fiap.api.pedidos.infra.adapters.entity;
 
 import br.com.fiap.api.pedidos.domain.Order;
-import br.com.fiap.api.pedidos.domain.Product;
 import br.com.fiap.api.pedidos.infra.enumeration.OrderStatusEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-@Table(name = "order")
+@Table(name = "order_food")
 public class OrderEntity {
 
     @Id
@@ -23,7 +23,8 @@ public class OrderEntity {
     private String customerOrder;
     private Boolean active;
     private OrderStatusEnum orderStatus;
-    private List<Product> orderProducts; // TODO -> Arrumar esse BO
+    @OneToMany
+    private List<ProductEntity> orderProducts;
     private Double orderPrice;
 
     public OrderEntity() {
@@ -37,6 +38,7 @@ public class OrderEntity {
         this.orderProducts = order.getOrderProducts();
         this.orderPrice = order.getOrderPrice();
     }
+
 
     public Order toOrder() {
         return new Order(this.orderId,
