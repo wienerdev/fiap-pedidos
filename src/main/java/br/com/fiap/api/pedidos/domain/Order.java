@@ -2,7 +2,6 @@ package br.com.fiap.api.pedidos.domain;
 
 import br.com.fiap.api.pedidos.infra.adapters.entity.ProductEntity;
 import br.com.fiap.api.pedidos.infra.enumeration.OrderStatusEnum;
-import jakarta.persistence.ManyToOne;
 
 import java.util.List;
 import java.util.Objects;
@@ -14,9 +13,13 @@ public class Order {
     private String customerOrder;
     private Boolean active;
     private OrderStatusEnum orderStatus;
-    @ManyToOne
+
     private List<ProductEntity> orderProducts;
     private Double orderPrice;
+
+    public Order() {
+
+    }
 
     public Order(UUID orderId, String customerOrder, Boolean active, OrderStatusEnum orderStatus, List<ProductEntity> orderProducts, Double orderPrice) {
         this.orderId = orderId;

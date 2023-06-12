@@ -1,4 +1,4 @@
-package br.com.fiap.api.pedidos.application.adapter;
+package br.com.fiap.api.pedidos.interfaceadapter;
 
 import br.com.fiap.api.pedidos.domain.dto.request.CreateOrderRequest;
 import br.com.fiap.api.pedidos.domain.dto.request.UpdateOrderRequest;
@@ -12,7 +12,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/v1/orders")
 public class OrderController {
-
+    
     private final OrderUseCasePort orderUseCasePort;
 
     public OrderController(OrderUseCasePort orderUseCasePort) {

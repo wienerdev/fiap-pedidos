@@ -5,7 +5,7 @@ import br.com.fiap.api.pedidos.domain.Client;
 
 public interface ClientRepositoryPort {
 
-    Client identificarClientePorCPF(String cpf);
-    Client cadastrarCliente(Client client);
+    Client identifyClientByCpf(String cpf);
+    Client registerClient(Client client);
 
 }

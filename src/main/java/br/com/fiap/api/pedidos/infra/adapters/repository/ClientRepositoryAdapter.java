@@ -19,7 +19,7 @@ public class ClientRepositoryAdapter implements ClientRepositoryPort {
     }
 
     @Override
-    public Client identificarClientePorCPF(String cpf) {
+    public Client identifyClientByCpf(String cpf) {
         Optional<ClientEntity> clientEntity = this.clientRepository.findByClientCpf(cpf);
         if (clientEntity.isPresent())
             return clientEntity.get().toClient();
@@ -29,7 +29,7 @@ public class ClientRepositoryAdapter implements ClientRepositoryPort {
 
 
     @Override
-    public Client cadastrarCliente(Client client) {
+    public Client registerClient(Client client) {
         Optional<ClientEntity> clientEntity = this.clientRepository.findByClientCpf(client.getClientCpf());
         if (clientEntity.isPresent()) {
             throw new ClientAlreadyRegistered("Customer already registered");

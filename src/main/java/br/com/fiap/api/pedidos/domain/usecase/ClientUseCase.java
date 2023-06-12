@@ -17,13 +17,13 @@ public class ClientUseCase implements ClientUseCasePort {
 
     @Override
     public ClientResponse getClientByCpf(String cpf) {
-        return ClientResponse.fromClientResponse(clientRepository.identificarClientePorCPF(cpf));
+        return ClientResponse.fromClientResponse(clientRepository.identifyClientByCpf(cpf));
     }
 
     @Override
     public ClientResponse saveClient(CreateClientRequest request) {
         Client entity = CreateClientRequest.fromClient(request);
-        clientRepository.cadastrarCliente(entity);
+        clientRepository.registerClient(entity);
         return ClientResponse.fromClientResponse(entity);
     }
 }
