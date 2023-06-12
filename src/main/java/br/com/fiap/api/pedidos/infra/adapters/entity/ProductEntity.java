@@ -26,6 +26,7 @@ public class ProductEntity {
 
     private BigDecimal price;
 
+    private String category;
 
     public ProductEntity() {
 
@@ -36,10 +37,11 @@ public class ProductEntity {
         this.productName = product.getProductName();
         this.productDesc = product.getProductDesc();
         this.price = product.getPrice();
+        this.category = product.getCategory();
     }
 
     public Product toProduct() {
-        return new Product(this.productId, this.productName, this.productDesc, this.price);
+        return new Product(this.productId, this.productName, this.productDesc, this.price, this.category);
     }
 
 }

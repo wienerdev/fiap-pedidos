@@ -5,6 +5,11 @@ import br.com.fiap.api.pedidos.domain.port.repository.ProductRepositoryPort;
 import br.com.fiap.api.pedidos.domain.port.usecase.OrderUseCasePort;
 import br.com.fiap.api.pedidos.domain.port.usecase.ProductUseCasePort;
 import br.com.fiap.api.pedidos.domain.usecase.OrderUseCase;
+import br.com.fiap.api.pedidos.domain.port.repository.ClientRepositoryPort;
+import br.com.fiap.api.pedidos.domain.port.repository.ProductRepositoryPort;
+import br.com.fiap.api.pedidos.domain.port.usecase.ClientUseCasePort;
+import br.com.fiap.api.pedidos.domain.port.usecase.ProductUseCasePort;
+import br.com.fiap.api.pedidos.domain.usecase.ClientUseCase;
 import br.com.fiap.api.pedidos.domain.usecase.ProductUseCase;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
@@ -21,5 +26,8 @@ public class PortConfiguration {
     @Bean
     OrderUseCasePort orderUseCase(OrderRepositoryPort orderRepositoryPort) {
         return new OrderUseCase(orderRepositoryPort, new ModelMapper());
+    @Bean
+    ClientUseCasePort clientUseCase(ClientRepositoryPort clientRepositoryPort) {
+        return new ClientUseCase(clientRepositoryPort, new ModelMapper());
     }
 }

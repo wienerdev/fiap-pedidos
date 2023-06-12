@@ -8,6 +8,7 @@ import java.util.UUID;
 public interface ProductRepositoryPort {
 
     List<Product> getAll();
+    List<Product> getByCategory(String category);
     Product getById(UUID id);
     Product save(Product product);
     Product update(Product product);
