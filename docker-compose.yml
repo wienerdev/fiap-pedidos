@@ -12,6 +12,8 @@ services:
     image: api-pedidos:0.0.1
     ports:
       - 8080:8080
+    volumes:
+      - maven-repo:/root/.m2
     networks:
       - shared-network
     stdin_open: true
@@ -36,6 +38,7 @@ services:
       - shared-network
 volumes:
   my-db:
+  maven-repo:
 networks:
   shared-network:
     driver: bridge
