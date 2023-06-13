@@ -13,7 +13,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - maven-repo:/root/.m2
+      - vol-maven:/root/.m2
     networks:
       - shared-network
     stdin_open: true
@@ -33,12 +33,14 @@ services:
     expose:
       - "3306"
     volumes:
-      - my-db:/var/lib/mysql
+      - vol-db-pedidos:/var/lib/mysql
     networks:
       - shared-network
 volumes:
-  my-db:
-  maven-repo:
+  vol-db-pedidos:
+    name: db-pedidos
+  vol-maven:
+    name: vol-maven
 networks:
   shared-network:
     driver: bridge
