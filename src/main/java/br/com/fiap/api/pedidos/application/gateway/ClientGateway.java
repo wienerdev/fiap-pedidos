@@ -12,7 +12,6 @@ public class ClientGateway {
 
     private final ClientUseCasePort clientUseCasePort;
 
-
     public ClientGateway(ClientUseCasePort clientUseCasePort) {
         this.clientUseCasePort = clientUseCasePort;
     }

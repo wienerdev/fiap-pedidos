@@ -1,9 +1,9 @@
 package br.com.fiap.api.pedidos.interfaceadapter;
 
+import br.com.fiap.api.pedidos.application.gateway.OrderGateway;
 import br.com.fiap.api.pedidos.domain.dto.request.CreateOrderRequest;
 import br.com.fiap.api.pedidos.domain.dto.request.UpdateOrderRequest;
 import br.com.fiap.api.pedidos.domain.dto.response.OrderResponse;
-import br.com.fiap.api.pedidos.domain.port.usecase.OrderUseCasePort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,34 +13,34 @@ import java.util.UUID;
 @RequestMapping("/api/v1/orders")
 public class OrderController {
     
-    private final OrderUseCasePort orderUseCasePort;
+    private final OrderGateway orderGateway;
 
-    public OrderController(OrderUseCasePort orderUseCasePort) {
-        this.orderUseCasePort = orderUseCasePort;
+    public OrderController(OrderGateway orderGateway) {
+        this.orderGateway = orderGateway;
     }
 
     @GetMapping
     public List<OrderResponse> getAll() {
-        return orderUseCasePort.getAllOrders();
+        return orderGateway.getAllOrders();
     }
 
     @GetMapping("/{id}")
     public OrderResponse getById(@PathVariable UUID id) {
-        return orderUseCasePort.getOrderById(id);
+        return orderGateway.getOrderById(id);
     }
 
     @PostMapping
     public OrderResponse create(@RequestBody CreateOrderRequest request){
-        return orderUseCasePort.saveOrder(request);
+        return orderGateway.createOrder(request);
     }
 
     @PutMapping
     public OrderResponse update(@RequestBody UpdateOrderRequest request){
-        return  orderUseCasePort.updateOrder(request);
+        return  orderGateway.updateOrder(request);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable UUID id){
-        orderUseCasePort.deleteOrder(id);
+        orderGateway.deleteOrder(id);
     }
 }
