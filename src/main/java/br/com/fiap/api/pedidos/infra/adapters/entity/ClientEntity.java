@@ -27,6 +27,13 @@ public class ClientEntity {
     public ClientEntity() {
     }
 
+    public ClientEntity(UUID clientId, String clientCpf, String clientName, String clientEmail) {
+        this.clientId = clientId;
+        this.clientCpf = clientCpf;
+        this.clientName = clientName;
+        this.clientEmail = clientEmail;
+    }
+
     public ClientEntity(Client client) {
         this.clientId = client.getClientId();
         this.clientName = client.getClientName();

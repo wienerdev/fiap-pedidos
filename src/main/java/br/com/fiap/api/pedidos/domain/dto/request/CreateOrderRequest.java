@@ -1,53 +1,18 @@
 package br.com.fiap.api.pedidos.domain.dto.request;
 
-import br.com.fiap.api.pedidos.domain.dto.response.ProductResponse;
+import br.com.fiap.api.pedidos.domain.Order;
+import br.com.fiap.api.pedidos.infra.adapters.entity.ClientEntity;
+import br.com.fiap.api.pedidos.infra.adapters.entity.ProductEntity;
 import br.com.fiap.api.pedidos.infra.enumeration.OrderStatusEnum;
 
 import java.util.List;
+import java.util.UUID;
 
-public class CreateOrderRequest {
+public record CreateOrderRequest(String customerOrder, Boolean active, OrderStatusEnum orderStatus,
+                                  List<ProductEntity> orderProducts, Double orderPrice, ClientEntity clientEntity) {
 
-    private String customerOrder;
-    private Boolean active;
-    private OrderStatusEnum orderStatus;
-    private List<ProductResponse> orderProducts;
-
-    public CreateOrderRequest(String customerOrder, Boolean active, OrderStatusEnum orderStatus, List<ProductResponse> orderProducts) {
-        this.customerOrder = customerOrder;
-        this.active = active;
-        this.orderStatus = orderStatus;
-        this.orderProducts = orderProducts;
-    }
-
-    public String getCustomerOrder() {
-        return customerOrder;
-    }
-
-    public void setCustomerOrder(String customerOrder) {
-        this.customerOrder = customerOrder;
-    }
-
-    public Boolean getActive() {
-        return active;
-    }
-
-    public void setActive(Boolean active) {
-        this.active = active;
-    }
-
-    public OrderStatusEnum getOrderStatus() {
-        return orderStatus;
-    }
-
-    public void setOrderStatus(OrderStatusEnum orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    public List<ProductResponse> getOrderProducts() {
-        return orderProducts;
-    }
-
-    public void setOrderProducts(List<ProductResponse> orderProducts) {
-        this.orderProducts = orderProducts;
+    public static Order fromResponseToOrder(CreateOrderRequest response) {
+        return new Order(UUID.randomUUID(), response.customerOrder, response.active, response.orderStatus,
+                response.orderProducts, response.orderPrice,response.clientEntity != null ? response.clientEntity.toClient() : null);
     }
 }

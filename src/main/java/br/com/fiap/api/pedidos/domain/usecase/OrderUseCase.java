@@ -6,7 +6,6 @@ import br.com.fiap.api.pedidos.domain.dto.request.UpdateOrderRequest;
 import br.com.fiap.api.pedidos.domain.dto.response.OrderResponse;
 import br.com.fiap.api.pedidos.domain.port.repository.OrderRepositoryPort;
 import br.com.fiap.api.pedidos.domain.port.usecase.OrderUseCasePort;
-import org.modelmapper.ModelMapper;
 
 import java.util.List;
 import java.util.UUID;
@@ -15,37 +14,32 @@ public class OrderUseCase implements OrderUseCasePort {
 
     private final OrderRepositoryPort orderRepository;
 
-    private final ModelMapper mapper;
 
-    public OrderUseCase(OrderRepositoryPort orderRepository, ModelMapper mapper) {
+    public OrderUseCase(OrderRepositoryPort orderRepository) {
         this.orderRepository = orderRepository;
-        this.mapper = mapper;
     }
 
 
     @Override
     public List<OrderResponse> getAllOrders() {
-        return orderRepository.getAll().stream().map(order -> mapper.map(order, OrderResponse.class)).toList();
+        return orderRepository.getAll().stream().map(order -> OrderResponse.fromEntityToResponse(order)).toList();
     }
 
     @Override
     public OrderResponse getOrderById(UUID id) {
-        return mapper.map(orderRepository.getById(id), OrderResponse.class);
+        return OrderResponse.fromEntityToResponse(orderRepository.getById(id));
     }
 
     @Override
     public OrderResponse saveOrder(CreateOrderRequest request) {
-        Order entity = mapper.map(request, Order.class);
-        entity.setOrderId(UUID.randomUUID());
-        orderRepository.save(entity);
-        return mapper.map(entity, OrderResponse.class);
+        Order entity = CreateOrderRequest.fromResponseToOrder(request);
+        return OrderResponse.fromEntityToResponse(orderRepository.save(entity));
     }
 
     @Override
     public OrderResponse updateOrder(UpdateOrderRequest request) {
-        Order entity = mapper.map(request, Order.class);
-        orderRepository.save(entity);
-        return mapper.map(entity, OrderResponse.class);
+        Order entity = UpdateOrderRequest.fromResponseToOrder(request);
+        return OrderResponse.fromEntityToResponse(orderRepository.save(entity));
     }
 
     @Override

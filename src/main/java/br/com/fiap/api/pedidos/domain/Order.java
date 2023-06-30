@@ -17,17 +17,20 @@ public class Order {
     private List<ProductEntity> orderProducts;
     private Double orderPrice;
 
+    private Client client;
+
     public Order() {
 
     }
 
-    public Order(UUID orderId, String customerOrder, Boolean active, OrderStatusEnum orderStatus, List<ProductEntity> orderProducts, Double orderPrice) {
+    public Order(UUID orderId, String customerOrder, Boolean active, OrderStatusEnum orderStatus, List<ProductEntity> orderProducts, Double orderPrice,Client client) {
         this.orderId = orderId;
         this.customerOrder = customerOrder;
         this.active = active;
         this.orderStatus = orderStatus;
         this.orderProducts = orderProducts;
         this.orderPrice = orderPrice;
+        this.client = client;
     }
 
     public UUID getOrderId() {
@@ -76,6 +79,14 @@ public class Order {
 
     public void setOrderPrice(Double orderPrice) {
         this.orderPrice = orderPrice;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     @Override

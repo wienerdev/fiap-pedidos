@@ -1,11 +1,9 @@
 package br.com.fiap.api.pedidos.infra.adapters.entity;
 
 import br.com.fiap.api.pedidos.domain.Order;
+import br.com.fiap.api.pedidos.domain.dto.ClientDto;
 import br.com.fiap.api.pedidos.infra.enumeration.OrderStatusEnum;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,6 +24,11 @@ public class OrderEntity {
     @OneToMany
     private List<ProductEntity> orderProducts;
     private Double orderPrice;
+    @OneToOne(optional = true)
+    @JoinColumn(name = "client_id")
+    private ClientEntity clientEntity;
+
+
 
     public OrderEntity() {
     }
@@ -37,6 +40,7 @@ public class OrderEntity {
         this.orderStatus = order.getOrderStatus();
         this.orderProducts = order.getOrderProducts();
         this.orderPrice = order.getOrderPrice();
+        this.clientEntity = order.getClient() != null ?  ClientDto.fromClientToClientEntity(order.getClient()) : null;
     }
 
 
@@ -46,7 +50,8 @@ public class OrderEntity {
                 this.active,
                 this.orderStatus,
                 this.orderProducts,
-                this.orderPrice);
+                this.orderPrice,
+                this.clientEntity != null ?this.clientEntity.toClient() : null);
     }
 }
 
