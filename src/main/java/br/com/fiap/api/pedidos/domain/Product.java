@@ -3,12 +3,12 @@ package br.com.fiap.api.pedidos.domain;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class Product {
+    public class Product {
 
-    private UUID productId;
-    private String productName;
-    private String productDesc;
-    private BigDecimal price;
+        private UUID productId;
+        private String productName;
+        private String productDesc;
+        private BigDecimal price;
 
     private String category;
 
