@@ -19,7 +19,7 @@ O FiapFood consiste em um sistema que é utilizado em lanchonetes e restaurantes
 Para utilizar o FiapPedidos, é necessário ter uma instância de conexão do banco de dados ativa (no caso MySQL), que por padrão fica na porta 3306, caso sua porta esteja diferente, especifique no application.properties em:
 
 ```
-spring.datasource.url=jdbc:mysql://localhost:<PORTA_BD>/testewk-doacao-sangue?createDatabaseIfNotExist=true
+spring.datasource.url=jdbc:mysql://localhost:<PORTA_BD>/fiap-pedidos?createDatabaseIfNotExist=true
 spring.datasource.username=<USUARIO_BD>
 spring.datasource.password=<SENHA_BD>
 ```
