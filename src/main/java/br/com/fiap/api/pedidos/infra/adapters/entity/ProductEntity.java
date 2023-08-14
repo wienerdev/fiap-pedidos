@@ -3,6 +3,7 @@ package br.com.fiap.api.pedidos.infra.adapters.entity;
 import br.com.fiap.api.pedidos.domain.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;

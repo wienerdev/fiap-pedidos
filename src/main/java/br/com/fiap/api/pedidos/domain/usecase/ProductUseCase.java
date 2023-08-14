@@ -6,7 +6,6 @@ import br.com.fiap.api.pedidos.domain.dto.request.UpdateProductRequest;
 import br.com.fiap.api.pedidos.domain.dto.response.ProductResponse;
 import br.com.fiap.api.pedidos.domain.port.repository.ProductRepositoryPort;
 import br.com.fiap.api.pedidos.domain.port.usecase.ProductUseCasePort;
-import org.modelmapper.ModelMapper;
 
 import java.util.List;
 import java.util.UUID;
@@ -15,45 +14,41 @@ public class ProductUseCase implements ProductUseCasePort {
 
     private final ProductRepositoryPort productRepository;
 
-    private final ModelMapper mapper;
 
-    public ProductUseCase(ProductRepositoryPort productRepository, ModelMapper mapper) {
+
+    public ProductUseCase(ProductRepositoryPort productRepository) {
         this.productRepository = productRepository;
-        this.mapper = mapper;
     }
 
     @Override
     public List<ProductResponse> getAllProducts() {
         return productRepository.getAll().stream()
-                .map(product -> mapper.map(product, ProductResponse.class))
+                .map(product -> ProductResponse.fromEntityToResponse(product))
                 .toList();
     }
 
     @Override
     public List<ProductResponse> getByCategory(String category) {
         return productRepository.getByCategory(category).stream()
-                .map(product -> mapper.map(product, ProductResponse.class))
+                .map(product -> ProductResponse.fromEntityToResponse(product))
                 .toList();
     }
 
     @Override
     public ProductResponse getProductById(UUID id) {
-        return mapper.map(productRepository.getById(id), ProductResponse.class);
+        return ProductResponse.fromEntityToResponse(productRepository.getById(id));
     }
 
     @Override
     public ProductResponse saveProduct(CreateProductRequest request) {
-        Product entity = mapper.map(request, Product.class);
-        entity.setProductId(UUID.randomUUID());
-        productRepository.save(entity);
-        return mapper.map(entity, ProductResponse.class);
+        Product entity = CreateProductRequest.fromRequestProduct(request);
+        return ProductResponse.fromEntityToResponse(productRepository.save(entity));
     }
 
     @Override
     public ProductResponse updateProduct(UpdateProductRequest request) {
-        Product entity = mapper.map(request, Product.class);
-        productRepository.update(entity);
-        return mapper.map(entity, ProductResponse.class);
+        Product entity = UpdateProductRequest.fromRequestProduct(request);
+        return ProductResponse.fromEntityToResponse( productRepository.update(entity));
     }
 
     @Override
