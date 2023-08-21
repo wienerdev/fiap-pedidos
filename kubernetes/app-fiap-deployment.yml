@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fiap-pedidos
+  labels:
+    app: fiap-pedidos
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fiap-pedidos
+  template:
+    metadata:
+      labels:
+        app: fiap-pedidos
+    spec:
+      containers:
+      - name: fiap-pedidos
+        image: api-pedidos:0.0.1
+        env:
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-fiap-secret
+              key: MYSQL_PASSWORD
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: app-fiap-secret
+              key: MYSQL_USER
+        - name: DATABASE_HOST
+          value: jdbc:mysql://db-pedidos:3306/fiap-pedidos
+        ports:
+        - containerPort: 8080
