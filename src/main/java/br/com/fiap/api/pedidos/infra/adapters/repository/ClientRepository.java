@@ -1,6 +1,5 @@
 package br.com.fiap.api.pedidos.infra.adapters.repository;
 
-import br.com.fiap.api.pedidos.domain.Client;
 import br.com.fiap.api.pedidos.infra.adapters.entity.ClientEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
