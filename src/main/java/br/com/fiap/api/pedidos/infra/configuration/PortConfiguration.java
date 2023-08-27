@@ -2,8 +2,10 @@ package br.com.fiap.api.pedidos.infra.configuration;
 
 import br.com.fiap.api.pedidos.domain.port.repository.OrderRepositoryPort;
 import br.com.fiap.api.pedidos.domain.port.repository.ProductRepositoryPort;
+import br.com.fiap.api.pedidos.domain.port.usecase.MercadoPagoWebhookUseCasePort;
 import br.com.fiap.api.pedidos.domain.port.usecase.OrderUseCasePort;
 import br.com.fiap.api.pedidos.domain.port.usecase.ProductUseCasePort;
+import br.com.fiap.api.pedidos.domain.usecase.MercadoPagoWebhookUseCase;
 import br.com.fiap.api.pedidos.domain.usecase.OrderUseCase;
 import br.com.fiap.api.pedidos.domain.port.repository.ClientRepositoryPort;
 import br.com.fiap.api.pedidos.domain.port.usecase.ClientUseCasePort;
@@ -27,8 +29,14 @@ public class PortConfiguration {
             ClientRepositoryPort clientRepositoryPort) {
         return new OrderUseCase(orderRepositoryPort, productRepositoryPort, clientRepositoryPort);
     }
+
     @Bean
     ClientUseCasePort clientUseCase(ClientRepositoryPort clientRepositoryPort) {
         return new ClientUseCase(clientRepositoryPort);
+    }
+
+    @Bean
+    MercadoPagoWebhookUseCasePort mercadoPagoWebhookUseCase() {
+        return new MercadoPagoWebhookUseCase();
     }
 }
