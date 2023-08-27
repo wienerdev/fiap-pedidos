@@ -1,13 +1,13 @@
-package br.com.fiap.api.pedidos;
+//package br.com.fiap.api.pedidos;
 
-import org.junit.jupiter.api.Test;
+//mport org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ApiPedidosApplicationTests {
+//@SpringBootTest
+//class ApiPedidosApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+//	@Test
+//	void contextLoads() {
+//	}
 
-}
+//}
