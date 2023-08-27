@@ -25,6 +25,12 @@ public class ProductRepositoryAdapter implements ProductRepositoryPort {
     }
 
     @Override
+    public List<Product> getAllById(List<UUID> productIds) {
+        List<ProductEntity> entities = this.productRepository.findAllById(productIds);
+        return entities.stream().map(ProductEntity::toProduct).toList();
+    }
+
+    @Override
     public List<Product> getByCategory(String category) {
         List<ProductEntity> entities = this.productRepository.findAllByCategory(category);
         return entities.stream().map(ProductEntity::toProduct).toList();
@@ -34,10 +40,7 @@ public class ProductRepositoryAdapter implements ProductRepositoryPort {
     public Product getById(UUID id) {
         Optional<ProductEntity> productEntity = this.productRepository.findById(id);
 
-        if (productEntity.isPresent())
-            return productEntity.get().toProduct();
-
-        throw new RuntimeException("Produto não existe");
+        return productEntity.map(ProductEntity::toProduct).orElse(null);
     }
 
     @Override

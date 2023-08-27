@@ -21,8 +21,11 @@ public class PortConfiguration {
     }
 
     @Bean
-    OrderUseCasePort orderUseCase(OrderRepositoryPort orderRepositoryPort) {
-        return new OrderUseCase(orderRepositoryPort);
+    OrderUseCasePort orderUseCase(
+            OrderRepositoryPort orderRepositoryPort,
+            ProductRepositoryPort productRepositoryPort,
+            ClientRepositoryPort clientRepositoryPort) {
+        return new OrderUseCase(orderRepositoryPort, productRepositoryPort, clientRepositoryPort);
     }
     @Bean
     ClientUseCasePort clientUseCase(ClientRepositoryPort clientRepositoryPort) {

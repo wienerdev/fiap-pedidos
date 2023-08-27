@@ -3,6 +3,7 @@ package br.com.fiap.api.pedidos.interfaceadapter;
 import br.com.fiap.api.pedidos.application.gateway.ProductGateway;
 import br.com.fiap.api.pedidos.domain.dto.request.CreateProductRequest;
 import br.com.fiap.api.pedidos.domain.dto.request.UpdateProductRequest;
+import br.com.fiap.api.pedidos.domain.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.domain.dto.response.ProductResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,38 +23,33 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<List<ProductResponse>> getAll() {
-        return new ResponseEntity<>(productGateway.getAllProducts(), HttpStatus.OK);
+    public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAll() {
+        return productGateway.getAllProducts();
     }
 
     @GetMapping("/category/{category}")
-    public ResponseEntity<List<ProductResponse>> getAll(@PathVariable String category) {
-        return new ResponseEntity<>(productGateway.getAllProductsByCategory(category), HttpStatus.OK);
+    public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAll(@PathVariable String category) {
+        return productGateway.getAllProductsByCategory(category);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductResponse> getById(@PathVariable UUID id) {
-        return new ResponseEntity<>(productGateway.getProductById(id), HttpStatus.OK);
+    public ResponseEntity<BaseResponse<ProductResponse>> getById(@PathVariable UUID id) {
+        return productGateway.getProductById(id);
     }
 
     @PostMapping
-    public ResponseEntity<ProductResponse> create(@RequestBody CreateProductRequest request) {
-        return new ResponseEntity<>(productGateway.createProduct(request), HttpStatus.CREATED);
+    public ResponseEntity<BaseResponse<ProductResponse>> create(@RequestBody CreateProductRequest request) {
+        return productGateway.createProduct(request);
     }
 
     @PutMapping
-    public ResponseEntity<ProductResponse> update(@RequestBody UpdateProductRequest request) {
-        return new ResponseEntity<>(productGateway.updateProduct(request), HttpStatus.OK);
+    public ResponseEntity<BaseResponse<ProductResponse>> update(@RequestBody UpdateProductRequest request) {
+        return productGateway.updateProduct(request);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Boolean> delete(@PathVariable UUID id) {
-        try {
-            productGateway.deleteProduct(id);
-            return new ResponseEntity<>(true, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(false, HttpStatus.OK);
-        }
+    public ResponseEntity<BaseResponse> delete(@PathVariable UUID id) {
+        return productGateway.deleteProduct(id);
     }
 
 }

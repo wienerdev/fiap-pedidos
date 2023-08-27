@@ -3,7 +3,9 @@ package br.com.fiap.api.pedidos.interfaceadapter;
 import br.com.fiap.api.pedidos.application.gateway.OrderGateway;
 import br.com.fiap.api.pedidos.domain.dto.request.CreateOrderRequest;
 import br.com.fiap.api.pedidos.domain.dto.request.UpdateOrderRequest;
+import br.com.fiap.api.pedidos.domain.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.domain.dto.response.OrderResponse;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,27 +22,27 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<OrderResponse> getAll() {
+    public ResponseEntity<BaseResponse<Iterable<OrderResponse>>> getAll() {
         return orderGateway.getAllOrders();
     }
 
     @GetMapping("/{id}")
-    public OrderResponse getById(@PathVariable UUID id) {
+    public ResponseEntity<BaseResponse<OrderResponse>> getById(@PathVariable UUID id) {
         return orderGateway.getOrderById(id);
     }
 
     @PostMapping
-    public OrderResponse create(@RequestBody CreateOrderRequest request){
+    public ResponseEntity<BaseResponse<OrderResponse>> create(@RequestBody CreateOrderRequest request){
         return orderGateway.createOrder(request);
     }
 
     @PutMapping
-    public OrderResponse update(@RequestBody UpdateOrderRequest request){
-        return  orderGateway.updateOrder(request);
+    public ResponseEntity<BaseResponse> update(@RequestBody UpdateOrderRequest request){
+        return orderGateway.updateOrder(request);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable UUID id){
-        orderGateway.deleteOrder(id);
+    public ResponseEntity<BaseResponse> delete(@PathVariable UUID id){
+        return orderGateway.deleteOrder(id);
     }
 }

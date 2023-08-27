@@ -1,5 +1,7 @@
 package br.com.fiap.api.pedidos.domain;
 
+import br.com.fiap.api.pedidos.infra.adapters.entity.ProductEntity;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -9,8 +11,7 @@ import java.util.UUID;
         private String productName;
         private String productDesc;
         private BigDecimal price;
-
-    private String category;
+        private String category;
 
     public Product() {
     }

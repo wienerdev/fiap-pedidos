@@ -29,7 +29,6 @@ public class OrderEntity {
     private ClientEntity clientEntity;
 
 
-
     public OrderEntity() {
     }
 

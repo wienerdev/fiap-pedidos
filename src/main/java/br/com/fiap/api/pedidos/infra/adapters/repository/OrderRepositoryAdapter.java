@@ -3,6 +3,7 @@ package br.com.fiap.api.pedidos.infra.adapters.repository;
 import br.com.fiap.api.pedidos.domain.Order;
 import br.com.fiap.api.pedidos.domain.port.repository.OrderRepositoryPort;
 import br.com.fiap.api.pedidos.infra.adapters.entity.OrderEntity;
+import br.com.fiap.api.pedidos.infra.enumeration.OrderStatusEnum;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -49,5 +50,10 @@ public class OrderRepositoryAdapter implements OrderRepositoryPort {
     @Override
     public void delete(UUID id) {
         orderRepository.deleteById(id);
+    }
+
+    @Override
+    public void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId) {
+        orderRepository.updateByOrderStatusAndOrderId(orderStatus, orderId);
     }
 }

@@ -2,8 +2,11 @@ package br.com.fiap.api.pedidos.application.gateway;
 
 import br.com.fiap.api.pedidos.domain.dto.request.CreateProductRequest;
 import br.com.fiap.api.pedidos.domain.dto.request.UpdateProductRequest;
+import br.com.fiap.api.pedidos.domain.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.domain.dto.response.ProductResponse;
 import br.com.fiap.api.pedidos.domain.port.usecase.ProductUseCasePort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,27 +23,27 @@ public class ProductGateway {
         this.productUseCasePort = productUseCasePort;
     }
 
-    public List<ProductResponse> getAllProducts() {
-        return productUseCasePort.getAllProducts();
+    public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAllProducts() {
+        return new ResponseEntity<>(productUseCasePort.getAllProducts(), HttpStatus.OK);
     }
 
-    public List<ProductResponse> getAllProductsByCategory(String category) {
-        return productUseCasePort.getByCategory(category);
+    public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAllProductsByCategory(String category) {
+        return new ResponseEntity<>(productUseCasePort.getByCategory(category), HttpStatus.OK);
     }
 
-    public ProductResponse getProductById(@PathVariable UUID id) {
-        return productUseCasePort.getProductById(id);
+    public ResponseEntity<BaseResponse<ProductResponse>> getProductById(@PathVariable UUID id) {
+        return new ResponseEntity<>(productUseCasePort.getProductById(id), HttpStatus.OK);
     }
 
-    public ProductResponse createProduct(@RequestBody CreateProductRequest request) {
-        return productUseCasePort.saveProduct(request);
+    public ResponseEntity<BaseResponse<ProductResponse>> createProduct(@RequestBody CreateProductRequest request) {
+        return new ResponseEntity<>(productUseCasePort.saveProduct(request), HttpStatus.OK);
     }
 
-    public ProductResponse updateProduct(@RequestBody UpdateProductRequest request) {
-        return productUseCasePort.updateProduct(request);
+    public ResponseEntity<BaseResponse<ProductResponse>> updateProduct(@RequestBody UpdateProductRequest request) {
+        return new ResponseEntity<>(productUseCasePort.updateProduct(request), HttpStatus.OK);
     }
 
-    public void deleteProduct(@PathVariable UUID id) {
-        productUseCasePort.deleteProduct(id);
+    public ResponseEntity<BaseResponse> deleteProduct(@PathVariable UUID id) {
+        return new ResponseEntity<>(productUseCasePort.deleteProduct(id), HttpStatus.OK);
     }
 }

@@ -13,10 +13,8 @@ public class Order {
     private String customerOrder;
     private Boolean active;
     private OrderStatusEnum orderStatus;
-
     private List<ProductEntity> orderProducts;
     private Double orderPrice;
-
     private Client client;
 
     public Order() {

@@ -76,6 +76,19 @@
 			<version>2.0.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>7.0.1.Final</version> <!-- Use a versão apropriada conforme a necessidade -->
+		</dependency>
+
+		<!-- O Hibernate Validator precisa do API de Jakarta Bean Validation. -->
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.0</version> <!-- Use a versão apropriada conforme a necessidade -->
+		</dependency>
+
     </dependencies>
 	<dependencyManagement>
 		<dependencies>

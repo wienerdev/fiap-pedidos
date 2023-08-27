@@ -8,7 +8,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -41,6 +43,12 @@ public class ProductEntity {
 
     public Product toProduct() {
         return new Product(this.productId, this.productName, this.productDesc, this.price, this.category);
+    }
+
+    public static List<ProductEntity> toProductEntityList(List<Product> products) {
+        return products.stream()
+                .map(ProductEntity::new)
+                .collect(Collectors.toList());
     }
 
 }
