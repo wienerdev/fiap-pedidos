@@ -23,12 +23,12 @@ spec:
             secretKeyRef:
               name: app-fiap-secret
               key: MYSQL_PASSWORD
-        - name: MYSQL_USER
+        - name: MYSQL_USERNAME
           valueFrom:
             secretKeyRef:
               name: app-fiap-secret
-              key: MYSQL_USER
+              key: MYSQL_USERNAME
         - name: DATABASE_HOST
-          value: jdbc:mysql://db-pedidos:3306/fiap-pedidos
+          value: db-pedidos
         ports:
         - containerPort: 8080
