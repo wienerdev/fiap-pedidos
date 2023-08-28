@@ -4,12 +4,12 @@ Segue abaixo a evidências dos recursos criados no kubernetes a partir dos arqui
 
 Todos os recursos criados:
 
-![all resources k8s](k8s-resources.png)
+![all resources k8s](images/k8s-resources.png)
 
 Logs do pod rodando:
 
-![log pod](logs-app-pod.png)
+![log pod](images/logs-app-pod.png)
 
 Aplicação acessível via service LoadBalancer:
 
-![app](app-running.png)
+![app](images/app-running.png)
