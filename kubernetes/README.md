@@ -1,6 +1,6 @@
 # Infra Kubernetes
 
-Segue abaixo a evidências dos recursos criados no kubernetes a partir dos arquivos yamls deste diretório.
+Segue abaixo as evidências dos recursos criados no kubernetes a partir dos arquivos yaml deste diretório.
 
 Todos os recursos criados:
 
