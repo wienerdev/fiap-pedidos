@@ -1,5 +1,12 @@
 # Infra Kubernetes
 
-Segue abaixo a evidências dos recursos criados no cluster kuberntes:
+Segue abaixo a evidências dos recursos criados no cluster kubernetes:
 
-![alt text](kubernetes/k8s-resources.png)
+Todos os recursos criados:
+
+![all resources k8s](k8s-resources.png)
+
+Logs do pod rodando:
+
+![log pod](logs-app-pod.png)
+
