@@ -6,6 +6,10 @@ services:
       dockerfile: Dockerfile
       args:
         - APP_VERSION=api-pedidos-0.0.1-SNAPSHOT
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=123456
+      - DATABASE_HOST=db-pedidos
     depends_on:
       db-pedidos:
         condition: service_healthy
