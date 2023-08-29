@@ -32,12 +32,16 @@ public class Order {
         this.orderPrice = orderPrice;
         this.client = client;
     }
-    public List<UUID> getProductsIds(List<Product> orderProducts){
-    List<UUID> uuidList = new ArrayList<>();
-        for (Product orderList : orderProducts) {
-            uuidList.add(orderList.getProductId());
-        }
-        return uuidList;
+//    public List<UUID> getProductsIds(List<Product> orderProducts){
+//    List<UUID> uuidList = new ArrayList<>();
+//        for (Product orderList : orderProducts) {
+//            uuidList.add(orderList.getProductId());
+//        }
+//        return uuidList;
+//    }
+
+    public List<UUID> getOrderProductIds() {
+        return orderProductIds;
     }
 
     public void setOrderProductIds(List<UUID> orderProductIds) {

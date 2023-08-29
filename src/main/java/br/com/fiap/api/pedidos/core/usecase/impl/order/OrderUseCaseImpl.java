@@ -49,7 +49,7 @@ public class OrderUseCaseImpl implements OrderUseCase {
 
     @Override
     public Order saveOrder(Order order) {
-        List<Product> products = productRepositoryPort.getAllById(order.getProductsIds(order.getOrderProducts()));//request.orderProductIds());
+        List<Product> products = productRepositoryPort.getAllById(order.getOrderProductIds());//request.orderProductIds());
         Optional<Client> client = clientRepositoryPort.identifyClientByCpf(order.getClient().getClientCpf());
 
         order.setOrderPrice(calculateOrderPrice(products));
