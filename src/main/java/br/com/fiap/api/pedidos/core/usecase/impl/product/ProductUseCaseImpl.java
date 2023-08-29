@@ -2,6 +2,7 @@ package br.com.fiap.api.pedidos.core.usecase.impl.product;
 
 import br.com.fiap.api.pedidos.core.Product;
 import br.com.fiap.api.pedidos.core.exception.ClientNotFoundException;
+import br.com.fiap.api.pedidos.core.exception.ProductNotFoundException;
 import br.com.fiap.api.pedidos.core.usecase.ProductUseCase;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository;
@@ -31,7 +32,7 @@ public class ProductUseCaseImpl implements ProductUseCase {
 
     @Override
     public Optional<Product> getProductById(UUID id) {
-        return Optional.ofNullable(productRepository.getById(id).orElseThrow(() -> new ClientNotFoundException("client not found")));
+        return productRepository.getById(id);
     }
 
     @Override

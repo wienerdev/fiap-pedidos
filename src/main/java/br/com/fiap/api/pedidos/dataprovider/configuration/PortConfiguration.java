@@ -8,7 +8,7 @@ import br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository;
 import br.com.fiap.api.pedidos.core.usecase.ClientUseCase;
 import br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl;
 import br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl;
-import br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCase;
+import br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCaseImpl;
 import br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -35,7 +35,7 @@ public class PortConfiguration {
     }
 
     @Bean
-    MercadoPagoWebhookUseCase mercadoPagoWebhookUseCase() {
-        return new MercadoPagoWebhookUseCase();
+    MercadoPagoWebhookUseCaseImpl mercadoPagoWebhookUseCase() {
+        return new MercadoPagoWebhookUseCaseImpl();
     }
 }

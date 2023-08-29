@@ -36,12 +36,14 @@ public class ProductController {
 
     @GetMapping("/category/{category}")
     public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAll(@PathVariable String category) {
+        List<ProductResponse> listProdCategory = productGateway.getByCategory(category).stream()
+                .map(product -> ProductResponse.fromEntityToResponse(product))
+                .toList();
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                productGateway.getByCategory(category).stream()
-                        .map(product -> ProductResponse.fromEntityToResponse(product))
-                        .toList()), HttpStatus.OK);
+                listProdCategory), HttpStatus.OK);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<BaseResponse<ProductResponse>> getById(@PathVariable UUID id) {

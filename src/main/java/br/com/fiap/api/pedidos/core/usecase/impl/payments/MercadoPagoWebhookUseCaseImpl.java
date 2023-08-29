@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-public class MercadoPagoWebhookUseCase implements br.com.fiap.api.pedidos.core.usecase.MercadoPagoWebhookUseCase {
+public class MercadoPagoWebhookUseCaseImpl implements br.com.fiap.api.pedidos.core.usecase.MercadoPagoWebhookUseCase {
 
     private static final Logger logger = LoggerFactory.getLogger(MercadoPagoWebhookController.class);
 

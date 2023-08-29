@@ -1,7 +1,7 @@
 package br.com.fiap.api.pedidos.application.gateway;
 
 
-import br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCase;
+import br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCaseImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -11,9 +11,9 @@ import java.util.Map;
 @Service
 public class MercadoPagoWebhookGateway {
 
-    private final MercadoPagoWebhookUseCase mercadoPagoWebhookUseCase;
+    private final MercadoPagoWebhookUseCaseImpl mercadoPagoWebhookUseCase;
 
-    public MercadoPagoWebhookGateway(MercadoPagoWebhookUseCase mercadoPagoWebhookUseCase) {
+    public MercadoPagoWebhookGateway(MercadoPagoWebhookUseCaseImpl mercadoPagoWebhookUseCase) {
         this.mercadoPagoWebhookUseCase = mercadoPagoWebhookUseCase;
     }
 
