@@ -7,6 +7,7 @@ import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateOrderRequ
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.PriorityResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,6 +40,12 @@ public class OrderController {
                 OrderResponse.fromEntityToRespons(orderUseCase.getOrderById(id).get())), HttpStatus.OK);
     }
 
+    @GetMapping("/priority")
+    public ResponseEntity<BaseResponse<List<PriorityResponse>>>GetPriorityList() {
+        return new ResponseEntity<>(new BaseResponse<>(
+                true,
+                orderUseCase.getAllOrders().stream().map(PriorityResponse::fromPriorityListResponse).toList()),HttpStatus.OK);
+    }
     @PostMapping
     public ResponseEntity<BaseResponse<OrderResponse>> create(@RequestBody CreateOrderRequest request){
         Order orderSave = orderUseCase.saveOrder(CreateOrderRequest.fromResponseToOrder(request));
