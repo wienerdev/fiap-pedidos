@@ -44,7 +44,7 @@ public class OrderController {
     public ResponseEntity<BaseResponse<List<PriorityResponse>>>GetPriorityList() {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                orderUseCase.getAllOrders().stream().map(PriorityResponse::fromPriorityListResponse).toList()),HttpStatus.OK);
+                orderUseCase.getPriorityList().stream().map(PriorityResponse::fromPriorityListResponse).toList()),HttpStatus.OK);
     }
     @PostMapping
     public ResponseEntity<BaseResponse<OrderResponse>> create(@RequestBody CreateOrderRequest request){

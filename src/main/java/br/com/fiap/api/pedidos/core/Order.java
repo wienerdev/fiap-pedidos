@@ -2,7 +2,8 @@ package br.com.fiap.api.pedidos.core;
 
 import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 
-import java.util.ArrayList;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -17,7 +18,7 @@ public class Order {
     private List<UUID> orderProductIds;
     private Double orderPrice;
     private Client client;
-
+    private LocalDateTime dataRecebimento;
     public Order() {
 
     }
@@ -102,6 +103,14 @@ public class Order {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public LocalDateTime getDataRecebimento() {
+        return dataRecebimento;
+    }
+
+    public void setDataRecebimento(LocalDateTime dataRecebimento) {
+        this.dataRecebimento = dataRecebimento;
     }
 
     @Override

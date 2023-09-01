@@ -43,6 +43,11 @@ public class OrderUseCaseImpl implements OrderUseCase {
     }
 
     @Override
+    public List<Order> getPriorityList() {
+        return orderRepository.getPriority();
+    }
+
+    @Override
     public Optional<Order> getOrderById(UUID id) {
         return Optional.ofNullable(orderRepository.getById(id));
     }

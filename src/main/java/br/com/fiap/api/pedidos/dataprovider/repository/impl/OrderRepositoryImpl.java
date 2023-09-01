@@ -28,6 +28,12 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     @Override
+    public List<Order> getPriority() { //TODO Colocar logica de prioridade dos pedidos apartir do seu status
+        List<OrderEntity> entities = this.orderRepository.findAll();
+        return entities.stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+    }
+
+    @Override
     public Order getById(UUID id) {
         Optional<OrderEntity> orderEntity = this.orderRepository.findById(id);
         if (orderEntity.isPresent())

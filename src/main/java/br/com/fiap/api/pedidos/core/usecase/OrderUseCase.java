@@ -23,4 +23,6 @@ public interface OrderUseCase {
 
     void deleteOrder(UUID id);
 
+    List<Order> getPriorityList();
+
 }

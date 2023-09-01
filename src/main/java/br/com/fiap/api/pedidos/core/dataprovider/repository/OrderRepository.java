@@ -11,6 +11,8 @@ public interface OrderRepository {
 
     List<Order> getAll();
 
+    List<Order> getPriority();
+
     Order getById(UUID id);
 
     Order save(Order order);

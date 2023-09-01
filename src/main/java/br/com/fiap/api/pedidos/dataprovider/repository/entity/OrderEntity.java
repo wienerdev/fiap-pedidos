@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -32,6 +33,7 @@ public class OrderEntity {
     @OneToOne(optional = true)
     @JoinColumn(name = "client_id")
     private ClientEntity clientEntity;
+    private LocalDateTime dataRecebimento;
 
 
     public OrderEntity() {
@@ -47,6 +49,7 @@ public class OrderEntity {
                         product.getPrice(), product.getCategory()))
                 .toList(); this.orderPrice = order.getOrderPrice();
         this.clientEntity = order.getClient() != null ?  ClientDto.fromClientToClientEntity(order.getClient()) : null;
+        this.dataRecebimento = LocalDateTime.now();
     }
 
 
