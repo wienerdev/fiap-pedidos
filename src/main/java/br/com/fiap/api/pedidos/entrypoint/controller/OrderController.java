@@ -39,6 +39,13 @@ public class OrderController {
                 OrderResponse.fromEntityToRespons(orderUseCase.getOrderById(id).get())), HttpStatus.OK);
     }
 
+    @GetMapping("/{id}/status")
+    public ResponseEntity<BaseResponse<OrderResponse>>getStatusById(@PathVariable UUID id) {
+        return new ResponseEntity<>(new BaseResponse<>(
+                true,
+                OrderResponse.fromEntityToRespons(orderUseCase.getStatusById(id).get())),HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<BaseResponse<OrderResponse>> create(@RequestBody CreateOrderRequest request){
         Order orderSave = orderUseCase.saveOrder(CreateOrderRequest.fromResponseToOrder(request));

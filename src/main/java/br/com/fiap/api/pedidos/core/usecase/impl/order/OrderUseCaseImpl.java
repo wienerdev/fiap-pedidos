@@ -48,6 +48,11 @@ public class OrderUseCaseImpl implements OrderUseCase {
     }
 
     @Override
+    public Optional<Order> getStatusById(UUID id) {
+        return Optional.empty();
+    }
+
+    @Override
     public Order saveOrder(Order order) {
         List<Product> products = productRepositoryPort.getAllById(order.getOrderProductIds());//request.orderProductIds());
         Optional<Client> client = clientRepositoryPort.identifyClientByCpf(order.getClient().getClientCpf());

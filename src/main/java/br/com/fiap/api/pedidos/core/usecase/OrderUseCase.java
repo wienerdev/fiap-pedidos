@@ -17,6 +17,8 @@ public interface OrderUseCase {
 
     Optional<Order> getOrderById(UUID id);
 
+    Optional<Order> getStatusById(UUID id);
+
     Order saveOrder(Order order);
 
     void updateOrder(OrderStatusEnum status, UUID id);
