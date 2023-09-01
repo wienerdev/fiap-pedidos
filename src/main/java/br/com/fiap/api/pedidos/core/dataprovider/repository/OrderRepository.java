@@ -13,6 +13,8 @@ public interface OrderRepository {
 
     Order getById(UUID id);
 
+    Order getStatusById(UUID id);
+
     Order save(Order order);
 
     void delete(UUID id);

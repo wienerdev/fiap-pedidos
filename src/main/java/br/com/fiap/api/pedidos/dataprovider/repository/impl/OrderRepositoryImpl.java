@@ -36,6 +36,12 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     @Override
+    public Order getStatusById(UUID id) {
+
+        return null;
+    }
+
+    @Override
     public Order save(Order order) {
         OrderEntity entity = new OrderEntity(order);
         return orderRepository.save(entity).toOrder();

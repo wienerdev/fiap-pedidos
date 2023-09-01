@@ -7,6 +7,7 @@ import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateOrderRequ
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderStatusResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,10 +41,10 @@ public class OrderController {
     }
 
     @GetMapping("/{id}/status")
-    public ResponseEntity<BaseResponse<OrderResponse>>getStatusById(@PathVariable UUID id) {
+    public ResponseEntity<BaseResponse<OrderStatusResponse>>getStatusById(@PathVariable UUID id) {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                OrderResponse.fromEntityToRespons(orderUseCase.getStatusById(id).get())),HttpStatus.OK);
+                OrderStatusResponse.fromOrderStatusToResponse(orderUseCase.getStatusById(id).get())),HttpStatus.OK);
     }
 
     @PostMapping

@@ -49,7 +49,7 @@ public class OrderUseCaseImpl implements OrderUseCase {
 
     @Override
     public Optional<Order> getStatusById(UUID id) {
-        return Optional.empty();
+        return Optional.ofNullable(orderRepository.getStatusById(id));
     }
 
     @Override
