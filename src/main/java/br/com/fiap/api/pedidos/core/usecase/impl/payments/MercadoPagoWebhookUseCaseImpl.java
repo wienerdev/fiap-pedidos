@@ -1,6 +1,5 @@
 package br.com.fiap.api.pedidos.core.usecase.impl.payments;
 
-import br.com.fiap.api.pedidos.entrypoint.controller.MercadoPagoWebhookController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,35 +7,27 @@ import java.util.Map;
 
 public class MercadoPagoWebhookUseCaseImpl implements br.com.fiap.api.pedidos.core.usecase.MercadoPagoWebhookUseCase {
 
-    private static final Logger logger = LoggerFactory.getLogger(MercadoPagoWebhookController.class);
+    private static final Logger logger = LoggerFactory.getLogger(MercadoPagoWebhookUseCaseImpl.class);
 
     @Override
     public String handleMercadoPagoNotification(Map<String, Object> payload) {
-        String status = (String) payload.get("status");
+        String action = (String) payload.get("action");
 
-        if (status == null) {
-            logger.warn("Webhook recebido sem status");
+        if (action == null) {
+            logger.warn("Webhook recebido sem ação");
             return "Payload inválido";
         }
 
-        switch (status.toLowerCase()) {
-            case "approved":
-                return handleApprovedPayment(payload);
-            case "rejected":
-                return handleRejectedPayment(payload);
-            default:
-                logger.warn("Status de pagamento desconhecido: {}", status);
-                return "Status desconhecido";
+        if (action.equalsIgnoreCase("test.created")) {
+            return handleTestCreated(payload);
         }
+        logger.warn("Ação desconhecida: {}", action);
+        return "Ação desconhecida";
     }
 
-    private String handleApprovedPayment(Map<String, Object> payload) {
-        logger.info("Pagamento aprovado: {}", payload);
-        return String.format("Pagamento aprovado: {}", payload);
+    private String handleTestCreated(Map<String, Object> payload) {
+        logger.info("Ação de teste criada: {}", payload);
+        return String.format("Ação de teste criada: {}", payload);
     }
 
-    private String handleRejectedPayment(Map<String, Object> payload) {
-        logger.warn("Pagamento recusado: {}", payload);
-        return String.format("Pagamento recusado: {%s}", payload);
-    }
 }

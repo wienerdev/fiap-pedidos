@@ -9,11 +9,11 @@ import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 import java.util.List;
 import java.util.UUID;
 
-public record OrderResponse(UUID orderId, String customerOrder, Boolean active, OrderStatusEnum orderStatus,
+public record OrderResponse(UUID orderId, Boolean isPaymentReceived, OrderStatusEnum orderStatus,
                             List<Product> orderProducts, Double orderPrice, ClientEntity client) {
 
     public static OrderResponse fromEntityToResponse(Order order) {
-        return new OrderResponse(order.getOrderId(), order.getCustomerOrder(), order.getActive(), order.getOrderStatus(),
+        return new OrderResponse(order.getOrderId(), order.getPaymentReceived(), order.getOrderStatus(),
                 order.getOrderProducts(), order.getOrderPrice(), order.getClient() != null ? ClientDto.fromClientToClientEntity(order.getClient()) : null);
     }
 }

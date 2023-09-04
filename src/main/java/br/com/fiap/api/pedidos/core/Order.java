@@ -1,8 +1,9 @@
 package br.com.fiap.api.pedidos.core;
 
 import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
+import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -10,8 +11,7 @@ import java.util.UUID;
 public class Order {
 
     private UUID orderId;
-    private String customerOrder;
-    private Boolean active;
+    private Boolean isPaymentReceived;
     private OrderStatusEnum orderStatus;
     private List<Product> orderProducts;
     private List<UUID> orderProductIds;
@@ -22,23 +22,15 @@ public class Order {
 
     }
 
-    public Order(UUID orderId, String customerOrder, Boolean active, OrderStatusEnum orderStatus, List<Product> orderProducts,List<UUID> orderProductIds, Double orderPrice,Client client) {
+    public Order(UUID orderId,boolean isPaymentReceived, List<Product> orderProducts, List<UUID> orderProductIds, Double orderPrice, Client client) {
         this.orderId = orderId;
-        this.customerOrder = customerOrder;
-        this.active = active;
-        this.orderStatus = orderStatus;
+        this.isPaymentReceived = isPaymentReceived;
+        this.orderStatus = OrderStatusEnum.RECEIVED;
         this.orderProducts = orderProducts;
         this.orderProductIds = orderProductIds;
         this.orderPrice = orderPrice;
         this.client = client;
     }
-//    public List<UUID> getProductsIds(List<Product> orderProducts){
-//    List<UUID> uuidList = new ArrayList<>();
-//        for (Product orderList : orderProducts) {
-//            uuidList.add(orderList.getProductId());
-//        }
-//        return uuidList;
-//    }
 
     public List<UUID> getOrderProductIds() {
         return orderProductIds;
@@ -54,22 +46,6 @@ public class Order {
 
     public void setOrderId(UUID orderId) {
         this.orderId = orderId;
-    }
-
-    public String getCustomerOrder() {
-        return customerOrder;
-    }
-
-    public void setCustomerOrder(String customerOrder) {
-        this.customerOrder = customerOrder;
-    }
-
-    public Boolean getActive() {
-        return active;
-    }
-
-    public void setActive(Boolean active) {
-        this.active = active;
     }
 
     public OrderStatusEnum getOrderStatus() {
@@ -104,16 +80,31 @@ public class Order {
         this.client = client;
     }
 
+    public Boolean getPaymentReceived() {
+        return isPaymentReceived;
+    }
+
+    public void setPaymentReceived(Boolean paymentReceived) {
+        isPaymentReceived = paymentReceived;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Order order = (Order) o;
-        return Objects.equals(orderId, order.orderId) && Objects.equals(customerOrder, order.customerOrder) && Objects.equals(active, order.active) && orderStatus == order.orderStatus && Objects.equals(orderProducts, order.orderProducts) && Objects.equals(orderPrice, order.orderPrice);
+        if (!(o instanceof Order order)) return false;
+        return Objects.equals(getOrderId(), order.getOrderId()) && Objects.equals(isPaymentReceived, order.isPaymentReceived) && getOrderStatus() == order.getOrderStatus() && Objects.equals(getOrderProducts(), order.getOrderProducts()) && Objects.equals(getOrderProductIds(), order.getOrderProductIds()) && Objects.equals(getOrderPrice(), order.getOrderPrice()) && Objects.equals(getClient(), order.getClient());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderId, customerOrder, active, orderStatus, orderProducts, orderPrice);
+        return Objects.hash(getOrderId(), isPaymentReceived, getOrderStatus(), getOrderProducts(), getOrderProductIds(), getOrderPrice(), getClient());
+    }
+
+    public OrderEntity toEntity() {
+        return new OrderEntity(this);
+    }
+
+    public OrderResponse toResponse() {
+        return new OrderResponse(this.orderId, this.isPaymentReceived, this.orderStatus, this.orderProducts, this.orderPrice, this.client.toEntity());
     }
 }
