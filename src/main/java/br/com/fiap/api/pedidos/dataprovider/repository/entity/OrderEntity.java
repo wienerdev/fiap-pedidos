@@ -54,6 +54,7 @@ public class OrderEntity {
     public Order toOrder() {
         return new Order(this.orderId,
                 this.isPaymentReceived,
+                this.orderStatus,
                 toProductList(this.orderProducts),
                 this.orderProductIds,
                 this.orderPrice,

@@ -22,10 +22,10 @@ public class Order {
 
     }
 
-    public Order(UUID orderId,boolean isPaymentReceived, List<Product> orderProducts, List<UUID> orderProductIds, Double orderPrice, Client client) {
+    public Order(UUID orderId,boolean isPaymentReceived, OrderStatusEnum orderStatus, List<Product> orderProducts, List<UUID> orderProductIds, Double orderPrice, Client client) {
         this.orderId = orderId;
         this.isPaymentReceived = isPaymentReceived;
-        this.orderStatus = OrderStatusEnum.RECEIVED;
+        this.orderStatus = orderStatus;
         this.orderProducts = orderProducts;
         this.orderProductIds = orderProductIds;
         this.orderPrice = orderPrice;
