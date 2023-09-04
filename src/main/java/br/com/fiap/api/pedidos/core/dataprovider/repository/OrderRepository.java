@@ -4,7 +4,6 @@ import br.com.fiap.api.pedidos.core.Order;
 import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 public interface OrderRepository {
@@ -18,5 +17,7 @@ public interface OrderRepository {
     void delete(UUID id);
 
     void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
+
+    List<Order> getAllByClientCpf(String cpf);
 }
 

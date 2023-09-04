@@ -6,6 +6,7 @@ import br.com.fiap.api.pedidos.core.usecase.OrderUseCase;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateOrderRequest;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderCheckoutResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,14 +30,14 @@ public class OrderController {
     public ResponseEntity<BaseResponse<List<OrderResponse>>> getAll() {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                orderUseCase.getAllOrders().stream().map(OrderResponse::fromEntityToRespons).toList()), HttpStatus.OK);
+                orderUseCase.getAllOrders().stream().map(OrderResponse::fromEntityToResponse).toList()), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<BaseResponse<OrderResponse>> getById(@PathVariable UUID id) {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                OrderResponse.fromEntityToRespons(orderUseCase.getOrderById(id).get())), HttpStatus.OK);
+                OrderResponse.fromEntityToResponse(orderUseCase.getOrderById(id).get())), HttpStatus.OK);
     }
 
     @PostMapping
@@ -44,7 +45,7 @@ public class OrderController {
         Order orderSave = orderUseCase.saveOrder(CreateOrderRequest.fromResponseToOrder(request));
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
-                OrderResponse.fromEntityToRespons(orderSave)), HttpStatus.CREATED);
+                OrderResponse.fromEntityToResponse(orderSave)), HttpStatus.CREATED);
     }
 
 
@@ -62,5 +63,12 @@ public class OrderController {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
                 "Order deleted successfully"), HttpStatus.OK);
+    }
+
+    @GetMapping("/order-checkout/{cpf}")
+    public ResponseEntity<BaseResponse<List<OrderCheckoutResponse>>> orderCheckout(@PathVariable String cpf) {
+        return new ResponseEntity<>(new BaseResponse<>(
+                true,
+                orderUseCase.orderCheckout(cpf).stream().map(OrderCheckoutResponse::fromEntityToResponse).toList()), HttpStatus.OK);
     }
 }

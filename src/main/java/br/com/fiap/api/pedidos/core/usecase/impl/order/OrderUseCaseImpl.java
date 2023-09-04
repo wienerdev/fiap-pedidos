@@ -3,19 +3,12 @@ package br.com.fiap.api.pedidos.core.usecase.impl.order;
 import br.com.fiap.api.pedidos.core.Client;
 import br.com.fiap.api.pedidos.core.Order;
 import br.com.fiap.api.pedidos.core.Product;
-import br.com.fiap.api.pedidos.core.exception.ClientNotFoundException;
-import br.com.fiap.api.pedidos.core.usecase.OrderUseCase;
-import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
-import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateOrderRequest;
-import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest;
-import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
-import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository;
-import br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity;
+import br.com.fiap.api.pedidos.core.usecase.OrderUseCase;
+import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -39,7 +32,7 @@ public class OrderUseCaseImpl implements OrderUseCase {
 
     @Override
     public List<Order> getAllOrders() {
-             return  orderRepository.getAll();
+        return orderRepository.getAll();
     }
 
     @Override
@@ -56,18 +49,23 @@ public class OrderUseCaseImpl implements OrderUseCase {
         order.setOrderProducts(products);
         order.setClient(client.get());
 
-        return  orderRepository.save(order);
+        return orderRepository.save(order);
     }
 
     @Override
     public void updateOrder(OrderStatusEnum status, UUID id) {
-       orderRepository.updateByOrderStatusAndOrderId(status,id);
+        orderRepository.updateByOrderStatusAndOrderId(status, id);
 
     }
 
     @Override
     public void deleteOrder(UUID id) {
         orderRepository.delete(id);
+    }
+
+    @Override
+    public List<Order> orderCheckout(String cpf) {
+        return orderRepository.getAllByClientCpf(cpf);
     }
 
     private Double calculateOrderPrice(List<Product> products) {

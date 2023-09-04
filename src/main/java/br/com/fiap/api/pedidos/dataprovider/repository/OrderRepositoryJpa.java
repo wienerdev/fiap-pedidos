@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Repository
@@ -17,4 +18,6 @@ public interface OrderRepositoryJpa extends JpaRepository<OrderEntity, UUID> {
     @Modifying
     @Query("UPDATE OrderEntity o SET o.orderStatus = ?1 WHERE o.orderId = ?2")
     void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
+
+    List<OrderEntity> getAllByClientEntityClientCpf(String cpf);
 }
