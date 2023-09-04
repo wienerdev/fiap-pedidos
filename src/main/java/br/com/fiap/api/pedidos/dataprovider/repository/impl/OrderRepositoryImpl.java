@@ -52,4 +52,10 @@ public class OrderRepositoryImpl implements OrderRepository {
         orderRepository.updateByOrderStatusAndOrderId(orderStatus,orderId);
     }
 
+    @Override
+    public List<Order> getAllByClientCpf(String cpf) {
+        List<OrderEntity> entities =  orderRepository.getAllByClientEntityClientCpf(cpf);
+        return entities.stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+    }
+
 }
