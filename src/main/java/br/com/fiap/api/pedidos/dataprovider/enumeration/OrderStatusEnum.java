@@ -7,12 +7,12 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum OrderStatusEnum {
 
-    CREATED("The order was created."),
-    IN_PROGRESS("In Progress."),
-    COMPLETED("The order has been completed."),
-    CLOSED("The order has been closed."),
+    RECEIVED("The order was received."),
+    PREPARING("In Progress."),
+    DONE("The order has been done."),
+    FINISHED("The order has been finished."),
     CANCELED("The order has been canceled.");
 
-    private String message;
+    private final String message;
 
 }

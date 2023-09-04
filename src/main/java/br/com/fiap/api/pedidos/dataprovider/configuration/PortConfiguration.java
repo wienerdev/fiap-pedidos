@@ -1,14 +1,17 @@
 package br.com.fiap.api.pedidos.dataprovider.configuration;
 
 import br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository;
+import br.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepository;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository;
 import br.com.fiap.api.pedidos.core.usecase.OrderUseCase;
+import br.com.fiap.api.pedidos.core.usecase.PaymentUseCase;
 import br.com.fiap.api.pedidos.core.usecase.ProductUseCase;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository;
 import br.com.fiap.api.pedidos.core.usecase.ClientUseCase;
 import br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl;
 import br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl;
 import br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCaseImpl;
+import br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl;
 import br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,5 +40,10 @@ public class PortConfiguration {
     @Bean
     MercadoPagoWebhookUseCaseImpl mercadoPagoWebhookUseCase() {
         return new MercadoPagoWebhookUseCaseImpl();
+    }
+
+    @Bean
+    PaymentUseCase paymentUseCase(OrderRepository orderRepository, PaymentRepository paymentRepository) {
+        return new PaymentUseCaseImpl(orderRepository, paymentRepository);
     }
 }

@@ -1,5 +1,8 @@
 package br.com.fiap.api.pedidos.core;
 
+import br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse;
+
 import java.util.UUID;
 
 public class Client {
@@ -52,5 +55,13 @@ public class Client {
 
     public void setClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
+    }
+
+    public ClientResponse toResponse() {
+        return new ClientResponse(this.clientId, this.clientCpf, this.clientName, this.clientEmail);
+    }
+
+    public ClientEntity toEntity() {
+        return new ClientEntity(this.clientId, this.clientCpf, this.clientName, this.clientEmail);
     }
 }

@@ -49,7 +49,7 @@ public class OrderController {
     }
 
 
-    @PutMapping
+    @PutMapping("/update-status")
     public ResponseEntity<BaseResponse> update(@RequestBody UpdateOrderRequest request){
         orderUseCase.updateOrder(request.orderStatus(), request.orderId());
         return new ResponseEntity<>(new BaseResponse<>(
