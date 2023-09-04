@@ -37,8 +37,8 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     @Override
     public Order getStatusById(UUID id) {
-
-        return null;
+        List<OrderEntity> entities = this.orderRepository.getStatusById();
+        return entities.stream.map(OrderEntity::toOrder).collect(Collectors.toList());
     }
 
     @Override
