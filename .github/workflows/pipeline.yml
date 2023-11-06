@@ -9,7 +9,7 @@ on:
 
 jobs:
   sonarcloud:
-    runs-on: self-hosted
+    runs-on: Alissons-MacBook-Air
 
     steps:
       - name: Check out code
