@@ -1,6 +1,6 @@
 name: SonarCloud Maven Analysis
 
-runs-on: self-hosted
+
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   sonarcloud:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Check out code
