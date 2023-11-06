@@ -46,15 +46,12 @@ jobs:
         run: |
           mvn sonar:sonar -Dsonar.projectKey=alissonit_fiap-pedidos -Dsonar.organization=alissonit -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=${{ secrets.SONAR_TOKEN }}
       
-      - name: setup Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      
       - name: mvn package
         run: |
           mvn clean package -DskipTests
 
       - name: Docker build
         run: |
-          docker build -t ${{secrets.ECR_URL }}:0.0.2 .
-          docker push ${{secrets.ECR_URL }}:0.0.2
+          docker build -t ${{ secrets.ECR_URL }}:0.0.2 --build-args APP_VERSION=api-pedidos-0.0.1-SNAPSHOT .
+          docker push ${{ secrets.ECR_URL }}:0.0.2
         
