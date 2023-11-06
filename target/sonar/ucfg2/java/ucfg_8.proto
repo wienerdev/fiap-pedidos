@@ -1,0 +1,32 @@
+
+Åbr.com.fiap.api.pedidos.entrypoint.controller.ProductController#delete(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;x
+n/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/ProductController.javaK( K(."1*ˆ
+1N N(√
+¿
+N N(9
+%03br.com.fiap.api.pedidos.core.usecase.ProductUseCase"__id*s
+
+__unknown_file (W*UA
+?br.com.fiap.api.pedidos.entrypoint.controller.ProductController"
+productGateway©¶
+N N(,M
+%1Gbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse"úbr.com.fiap.api.pedidos.core.usecase.ProductUseCase#deleteProduct(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/BaseResponse;*W
+
+__unknown_file (;
+9
+%03br.com.fiap.api.pedidos.core.usecase.ProductUseCase*2
+
+__unknown_file (
+
+idjava.util.UUID2deleteProduct(Ljava/util/UUID;)a
+_
+Q Q($)
+%2#org.springframework.http.HttpStatus"__id*"
+
+__unknown_file (
+"""
+O Q(&
+"": 
+K/ K(D
+idjava.util.UUIDBCA
+?br.com.fiap.api.pedidos.entrypoint.controller.ProductControllerH

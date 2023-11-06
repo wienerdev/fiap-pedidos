@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#getOrderById(Ljava/util/UUID;)Ljava/util/Optional;
+java.util.Optional#ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+==
+getById br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#getById(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/core/Order;

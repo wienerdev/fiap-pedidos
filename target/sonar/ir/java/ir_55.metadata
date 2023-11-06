@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#saveProduct(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;
+==
+save br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#save(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;

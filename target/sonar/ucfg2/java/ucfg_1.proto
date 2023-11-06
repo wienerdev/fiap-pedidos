@@ -1,0 +1,20 @@
+
+P__sonar_lambda_0$br.com.fiap.api.pedidos.entrypoint.controller.ProductControllerx
+n/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/ProductController.java! !(U"1*à
+1!( !(7ð
+í
+!( !(UP
+%4Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse"Óbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ProductResponse;*j
+
+__unknown_file (N"L
+Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product"^
+!( !(UR
+P
+%4Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse:;
+! !($/
+product$br.com.fiap.api.pedidos.core.ProductB
+java.util.function.Function

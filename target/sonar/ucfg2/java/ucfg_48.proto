@@ -1,0 +1,49 @@
+
+­br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#deleteProduct(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/BaseResponse;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/product/ProductUseCaseImpl.java2 2(%"startingBlock*þ
+startingBlock2% 2(.‡
+„
+1 1(
+%3"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDT
+R
+2+ 2(-
+idjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%3*
+6*!
+45 8("
+5 8(
+""*«
+64 4(Þ
+Û
+4 4(L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository"__id*{
+
+__unknown_file (_*]F
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl"
+productRepositoryµ²
+4 4((
+
+%1void"`br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#delete(Ljava/util/UUID;)V*j
+
+__unknown_file (N
+L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository*2
+
+__unknown_file (
+
+idjava.util.UUID2delete(Ljava/util/UUID;)*
+4: 
+2& 2(-
+idjava.util.UUIDBHF
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImplH

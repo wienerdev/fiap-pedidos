@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#<init>(Lbr/com/fiap/api/pedidos/core/Client;)V
+==
+getClientName br.com.fiap.api.pedidos.core.Client#getClientName()Ljava/lang/String;
+getClientCpf br.com.fiap.api.pedidos.core.Client#getClientCpf()Ljava/lang/String;
+getClientId br.com.fiap.api.pedidos.core.Client#getClientId()Ljava/util/UUID;
+getClientEmail br.com.fiap.api.pedidos.core.Client#getClientEmail()Ljava/lang/String;

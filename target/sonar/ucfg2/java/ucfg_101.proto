@@ -1,0 +1,61 @@
+
+}br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest#toClient()Lbr/com/fiap/api/pedidos/core/Client;†
+|/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/request/CreateClientRequest.java ("1*Ö	
+1	 	(
+}
+	 	(+
+%0java.util.UUID"+java.util.UUID#randomUUID()Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUID©
+¦
+	- 	(6
+%1java.lang.String"__id*|
+
+__unknown_file (`*^O
+Mbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest"
+	clientCpfª
+§
+	8 	(B
+%2java.lang.String"__id*}
+
+__unknown_file (a*_O
+Mbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest"
+
+clientName«
+¨
+	D 	(O
+%3java.lang.String"__id*~
+
+__unknown_file (b*`O
+Mbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest"
+clientEmail\Z
+	 	()
+%4#br.com.fiap.api.pedidos.core.Client"#br.com.fiap.api.pedidos.core.Client§
+¤
+	 	(P
+%5"sbr.com.fiap.api.pedidos.core.Client#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*G
+
+__unknown_file (+
+)
+%4#br.com.fiap.api.pedidos.core.Client*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"7
+	 	(Q+
+)
+%4#br.com.fiap.api.pedidos.core.ClientBQO
+Mbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequestH

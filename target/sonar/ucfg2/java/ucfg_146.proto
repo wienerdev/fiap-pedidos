@@ -1,0 +1,67 @@
+
+˜br.com.fiap.api.pedidos.dataprovider.configuration.PortConfiguration#paymentUseCase(Lbr/com/fiap/api/pedidos/core/dataprovider/repository/OrderRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/PaymentRepository;)Lbr/com/fiap/api/pedidos/core/usecase/PaymentUseCase;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/configuration/PortConfiguration.java. .(!"startingBlock*¨
+startingBlock.! .(gã
+à
+- -(	
+%2"
+__annotate*K
+
+__unknown_file (/-
++org.springframework.context.annotation.Bean*u
+
+__unknown_file (Y
+W
+orderRepositoryDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository˜
+•
+.2 .(AW
+orderRepositoryDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository"__annotation*"
+
+__unknown_file (
+
+%2ç
+ä
+- -(	
+%3"
+__annotate*K
+
+__unknown_file (/-
++org.springframework.context.annotation.Bean*y
+
+__unknown_file (]
+[
+paymentRepositoryFbr.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepositoryœ
+™
+.U .(f[
+paymentRepositoryFbr.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepository"__annotation*"
+
+__unknown_file (
+
+%3*
+1*ß
+1/& /(5¡ž
+/ /(%K
+%0Ebr.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl"Ebr.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImplÐ
+Í
+/ /(I
+%1"Ýbr.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#<init>(Lbr/com/fiap/api/pedidos/core/dataprovider/repository/OrderRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/PaymentRepository;)V*i
+
+__unknown_file (M
+K
+%0Ebr.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl*u
+
+__unknown_file (Y
+W
+orderRepositoryDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository*y
+
+__unknown_file (]
+[
+paymentRepositoryFbr.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepository"Y
+/ /(JM
+K
+%0Ebr.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl:c
+." .(BW
+orderRepositoryDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository:g
+.C .(f[
+paymentRepositoryFbr.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepositoryBHF
+Dbr.com.fiap.api.pedidos.dataprovider.configuration.PortConfiguration

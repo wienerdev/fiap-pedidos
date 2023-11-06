@@ -1,0 +1,13 @@
+br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#makePayment(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/MakePaymentRequest;)Lbr/com/fiap/api/pedidos/core/Payment;
+br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#saveOrder(Lbr/com/fiap/api/pedidos/core/Order;)V
+br.com.fiap.api.pedidos.core.Payment#instance-init#
+java.util.UUID#randomUUID()Ljava/util/UUID;
+br.com.fiap.api.pedidos.core.exception.PaymentRefusedException#instance-init#
+br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#mercadoPagoIntegrationOrderPay()Z
+br.com.fiap.api.pedidos.core.Payment#<init>(Ljava/util/UUID;Lbr/com/fiap/api/pedidos/core/Order;Ljava/lang/String;)V
+br.com.fiap.api.pedidos.core.exception.PaymentRefusedException#<init>(Ljava/lang/String;)V
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.MakePaymentRequest#orderId()Ljava/util/UUID;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.MakePaymentRequest#paymentMethod()Ljava/lang/String;
+==
+getById br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#getById(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/core/Order;
+makePayment br.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepository#makePayment(Lbr/com/fiap/api/pedidos/core/Payment;)Lbr/com/fiap/api/pedidos/core/Payment;

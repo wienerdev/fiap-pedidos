@@ -1,0 +1,80 @@
+
+wbr.com.fiap.api.pedidos.dataprovider.repository.impl.ProductRepositoryImpl#getAllById(Ljava/util/List;)Ljava/util/List;ƒ
+y/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/repository/impl/ProductRepositoryImpl.java (#"startingBlock*Ž
+startingBlock# (:
+Œ
+ (
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+
+productIdsjava.util.List\
+Z
+/ (9
+
+productIdsjava.util.List"__annotation*"
+
+__unknown_file (
+
+%5*
+1*§
+
+1' (+ã
+à
+' (=J
+%0Dbr.com.fiap.api.pedidos.dataprovider.repository.ProductRepositoryJpa"__id*
+
+__unknown_file (e*cL
+Jbr.com.fiap.api.pedidos.dataprovider.repository.impl.ProductRepositoryImpl"
+productRepositoryÖÓ
+' (U
+%1java.util.List"horg.springframework.data.repository.ListCrudRepository#findAllById(Ljava/lang/Iterable;)Ljava/util/List;*h
+
+__unknown_file (L
+J
+%0Dbr.com.fiap.api.pedidos.dataprovider.repository.ProductRepositoryJpa*:
+
+__unknown_file (
+
+
+productIdsjava.util.List2!findAllById(Ljava/lang/Iterable;)b
+`
+ (V
+entitiesjava.util.List"__id*2
+
+__unknown_file (
+
+%1java.util.List¨¥
+ ( 
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+entitiesjava.util.List2stream()†ƒ
+ (>
+%3java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)œ™
+ (G
+%4java.util.List"0java.util.stream.Stream#toList()Ljava/util/List;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream2toList()""
+ (H
+
+%4java.util.List:(
+$ (9
+
+productIdsjava.util.ListBNL
+Jbr.com.fiap.api.pedidos.dataprovider.repository.impl.ProductRepositoryImplH

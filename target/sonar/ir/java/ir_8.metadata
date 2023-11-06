@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.ProductController#update(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/UpdateProductRequest;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ProductResponse;
+org.springframework.http.ResponseEntity#instance-init#
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest#fromRequestProduct(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/UpdateProductRequest;)Lbr/com/fiap/api/pedidos/core/Product;
+==
+updateProduct br.com.fiap.api.pedidos.core.usecase.ProductUseCase#updateProduct(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;

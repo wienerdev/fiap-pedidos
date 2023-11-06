@@ -1,0 +1,74 @@
+
+‰br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest#fromRequestProduct()Lbr/com/fiap/api/pedidos/core/Product;‡
+}/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/request/CreateProductRequest.java
+ 
+(%"1*Ü
+1 (
+}
+ (,
+%0java.util.UUID"+java.util.UUID#randomUUID()Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUID¬
+©
+. (9
+%1java.lang.String"__id*
+
+__unknown_file (c*aP
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest"
+productName¬
+©
+; (F
+%2java.lang.String"__id*
+
+__unknown_file (c*aP
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest"
+productDescª
+§
+H (M
+%3java.math.BigDecimal"__id*y
+
+__unknown_file (]*[P
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest"
+price©
+¦
+O (W
+%4java.lang.String"__id*|
+
+__unknown_file (`*^P
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest"
+
+category^\
+ (*
+%5$br.com.fiap.api.pedidos.core.Product"$br.com.fiap.api.pedidos.core.Productú
+÷
+ (X
+%6"Šbr.com.fiap.api.pedidos.core.Product#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+%5$br.com.fiap.api.pedidos.core.Product*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*8
+
+__unknown_file (
+
+%3java.math.BigDecimal*4
+
+__unknown_file (
+
+%4java.lang.String"8
+ (Y,
+*
+%5$br.com.fiap.api.pedidos.core.ProductBRP
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequestH

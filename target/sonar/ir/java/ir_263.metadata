@@ -1,0 +1,5 @@
+br.com.fiap.api.pedidos.dataprovider.configuration.MapperConfiguration#objectMapper()Lcom/fasterxml/jackson/databind/ObjectMapper;
+com.fasterxml.jackson.databind.ObjectMapper#<init>()V
+com.fasterxml.jackson.databind.ObjectMapper#instance-init#
+==
+findAndRegisterModules com.fasterxml.jackson.databind.ObjectMapper#findAndRegisterModules()Lcom/fasterxml/jackson/databind/ObjectMapper;

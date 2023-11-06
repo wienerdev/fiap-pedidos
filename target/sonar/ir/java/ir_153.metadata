@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.entrypoint.controller.PaymentController#handleMercadoPagoNotification(Ljava/util/Map;)Lorg/springframework/http/ResponseEntity;
+==
+handleMercadoPagoNotification br.com.fiap.api.pedidos.application.gateway.MercadoPagoWebhookGateway#handleMercadoPagoNotification(Ljava/util/Map;)Lorg/springframework/http/ResponseEntity;
+info org.slf4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V

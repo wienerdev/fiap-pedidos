@@ -1,0 +1,9 @@
+br.com.fiap.api.pedidos.dataprovider.repository.impl.ClientRepositoryImpl#identifyClientByCpf(Ljava/lang/String;)Ljava/util/Optional;
+java.util.Optional#isPresent()Z
+br.com.fiap.api.pedidos.core.exception.ClientNotFoundException#<init>(Ljava/lang/String;)V
+java.util.Optional#ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+br.com.fiap.api.pedidos.core.exception.ClientNotFoundException#instance-init#
+java.util.Optional#get()Ljava/lang/Object;
+==
+findByClientCpf br.com.fiap.api.pedidos.dataprovider.repository.ClientRepositoryJpa#findByClientCpf(Ljava/lang/String;)Ljava/util/Optional;
+toClient br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#toClient()Lbr/com/fiap/api/pedidos/core/Client;

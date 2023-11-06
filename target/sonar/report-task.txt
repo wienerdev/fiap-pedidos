@@ -1,0 +1,7 @@
+organization=alissonit
+projectKey=alissonit_fiap-pedidos
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.49842
+dashboardUrl=https://sonarcloud.io/dashboard?id=alissonit_fiap-pedidos
+ceTaskId=AYulLNuLxIom--aOcJti
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYulLNuLxIom--aOcJti

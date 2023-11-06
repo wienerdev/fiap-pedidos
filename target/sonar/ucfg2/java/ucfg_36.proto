@@ -1,0 +1,20 @@
+
+qbr.com.fiap.api.pedidos.core.Order#toEntity()Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/OrderEntity;[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.javag g("1*·
+1h h(#›˜
+h h(H
+%0Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity±
+®
+h h($
+%1"pbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#<init>(Lbr/com/fiap/api/pedidos/core/Order;)V*f
+
+__unknown_file (J
+H
+%0Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order"V
+h h(%J
+H
+%0Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntityB&$
+"br.com.fiap.api.pedidos.core.OrderH

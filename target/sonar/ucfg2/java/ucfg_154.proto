@@ -1,0 +1,15 @@
+
+Cbr.com.fiap.api.pedidos.core.Product#getProductId()Ljava/util/UUID;]
+S/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Product.java ("1*°
+1 (}
+{
+ (
+%0java.util.UUID"__id*S
+
+__unknown_file (7*5&
+$br.com.fiap.api.pedidos.core.Product"
+	productId""
+ (
+
+%0java.util.UUIDB(&
+$br.com.fiap.api.pedidos.core.ProductH

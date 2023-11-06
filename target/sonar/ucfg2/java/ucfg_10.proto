@@ -1,0 +1,62 @@
+
+„br.com.fiap.api.pedidos.entrypoint.controller.ClientController#getByCpf(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;w
+m/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/ClientController.java8 (@"startingBlock*¦
+startingBlock@ (Z¬
+©
+A (N
+%4"
+__annotate*T
+
+__unknown_file (86
+4org.springframework.web.bind.annotation.PathVariable*5
+
+__unknown_file (
+
+cpfjava.lang.StringW
+U
+V (Y
+cpfjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%4*
+1*—	
+1 (À
+½
+2 (?8
+%02br.com.fiap.api.pedidos.core.usecase.ClientUseCase"__id*q
+
+__unknown_file (U*S@
+>br.com.fiap.api.pedidos.entrypoint.controller.ClientController"
+clientGatewayçä
+2 (S)
+%1#br.com.fiap.api.pedidos.core.Client"zbr.com.fiap.api.pedidos.core.usecase.ClientUseCase#getClientByCpf(Ljava/lang/String;)Lbr/com/fiap/api/pedidos/core/Client;*V
+
+__unknown_file (:
+8
+%02br.com.fiap.api.pedidos.core.usecase.ClientUseCase*5
+
+__unknown_file (
+
+cpfjava.lang.String2"getClientByCpf(Ljava/lang/String;)ã
+à
+ (TO
+%2Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse"Îbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#fromClientResponse(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;*i
+
+__unknown_file (M"K
+Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse*G
+
+__unknown_file (+
+)
+%1#br.com.fiap.api.pedidos.core.Clienta
+_
+W (d)
+%3#org.springframework.http.HttpStatus"__id*"
+
+__unknown_file (
+"""
+ (f
+"":#
+A (Y
+cpfjava.lang.StringBB@
+>br.com.fiap.api.pedidos.entrypoint.controller.ClientControllerH

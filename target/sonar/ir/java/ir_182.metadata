@@ -1,0 +1,10 @@
+br.com.fiap.api.pedidos.dataprovider.configuration.SwaggerConfiguration#usersMicroserviceOpenAPI()Lio/swagger/v3/oas/models/OpenAPI;
+io.swagger.v3.oas.models.OpenAPI#<init>()V
+io.swagger.v3.oas.models.info.Info#<init>()V
+io.swagger.v3.oas.models.info.Info#instance-init#
+io.swagger.v3.oas.models.OpenAPI#instance-init#
+==
+version io.swagger.v3.oas.models.info.Info#version(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;
+title io.swagger.v3.oas.models.info.Info#title(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;
+info io.swagger.v3.oas.models.OpenAPI#info(Lio/swagger/v3/oas/models/info/Info;)Lio/swagger/v3/oas/models/OpenAPI;
+description io.swagger.v3.oas.models.info.Info#description(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;

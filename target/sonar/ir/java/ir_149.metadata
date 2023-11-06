@@ -1,0 +1,1 @@
+br.com.fiap.api.pedidos.entrypoint.controller.PaymentController#<init>(Lbr/com/fiap/api/pedidos/core/usecase/PaymentUseCase;Lbr/com/fiap/api/pedidos/application/gateway/MercadoPagoWebhookGateway;)V

@@ -1,0 +1,30 @@
+
+‚br.com.fiap.api.pedidos.dataprovider.configuration.MapperConfiguration#objectMapper()Lcom/fasterxml/jackson/databind/ObjectMapper;
+u/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/configuration/MapperConfiguration.java ($"1*³
+1 (-lj
+ (+1
+%0+com.fasterxml.jackson.databind.ObjectMapper"+com.fasterxml.jackson.databind.ObjectMapper›
+˜
+ (-
+%1"5com.fasterxml.jackson.databind.ObjectMapper#<init>()V*O
+
+__unknown_file (3
+1
+%0+com.fasterxml.jackson.databind.ObjectMapper¡
+ž
+ (.;
+objectMapper+com.fasterxml.jackson.databind.ObjectMapper"__id*O
+
+__unknown_file (3
+1
+%0+com.fasterxml.jackson.databind.ObjectMapper¨¥
+ (-1
+%2+com.fasterxml.jackson.databind.ObjectMapper"qcom.fasterxml.jackson.databind.ObjectMapper#findAndRegisterModules()Lcom/fasterxml/jackson/databind/ObjectMapper;*Y
+
+__unknown_file (=
+;
+objectMapper+com.fasterxml.jackson.databind.ObjectMapper2findAndRegisterModules()"I
+ (=
+;
+objectMapper+com.fasterxml.jackson.databind.ObjectMapperBJH
+Fbr.com.fiap.api.pedidos.dataprovider.configuration.MapperConfigurationH

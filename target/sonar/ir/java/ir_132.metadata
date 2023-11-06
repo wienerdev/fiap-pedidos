@@ -1,0 +1,5 @@
+br.com.fiap.api.pedidos.entrypoint.controller.OrderController#delete(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;
+null
+org.springframework.http.ResponseEntity#instance-init#
+==
+deleteOrder br.com.fiap.api.pedidos.core.usecase.OrderUseCase#deleteOrder(Ljava/util/UUID;)V

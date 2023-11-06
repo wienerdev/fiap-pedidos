@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderCheckoutResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Order;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/OrderCheckoutResponse;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderCheckoutResponse#instance-init#
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderCheckoutResponse#<init>(Ljava/util/UUID;Ljava/util/List;Ljava/lang/Double;)V
+==
+getOrderId br.com.fiap.api.pedidos.core.Order#getOrderId()Ljava/util/UUID;
+getOrderProducts br.com.fiap.api.pedidos.core.Order#getOrderProducts()Ljava/util/List;
+getOrderPrice br.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;

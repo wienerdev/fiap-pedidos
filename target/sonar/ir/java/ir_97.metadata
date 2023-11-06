@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl#saveClient(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/core/Client;
+==
+registerClient br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository#registerClient(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/core/Client;

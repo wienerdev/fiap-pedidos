@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#getPaymentStatusByOrderId(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/PaymentStatusResponse;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.PaymentStatusResponse#<init>(Z)V
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.PaymentStatusResponse#instance-init#
+==
+getById br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#getById(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/core/Order;
+getPaymentReceived br.com.fiap.api.pedidos.core.Order#getPaymentReceived()Ljava/lang/Boolean;

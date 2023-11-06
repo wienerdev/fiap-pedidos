@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.OrderController#update(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/UpdateOrderRequest;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest#orderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;
+org.springframework.http.ResponseEntity#instance-init#
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequest#orderId()Ljava/util/UUID;
+==
+updateOrder br.com.fiap.api.pedidos.core.usecase.OrderUseCase#updateOrder(Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/UUID;)V

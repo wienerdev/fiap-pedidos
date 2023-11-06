@@ -1,0 +1,38 @@
+
+xbr.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#calculateOrderPrice(Ljava/util/List;)Ljava/lang/Double;y
+o/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/order/OrderUseCaseImpl.javaG G(&"1*ý
+1H H(¨¥
+H H( 
+%0java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+productsjava.util.List2stream()¾
+»
+I I(H)
+%1#java.util.function.ToDoubleFunction"__declareFunction*q
+
+__unknown_file (US
+Q__sonar_lambda_4$br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl×Ô
+H I(I#
+%4java.util.stream.DoubleStream"ijava.util.stream.Stream#mapToDouble(Ljava/util/function/ToDoubleFunction;)Ljava/util/stream/DoubleStream;*;
+
+__unknown_file (
+
+%0java.util.stream.Stream*G
+
+__unknown_file (+
+)
+%1#java.util.function.ToDoubleFunction22mapToDouble(Ljava/util/function/ToDoubleFunction;)‹ˆ
+H J(
+%5double"$java.util.stream.DoubleStream#sum()D*A
+
+__unknown_file (%
+#
+%4java.util.stream.DoubleStream2sum()"
+H J(
+
+%5double:&
+G' G(=
+productsjava.util.ListBDB
+@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl

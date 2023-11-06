@@ -1,0 +1,21 @@
+
+ebr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#getAllProducts()Ljava/util/List;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/product/ProductUseCaseImpl.java ('"1*è
+1 (!ﬁ
+€
+ (!L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository"__id*{
+
+__unknown_file (_*]F
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl"
+productRepository˙˜
+ (*
+%1java.util.List"_br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getAll()Ljava/util/List;*j
+
+__unknown_file (N
+L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository2getAll()""
+ (+
+
+%1java.util.ListBHF
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImplH

@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.impl.ProductRepositoryImpl#save(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#<init>(Lbr/com/fiap/api/pedidos/core/Product;)V
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#instance-init#
+==
+save org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;
+toProduct br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#toProduct()Lbr/com/fiap/api/pedidos/core/Product;

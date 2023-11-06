@@ -1,0 +1,16 @@
+
+Abr.com.fiap.api.pedidos.core.Client#getClientId()Ljava/util/UUID;\
+R/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Client.java ("1*®
+1 ({
+y
+ (
+%0java.util.UUID"__id*Q
+
+__unknown_file (5*3%
+#br.com.fiap.api.pedidos.core.Client"
+
+clientId""
+ (
+
+%0java.util.UUIDB'%
+#br.com.fiap.api.pedidos.core.ClientH

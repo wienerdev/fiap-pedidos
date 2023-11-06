@@ -1,0 +1,98 @@
+
+Ùbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest#fromRequestProduct(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/UpdateProductRequest;)Lbr/com/fiap/api/pedidos/core/Product;‡
+}/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/request/UpdateProductRequest.java	 	(,"1*¸
+1
+ 
+("²
+¯
+
+ 
+(,
+%0java.util.UUID"__id*†
+
+__unknown_file (j*h
+Y
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest"
+	productId¶
+³
+
+- 
+(@
+%1java.lang.String"__id*ˆ
+
+__unknown_file (l*j
+Y
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest"
+productName¶
+³
+
+A 
+(T
+%2java.lang.String"__id*ˆ
+
+__unknown_file (l*j
+Y
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest"
+productDesc´
+±
+
+U 
+(b
+%3java.math.BigDecimal"__id*‚
+
+__unknown_file (f*d
+Y
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest"
+price³
+°
+
+c 
+(s
+%4java.lang.String"__id*…
+
+__unknown_file (i*g
+Y
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequest"
+
+category^\
+
+ 
+(*
+%5$br.com.fiap.api.pedidos.core.Product"$br.com.fiap.api.pedidos.core.Productú
+÷
+
+ 
+(t
+%6"Šbr.com.fiap.api.pedidos.core.Product#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+%5$br.com.fiap.api.pedidos.core.Product*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*8
+
+__unknown_file (
+
+%3java.math.BigDecimal*4
+
+__unknown_file (
+
+%4java.lang.String"8
+
+ 
+(u,
+*
+%5$br.com.fiap.api.pedidos.core.Product:e
+	- 	(IY
+requestNbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequestBR"P
+Nbr.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateProductRequestH

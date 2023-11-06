@@ -1,0 +1,15 @@
+
+ubr.com.fiap.api.pedidos.core.Order#getOrderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.java3 3()"1*–
+14 4(°
+­
+4 4(F
+%0@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum"__id*S
+
+__unknown_file (7*5$
+"br.com.fiap.api.pedidos.core.Order"
+orderStatus"T
+4 4(H
+F
+%0@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnumB&$
+"br.com.fiap.api.pedidos.core.OrderH

@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.dataprovider.repository.impl.OrderRepositoryImpl#updateByOrderStatusAndOrderId(Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/UUID;)V
+==
+updateByOrderStatusAndOrderId br.com.fiap.api.pedidos.dataprovider.repository.OrderRepositoryJpa#updateByOrderStatusAndOrderId(Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/UUID;)V

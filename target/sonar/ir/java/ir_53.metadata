@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#getByCategory(Ljava/lang/String;)Ljava/util/List;
+==
+getByCategory br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getByCategory(Ljava/lang/String;)Ljava/util/List;

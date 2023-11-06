@@ -1,0 +1,21 @@
+
+_br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#getAllOrders()Ljava/util/List;y
+o/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/order/OrderUseCaseImpl.java" "(#"1*ƒ
+1# #(Ö
+Ó
+# #(J
+%0Dbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository"__id*u
+
+__unknown_file (Y*WB
+@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl"
+orderRepositoryöó
+# #('
+%1java.util.List"]br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#getAll()Ljava/util/List;*h
+
+__unknown_file (L
+J
+%0Dbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository2getAll()""
+# #((
+
+%1java.util.ListBDB
+@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImplH

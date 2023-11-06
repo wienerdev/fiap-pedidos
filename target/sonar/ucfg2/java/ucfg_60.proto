@@ -1,0 +1,73 @@
+
+vbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#toProduct()Lbr/com/fiap/api/pedidos/core/Product;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/repository/entity/ProductEntity.java4 4("1*‘
+15 5(û
+õ
+5 5()
+%0java.util.UUID"__id*s
+
+__unknown_file (W*UF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"
+	productId¢
+ü
+5+ 5(;
+%1java.lang.String"__id*u
+
+__unknown_file (Y*WF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"
+productName¢
+ü
+5= 5(M
+%2java.lang.String"__id*u
+
+__unknown_file (Y*WF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"
+productDesc†
+ù
+5O 5(Y
+%3java.math.BigDecimal"__id*o
+
+__unknown_file (S*QF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"
+priceü
+ú
+5[ 5(h
+%4java.lang.String"__id*r
+
+__unknown_file (V*TF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"
+
+category^\
+5 5(*
+%5$br.com.fiap.api.pedidos.core.Product"$br.com.fiap.api.pedidos.core.Product˙
+˜
+5 5(i
+%6"äbr.com.fiap.api.pedidos.core.Product#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+%5$br.com.fiap.api.pedidos.core.Product*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*8
+
+__unknown_file (
+
+%3java.math.BigDecimal*4
+
+__unknown_file (
+
+%4java.lang.String"8
+5 5(j,
+*
+%5$br.com.fiap.api.pedidos.core.ProductBHF
+Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntityH

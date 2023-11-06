@@ -1,0 +1,75 @@
+
+¿br.com.fiap.api.pedidos.entrypoint.controller.dto.ClientDto#fromClientToClientEntity(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/ClientEntity;t
+j/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/ClientDto.java	# 	(;"1*ü
+1
+$ 
+(*¬ø
+
+$ 
+(8
+%0java.util.UUID"Abr.com.fiap.api.pedidos.core.Client#getClientId()Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientId()»≈
+
+: 
+(O
+%1java.lang.String"Dbr.com.fiap.api.pedidos.core.Client#getClientCpf()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientCpf() «
+
+P 
+(f
+%2java.lang.String"Ebr.com.fiap.api.pedidos.core.Client#getClientName()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientName()Ã…
+
+h 
+(
+%3java.lang.String"Fbr.com.fiap.api.pedidos.core.Client#getClientEmail()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientEmail()ùö
+
+ 
+(#I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity"Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntityÈ
+Ê
+	
+ 
+(Ä
+%5"ìbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*g
+
+__unknown_file (K
+I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"X
+	
+ 
+(ÅK
+I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity:9
+	< 	(I-
+client#br.com.fiap.api.pedidos.core.ClientB?"=
+;br.com.fiap.api.pedidos.entrypoint.controller.dto.ClientDtoH

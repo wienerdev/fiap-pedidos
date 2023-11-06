@@ -1,0 +1,13 @@
+br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#saveOrder(Lbr/com/fiap/api/pedidos/core/Order;)Lbr/com/fiap/api/pedidos/core/Order;
+br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#calculateOrderPrice(Ljava/util/List;)Ljava/lang/Double;
+java.util.Optional#get()Ljava/lang/Object;
+==
+save br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#save(Lbr/com/fiap/api/pedidos/core/Order;)Lbr/com/fiap/api/pedidos/core/Order;
+identifyClientByCpf br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository#identifyClientByCpf(Ljava/lang/String;)Ljava/util/Optional;
+setOrderProducts br.com.fiap.api.pedidos.core.Order#setOrderProducts(Ljava/util/List;)V
+getOrderProductIds br.com.fiap.api.pedidos.core.Order#getOrderProductIds()Ljava/util/List;
+getClient br.com.fiap.api.pedidos.core.Order#getClient()Lbr/com/fiap/api/pedidos/core/Client;
+getAllById br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getAllById(Ljava/util/List;)Ljava/util/List;
+getClientCpf br.com.fiap.api.pedidos.core.Client#getClientCpf()Ljava/lang/String;
+setClient br.com.fiap.api.pedidos.core.Order#setClient(Lbr/com/fiap/api/pedidos/core/Client;)V
+setOrderPrice br.com.fiap.api.pedidos.core.Order#setOrderPrice(Ljava/lang/Double;)V

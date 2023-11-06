@@ -1,0 +1,16 @@
+
+Dbr.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.javaC C("1*³
+1D D(~
+|
+D D(
+%0java.lang.Double"__id*R
+
+__unknown_file (6*4$
+"br.com.fiap.api.pedidos.core.Order"
+
+orderPrice"$
+D D(
+
+%0java.lang.DoubleB&$
+"br.com.fiap.api.pedidos.core.OrderH

@@ -1,0 +1,294 @@
+
+>br.com.fiap.api.pedidos.core.Order#equals(Ljava/lang/Object;)Z[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.java\ \("startingBlock*õ
+13_ _(∂≥
+_ _(*
+%1java.util.UUID"?br.com.fiap.api.pedidos.core.Order#getOrderId()Ljava/util/UUID;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderId()Ω∫
+_, _(>
+%2java.util.UUID"?br.com.fiap.api.pedidos.core.Order#getOrderId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getOrderId()¯
+ı
+_ _(?
+%3boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*2
+
+__unknown_file (
+
+%1java.util.UUID*2
+
+__unknown_file (
+
+%2java.util.UUID*
+2
+4
+6
+8
+10
+12
+1*"
+14^0 ^(5"
+^) ^(6
+""*}
+15^ ^(c
+a
+^ ^(&+
+order"br.com.fiap.api.pedidos.core.Order"__id*"
+
+__unknown_file (
+""*
+13
+14*"
+16] ](""
+] ](#
+""*ﬂ
+17] ](ƒ
+¡
+] ](
+%0boolean"	__compare*"
+
+__unknown_file (
+==*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order*3
+
+__unknown_file (
+
+ojava.lang.Object*
+15
+16*#
+1	_ _(ú"
+	_ _(ú
+""*ç
+2
+_Ì _(Ù·ﬁ
+
+_¸ _(á*
+%19#br.com.fiap.api.pedidos.core.Client"Sbr.com.fiap.api.pedidos.core.Order#getClient()Lbr/com/fiap/api/pedidos/core/Client;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getClient()ËÂ
+
+_â _(ö*
+%20#br.com.fiap.api.pedidos.core.Client"Sbr.com.fiap.api.pedidos.core.Order#getClient()Lbr/com/fiap/api/pedidos/core/Client;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getClient()ß
+§
+
+_Ì _(õ
+%21boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*H
+
+__unknown_file (,
+*
+%19#br.com.fiap.api.pedidos.core.Client*H
+
+__unknown_file (,
+*
+%20#br.com.fiap.api.pedidos.core.Client*
+1*É
+startingBlock\ \(#â
+Ü
+[ [(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*3
+
+__unknown_file (
+
+ojava.lang.ObjectV
+T
+\! \("
+ojava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%22*
+17*Æ
+4
+_≥ _(∫√¿
+
+_¬ _(—
+%16java.lang.Double"Dbr.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderPrice() «
+
+_” _(Ë
+%17java.lang.Double"Dbr.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getOrderPrice()Å
+˛
+
+_≥ _(È
+%18boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*5
+
+__unknown_file (
+
+%16java.lang.Double*5
+
+__unknown_file (
+
+%17java.lang.Double*
+2
+1*π
+6
+_Ô _(ˆ…∆
+
+_˛ _(í
+%13java.util.List"Gbr.com.fiap.api.pedidos.core.Order#getOrderProductIds()Ljava/util/List;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderProductIds()–Õ
+
+_î _(Æ
+%14java.util.List"Gbr.com.fiap.api.pedidos.core.Order#getOrderProductIds()Ljava/util/List;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getOrderProductIds()˝
+˙
+
+_Ô _(Ø
+%15boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%13java.util.List*3
+
+__unknown_file (
+
+%14java.util.List*	
+2
+4
+1*¥
+8
+_Ø _(∂≈¬
+
+_æ _(–
+%10java.util.List"Ebr.com.fiap.api.pedidos.core.Order#getOrderProducts()Ljava/util/List;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderProducts()Ã…
+
+_“ _(Í
+%11java.util.List"Ebr.com.fiap.api.pedidos.core.Order#getOrderProducts()Ljava/util/List;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getOrderProducts()˝
+˙
+
+_Ø _(Î
+%12boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%10java.util.List*3
+
+__unknown_file (
+
+%11java.util.List*
+2
+4
+6
+1*í
+10
+_Å _(è§°
+
+_Å _(ëF
+%7@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum"ubr.com.fiap.api.pedidos.core.Order#getOrderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderStatus()´®
+
+_ï _(´F
+%8@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum"ubr.com.fiap.api.pedidos.core.Order#getOrderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;*I
+
+__unknown_file (-
++
+order"br.com.fiap.api.pedidos.core.Order2getOrderStatus()ô
+ñ
+
+_Å _(´
+%9boolean"	__compare*"
+
+__unknown_file (
+==*d
+
+__unknown_file (H
+F
+%7@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum*d
+
+__unknown_file (H
+F
+%8@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum*
+2
+4
+6
+8
+1*ø
+12_C _(Já
+Ñ
+_R _(c
+%4java.lang.Boolean"__id*Y
+
+__unknown_file (=*;$
+"br.com.fiap.api.pedidos.core.Order"
+isPaymentReceivedé
+ã
+_e _(|
+%5java.lang.Boolean"__id*`
+
+__unknown_file (D*B
++
+order"br.com.fiap.api.pedidos.core.Order"
+isPaymentReceived˛
+˚
+_C _(}
+%6boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*5
+
+__unknown_file (
+
+%4java.lang.Boolean*5
+
+__unknown_file (
+
+%5java.lang.Boolean*
+2
+4
+6
+8
+10
+1:!
+\ \("
+ojava.lang.ObjectB&$
+"br.com.fiap.api.pedidos.core.OrderHX

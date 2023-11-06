@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.payments.PaymentUseCaseImpl#getAll()Ljava/util/List;
+==
+getAll br.com.fiap.api.pedidos.core.dataprovider.repository.PaymentRepository#getAll()Ljava/util/List;

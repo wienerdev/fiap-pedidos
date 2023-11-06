@@ -1,0 +1,15 @@
+
+Gbr.com.fiap.api.pedidos.core.Order#getOrderProductIds()Ljava/util/List;[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.java# #(("1*µ
+1$ $(Å
+
+$ $(
+%0java.util.List"__id*W
+
+__unknown_file (;*9$
+"br.com.fiap.api.pedidos.core.Order"
+orderProductIds""
+$ $(
+
+%0java.util.ListB&$
+"br.com.fiap.api.pedidos.core.OrderH

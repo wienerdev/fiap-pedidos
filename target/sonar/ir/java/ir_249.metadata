@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.entrypoint.controller.HealthCheckController#getAppHealth()Lorg/springframework/http/ResponseEntity;
+org.springframework.http.ResponseEntity#<init>(Ljava/lang/Object;Lorg/springframework/http/HttpStatusCode;)V
+org.springframework.http.ResponseEntity#instance-init#

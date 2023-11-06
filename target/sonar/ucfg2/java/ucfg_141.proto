@@ -1,0 +1,63 @@
+
+sbr.com.fiap.api.pedidos.core.Client#toEntity()Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/ClientEntity;\
+R/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Client.java@ @( "1*Ú	
+1A  A(${
+y
+A  A(-
+%0java.util.UUID"__id*Q
+
+__unknown_file (5*3%
+#br.com.fiap.api.pedidos.core.Client"
+
+clientId~
+|
+A/ A(=
+%1java.lang.String"__id*R
+
+__unknown_file (6*4%
+#br.com.fiap.api.pedidos.core.Client"
+	clientCpf
+}
+A? A(N
+%2java.lang.String"__id*S
+
+__unknown_file (7*5%
+#br.com.fiap.api.pedidos.core.Client"
+
+clientNameÄ
+~
+AP A(`
+%3java.lang.String"__id*T
+
+__unknown_file (8*6%
+#br.com.fiap.api.pedidos.core.Client"
+clientEmailùö
+A A(I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity"Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntityË
+Â
+A A(a
+%5"ìbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*g
+
+__unknown_file (K
+I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"W
+A A(bK
+I
+%4Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntityB'%
+#br.com.fiap.api.pedidos.core.ClientH

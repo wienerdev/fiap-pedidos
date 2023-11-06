@@ -1,0 +1,64 @@
+
+{br.com.fiap.api.pedidos.core.Client#toResponse()Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;\
+R/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Client.java< <($"1*
+
+1=" =(&{
+y
+=" =(/
+%0java.util.UUID"__id*Q
+
+__unknown_file (5*3%
+#br.com.fiap.api.pedidos.core.Client"
+
+clientId~
+|
+=1 =(?
+%1java.lang.String"__id*R
+
+__unknown_file (6*4%
+#br.com.fiap.api.pedidos.core.Client"
+	clientCpf
+}
+=A =(P
+%2java.lang.String"__id*S
+
+__unknown_file (7*5%
+#br.com.fiap.api.pedidos.core.Client"
+
+clientName€
+~
+=R =(b
+%3java.lang.String"__id*T
+
+__unknown_file (8*6%
+#br.com.fiap.api.pedidos.core.Client"
+clientEmail©¦
+= =(!O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse"Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponseô
+ñ
+= =(c
+%5"™br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*m
+
+__unknown_file (Q
+O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"]
+= =(dQ
+O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponseB'%
+#br.com.fiap.api.pedidos.core.ClientH

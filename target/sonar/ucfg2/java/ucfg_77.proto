@@ -1,0 +1,27 @@
+
+Óbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ProductResponse;ƒ
+y/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/response/ProductResponse.java
+" 
+(6"1*ì
+1# (*«¨
+ ("P
+%0Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse"Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponseÎ
+Ë
+ (+
+%1"zbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse#<init>(Lbr/com/fiap/api/pedidos/core/Product;)V*n
+
+__unknown_file (R
+P
+%0Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product"^
+ (,R
+P
+%0Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse:;
+
+7 
+(F/
+product$br.com.fiap.api.pedidos.core.ProductBN"L
+Jbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponseH

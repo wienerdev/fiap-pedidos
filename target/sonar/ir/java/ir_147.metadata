@@ -1,0 +1,11 @@
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Order;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/OrderResponse;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse#<init>(Ljava/util/UUID;Ljava/lang/Boolean;Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/List;Ljava/lang/Double;Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/ClientEntity;)V
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse#instance-init#
+br.com.fiap.api.pedidos.entrypoint.controller.dto.ClientDto#fromClientToClientEntity(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/ClientEntity;
+==
+getOrderId br.com.fiap.api.pedidos.core.Order#getOrderId()Ljava/util/UUID;
+getOrderStatus br.com.fiap.api.pedidos.core.Order#getOrderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;
+getPaymentReceived br.com.fiap.api.pedidos.core.Order#getPaymentReceived()Ljava/lang/Boolean;
+getClient br.com.fiap.api.pedidos.core.Order#getClient()Lbr/com/fiap/api/pedidos/core/Client;
+getOrderProducts br.com.fiap.api.pedidos.core.Order#getOrderProducts()Ljava/util/List;
+getOrderPrice br.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;

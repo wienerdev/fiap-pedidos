@@ -1,0 +1,70 @@
+
+S__sonar_lambda_2$br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity{
+q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/repository/entity/OrderEntity.java/ 0(B"1*‘
+1/2 /(9«ƒ
+/2 /(H
+%6java.util.UUID"Cbr.com.fiap.api.pedidos.core.Product#getProductId()Ljava/util/UUID;*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2getProductId()œÃ
+/J /(b
+%7java.lang.String"Gbr.com.fiap.api.pedidos.core.Product#getProductName()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2getProductName()œÃ
+/d /(|
+%8java.lang.String"Gbr.com.fiap.api.pedidos.core.Product#getProductDesc()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2getProductDesc()À»
+0 0(*
+%9java.math.BigDecimal"Ebr.com.fiap.api.pedidos.core.Product#getPrice()Ljava/math/BigDecimal;*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2
+getPrice() «
+0, 0(A
+%10java.lang.String"Dbr.com.fiap.api.pedidos.core.Product#getCategory()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2getCategory()†ù
+/$ /(1K
+%11Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity"Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntityΩ
+∫
+/  0(B
+%12"™br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;)V*i
+
+__unknown_file (M
+K
+%11Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+%7java.lang.String*4
+
+__unknown_file (
+
+%8java.lang.String*8
+
+__unknown_file (
+
+%9java.math.BigDecimal*5
+
+__unknown_file (
+
+%10java.lang.String"Y
+/  0(BM
+K
+%11Dbr.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity:;
+/ /(/
+product$br.com.fiap.api.pedidos.core.ProductB
+java.util.function.Function

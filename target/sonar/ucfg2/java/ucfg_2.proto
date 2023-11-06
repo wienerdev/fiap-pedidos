@@ -1,0 +1,55 @@
+
+qbr.com.fiap.api.pedidos.entrypoint.controller.ProductController#getAll()Lorg/springframework/http/ResponseEntity;x
+n/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/ProductController.java? (E"1*Ó
+
+1 (Ã
+À
+   (9
+%03br.com.fiap.api.pedidos.core.usecase.ProductUseCase"__id*s
+
+__unknown_file (W*UA
+?br.com.fiap.api.pedidos.entrypoint.controller.ProductController"
+productGatewayäá
+   (/
+%1java.util.List"Tbr.com.fiap.api.pedidos.core.usecase.ProductUseCase#getAllProducts()Ljava/util/List;*W
+
+__unknown_file (;
+9
+%03br.com.fiap.api.pedidos.core.usecase.ProductUseCase2getAllProducts()¢Ÿ
+   (8
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%1java.util.List2stream()µ
+²
+! !(U!
+%3java.util.function.Function"__declareFunction*p
+
+__unknown_file (TR
+P__sonar_lambda_0$br.com.fiap.api.pedidos.entrypoint.controller.ProductController£ 
+  !(V
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%3java.util.function.Function2"map(Ljava/util/function/Function;)œ™
+  "(!
+%6java.util.List"0java.util.stream.Stream#toList()Ljava/util/List;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream2toList()a
+_
+"$ "(1)
+%7#org.springframework.http.HttpStatus"__id*"
+
+__unknown_file (
+"""
+ "(3
+""BCA
+?br.com.fiap.api.pedidos.entrypoint.controller.ProductControllerH

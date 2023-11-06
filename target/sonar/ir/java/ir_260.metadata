@@ -1,0 +1,5 @@
+br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#calculateOrderPrice(Ljava/util/List;)Ljava/lang/Double;
+==
+mapToDouble java.util.stream.Stream#mapToDouble(Ljava/util/function/ToDoubleFunction;)Ljava/util/stream/DoubleStream;
+stream java.util.Collection#stream()Ljava/util/stream/Stream;
+sum java.util.stream.DoubleStream#sum()D

@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#toProductList(Ljava/util/List;)Ljava/util/List;
+java.util.stream.Collectors#toList()Ljava/util/stream/Collector;
+==
+collect java.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+stream java.util.Collection#stream()Ljava/util/stream/Stream;
+map java.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;

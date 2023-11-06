@@ -1,0 +1,63 @@
+
+äbr.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl#getClientByCpf(Ljava/lang/String;)Lbr/com/fiap/api/pedidos/core/Client;{
+q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/client/ClientUseCaseImpl.java ( "startingBlock*Ñ
+startingBlock  (,ä
+á
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+cpfjava.lang.StringW
+U
+( (+
+cpfjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%6*
+1*à	
+1 (⁄
+◊
+ (K
+%0Ebr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository"__id*x
+
+__unknown_file (\*ZD
+Bbr.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl"
+clientRepositoryˆÛ
+ (8
+%1java.util.Optional"Åbr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository#identifyClientByCpf(Ljava/lang/String;)Ljava/util/Optional;*i
+
+__unknown_file (M
+K
+%0Ebr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository*5
+
+__unknown_file (
+
+cpfjava.lang.String2'identifyClientByCpf(Ljava/lang/String;)∏
+µ
+E (z!
+%2java.util.function.Supplier"__declareFunction*s
+
+__unknown_file (WU
+S__sonar_lambda_3$br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImplÆ´
+ ({)
+%5#br.com.fiap.api.pedidos.core.Client"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%1java.util.Optional*?
+
+__unknown_file (#
+!
+%2java.util.function.Supplier2*orElseThrow(Ljava/util/function/Supplier;)"7
+ (|+
+)
+%5#br.com.fiap.api.pedidos.core.Client:#
+! (+
+cpfjava.lang.StringBFD
+Bbr.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImplH

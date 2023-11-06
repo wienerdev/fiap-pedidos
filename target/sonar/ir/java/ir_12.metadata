@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.entrypoint.controller.ClientController#getByCpf(Ljava/lang/String;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#fromClientResponse(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;
+org.springframework.http.ResponseEntity#instance-init#
+==
+getClientByCpf br.com.fiap.api.pedidos.core.usecase.ClientUseCase#getClientByCpf(Ljava/lang/String;)Lbr/com/fiap/api/pedidos/core/Client;

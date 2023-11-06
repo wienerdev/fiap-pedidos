@@ -1,0 +1,47 @@
+
+ybr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#getProductById(Ljava/util/UUID;)Ljava/util/Optional;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/product/ProductUseCaseImpl.java" "(+"startingBlock*þ
+startingBlock"+ "(4‡
+„
+! !(
+%2"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDT
+R
+"1 "(3
+idjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%2*
+1*ñ
+1# #( Þ
+Û
+# #( L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository"__id*{
+
+__unknown_file (_*]F
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl"
+productRepositoryØÕ
+# #(,
+%1java.util.Optional"tbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getById(Ljava/util/UUID;)Ljava/util/Optional;*j
+
+__unknown_file (N
+L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository*2
+
+__unknown_file (
+
+idjava.util.UUID2getById(Ljava/util/UUID;)"&
+# #(-
+
+%1java.util.Optional: 
+", "(3
+idjava.util.UUIDBHF
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImplH

@@ -1,0 +1,20 @@
+
+S__sonar_lambda_3$br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl{
+q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/client/ClientUseCaseImpl.javaE (z"1*ÿ
+1g (y“
+O (fD
+%3>br.com.fiap.api.pedidos.core.exception.ClientNotFoundException">br.com.fiap.api.pedidos.core.exception.ClientNotFoundException…
+‚
+K (z
+%4"Zbr.com.fiap.api.pedidos.core.exception.ClientNotFoundException#<init>(Ljava/lang/String;)V*b
+
+__unknown_file (F
+D
+%3>br.com.fiap.api.pedidos.core.exception.ClientNotFoundException*0
+
+__unknown_file (
+client not found"R
+K (zF
+D
+%3>br.com.fiap.api.pedidos.core.exception.ClientNotFoundExceptionB
+java.util.function.Supplier

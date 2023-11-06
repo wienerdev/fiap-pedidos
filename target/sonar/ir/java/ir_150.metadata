@@ -1,0 +1,8 @@
+br.com.fiap.api.pedidos.entrypoint.controller.PaymentController#getAll()Lorg/springframework/http/ResponseEntity;
+null
+org.springframework.http.ResponseEntity#instance-init#
+==
+getAll br.com.fiap.api.pedidos.core.usecase.PaymentUseCase#getAll()Ljava/util/List;
+stream java.util.Collection#stream()Ljava/util/stream/Stream;
+map java.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+toList java.util.stream.Stream#toList()Ljava/util/List;

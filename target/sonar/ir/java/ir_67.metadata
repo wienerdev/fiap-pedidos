@@ -1,0 +1,2 @@
+br.com.fiap.api.pedidos.ApiPedidosApplication#main([Ljava/lang/String;)V
+org.springframework.boot.SpringApplication#run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;

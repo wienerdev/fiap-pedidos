@@ -1,0 +1,5 @@
+br.com.fiap.api.pedidos.entrypoint.controller.ProductController#delete(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;
+null
+org.springframework.http.ResponseEntity#instance-init#
+==
+deleteProduct br.com.fiap.api.pedidos.core.usecase.ProductUseCase#deleteProduct(Ljava/util/UUID;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/BaseResponse;

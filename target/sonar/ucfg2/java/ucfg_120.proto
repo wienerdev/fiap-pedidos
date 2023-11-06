@@ -1,0 +1,63 @@
+
+„br.com.fiap.api.pedidos.dataprovider.configuration.SwaggerConfiguration#usersMicroserviceOpenAPI()Lio/swagger/v3/oas/models/OpenAPI;€
+v/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/configuration/SwaggerConfiguration.java (+"1*„
+1 (VT
+ (&
+%0 io.swagger.v3.oas.models.OpenAPI" io.swagger.v3.oas.models.OpenAPI…
+‚
+ (
+%1"*io.swagger.v3.oas.models.OpenAPI#<init>()V*D
+
+__unknown_file ((
+&
+%0 io.swagger.v3.oas.models.OpenAPIZX
+ ((
+%2"io.swagger.v3.oas.models.info.Info""io.swagger.v3.oas.models.info.Info‰
+†
+ ( 
+%3",io.swagger.v3.oas.models.info.Info#<init>()V*F
+
+__unknown_file (*
+(
+%2"io.swagger.v3.oas.models.info.Info¬©
+ (8(
+%4"io.swagger.v3.oas.models.info.Info"`io.swagger.v3.oas.models.info.Info#title(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;*F
+
+__unknown_file (*
+(
+%2"io.swagger.v3.oas.models.info.Info*.
+
+__unknown_file (
+Your API Title2title(Ljava/lang/String;)¾»
+ (<(
+%5"io.swagger.v3.oas.models.info.Info"fio.swagger.v3.oas.models.info.Info#description(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;*F
+
+__unknown_file (*
+(
+%4"io.swagger.v3.oas.models.info.Info*4
+
+__unknown_file (
+Your API Description2description(Ljava/lang/String;)¥¢
+ ('(
+%6"io.swagger.v3.oas.models.info.Info"bio.swagger.v3.oas.models.info.Info#version(Ljava/lang/String;)Lio/swagger/v3/oas/models/info/Info;*F
+
+__unknown_file (*
+(
+%5"io.swagger.v3.oas.models.info.Info*#
+
+__unknown_file (
+1.02version(Ljava/lang/String;)ÞÛ
+ ((&
+%7 io.swagger.v3.oas.models.OpenAPI"mio.swagger.v3.oas.models.OpenAPI#info(Lio/swagger/v3/oas/models/info/Info;)Lio/swagger/v3/oas/models/OpenAPI;*D
+
+__unknown_file ((
+&
+%0 io.swagger.v3.oas.models.OpenAPI*F
+
+__unknown_file (*
+(
+%6"io.swagger.v3.oas.models.info.Info2*info(Lio/swagger/v3/oas/models/info/Info;)"4
+ ()(
+&
+%7 io.swagger.v3.oas.models.OpenAPIBKI
+Gbr.com.fiap.api.pedidos.dataprovider.configuration.SwaggerConfigurationH

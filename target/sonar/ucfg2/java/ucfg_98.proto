@@ -1,0 +1,33 @@
+
+br.com.fiap.api.pedidos.entrypoint.controller.OrderController#delete(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;v
+l/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/OrderController.java=( =(."1*Ü
+1>	 >(½
+º
+>	 >(7
+%01br.com.fiap.api.pedidos.core.usecase.OrderUseCase"__id*o
+
+__unknown_file (S*Q?
+=br.com.fiap.api.pedidos.entrypoint.controller.OrderController"
+orderUseCase•’
+>	 >(%
+
+%1void"Pbr.com.fiap.api.pedidos.core.usecase.OrderUseCase#deleteOrder(Ljava/util/UUID;)V*U
+
+__unknown_file (9
+7
+%01br.com.fiap.api.pedidos.core.usecase.OrderUseCase*2
+
+__unknown_file (
+
+idjava.util.UUID2deleteOrder(Ljava/util/UUID;)a
+_
+A/ A(<)
+%2#org.springframework.http.HttpStatus"__id*"
+
+__unknown_file (
+"""
+? A(>
+"": 
+=/ =(D
+idjava.util.UUIDBA?
+=br.com.fiap.api.pedidos.entrypoint.controller.OrderControllerH

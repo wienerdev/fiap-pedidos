@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.entrypoint.controller.PaymentController#makePayment(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/MakePaymentRequest;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.PaymentResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Payment;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/PaymentResponse;
+org.springframework.http.ResponseEntity#instance-init#
+==
+makePayment br.com.fiap.api.pedidos.core.usecase.PaymentUseCase#makePayment(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/MakePaymentRequest;)Lbr/com/fiap/api/pedidos/core/Payment;

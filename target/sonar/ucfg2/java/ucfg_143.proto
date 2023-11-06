@@ -1,0 +1,91 @@
+
+€br.com.fiap.api.pedidos.dataprovider.configuration.PortConfiguration#orderUseCase(Lbr/com/fiap/api/pedidos/core/dataprovider/repository/OrderRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/ProductRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/ClientRepository;)Lbr/com/fiap/api/pedidos/core/usecase/OrderUseCase;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/configuration/PortConfiguration.java ("startingBlock*≈	
+startingBlock (2Á
+‰
+ (	
+%2"
+__annotate*K
+
+__unknown_file (/-
++org.springframework.context.annotation.Bean*y
+
+__unknown_file (]
+[
+orderRepositoryPortDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepositoryú
+ô
+ (/[
+orderRepositoryPortDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository"__annotation*"
+
+__unknown_file (
+
+%2Î
+Ë
+ (	
+%3"
+__annotate*K
+
+__unknown_file (/-
++org.springframework.context.annotation.Bean*}
+
+__unknown_file (a
+_
+productRepositoryPortFbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository†
+ù
+ (3_
+productRepositoryPortFbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository"__annotation*"
+
+__unknown_file (
+
+%3È
+Ê
+ (	
+%4"
+__annotate*K
+
+__unknown_file (/-
++org.springframework.context.annotation.Bean*{
+
+__unknown_file (_
+]
+clientRepositoryPortEbr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepositoryû
+õ
+ (1]
+clientRepositoryPortEbr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository"__annotation*"
+
+__unknown_file (
+
+%4*
+1*í
+1 $  (7óî
+   (#F
+%0@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl"@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImplí
+è
+   (e
+%1"übr.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#<init>(Lbr/com/fiap/api/pedidos/core/dataprovider/repository/OrderRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/ProductRepository;Lbr/com/fiap/api/pedidos/core/dataprovider/repository/ClientRepository;)V*d
+
+__unknown_file (H
+F
+%0@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl*y
+
+__unknown_file (]
+[
+orderRepositoryPortDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository*}
+
+__unknown_file (a
+_
+productRepositoryPortFbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository*{
+
+__unknown_file (_
+]
+clientRepositoryPortEbr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository"T
+   (fH
+F
+%0@br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl:g
+ (0[
+orderRepositoryPortDbr.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository:k
+ (4_
+productRepositoryPortFbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository:i
+ (1]
+clientRepositoryPortEbr.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepositoryBHF
+Dbr.com.fiap.api.pedidos.dataprovider.configuration.PortConfiguration

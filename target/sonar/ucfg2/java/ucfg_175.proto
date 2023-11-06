@@ -1,0 +1,46 @@
+
+qbr.com.fiap.api.pedidos.dataprovider.configuration.MapperConfiguration#modelMapper()Lorg/modelmapper/ModelMapper;
+u/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/configuration/MapperConfiguration.java (""1*¸
+1 (+LJ
+ ()!
+%0org.modelmapper.ModelMapper"org.modelmapper.ModelMapperz
+x
+ (+
+%1"%org.modelmapper.ModelMapper#<init>()V*?
+
+__unknown_file (#
+!
+%0org.modelmapper.ModelMapper
+}
+ (,*
+modelMapperorg.modelmapper.ModelMapper"__id*?
+
+__unknown_file (#
+!
+%0org.modelmapper.ModelMapperÌÍ
+ (&*
+%2$org.modelmapper.config.Configuration"Torg.modelmapper.ModelMapper#getConfiguration()Lorg/modelmapper/config/Configuration;*H
+
+__unknown_file (,
+*
+modelMapperorg.modelmapper.ModelMapper2getConfiguration()b
+`
+; (T*
+%3$org.modelmapper.spi.MatchingStrategy"__id*"
+
+__unknown_file (
+""ìê
+ (U*
+%4$org.modelmapper.config.Configuration"Üorg.modelmapper.config.Configuration#setMatchingStrategy(Lorg/modelmapper/spi/MatchingStrategy;)Lorg/modelmapper/config/Configuration;*H
+
+__unknown_file (,
+*
+%2$org.modelmapper.config.Configuration*H
+
+__unknown_file (,
+*
+%3$org.modelmapper.spi.MatchingStrategy2;setMatchingStrategy(Lorg/modelmapper/spi/MatchingStrategy;)"8
+ (,
+*
+modelMapperorg.modelmapper.ModelMapperBJH
+Fbr.com.fiap.api.pedidos.dataprovider.configuration.MapperConfigurationH

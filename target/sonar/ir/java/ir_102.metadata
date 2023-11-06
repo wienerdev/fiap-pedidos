@@ -1,0 +1,1 @@
+br.com.fiap.api.pedidos.application.gateway.MercadoPagoWebhookGateway#<init>(Lbr/com/fiap/api/pedidos/core/usecase/impl/payments/MercadoPagoWebhookUseCaseImpl;)V

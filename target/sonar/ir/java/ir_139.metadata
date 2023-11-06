@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest#toClient()Lbr/com/fiap/api/pedidos/core/Client;
+java.util.UUID#randomUUID()Ljava/util/UUID;
+br.com.fiap.api.pedidos.core.Client#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+br.com.fiap.api.pedidos.core.Client#instance-init#

@@ -1,0 +1,59 @@
+
+Îbr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#fromClientResponse(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;‚
+x/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse.java! (3"1*¼
+1	" 	((Â¿
+	" 	(6
+%0java.util.UUID"Abr.com.fiap.api.pedidos.core.Client#getClientId()Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientId()ÈÅ
+	8 	(M
+%1java.lang.String"Dbr.com.fiap.api.pedidos.core.Client#getClientCpf()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientCpf()ÊÇ
+	O 	(e
+%2java.lang.String"Ebr.com.fiap.api.pedidos.core.Client#getClientName()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientName()ÌÉ
+	g 	(~
+%3java.lang.String"Fbr.com.fiap.api.pedidos.core.Client#getClientEmail()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+client#br.com.fiap.api.pedidos.core.Client2getClientEmail()©¦
+	 	(!O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse"Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponseô
+ñ
+	 	(
+%5"™br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*m
+
+__unknown_file (Q
+O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"^
+		 	(€Q
+O
+%4Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse:9
+4 (A-
+client#br.com.fiap.api.pedidos.core.ClientBM"K
+Ibr.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponseH

@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#getAllProducts()Ljava/util/List;
+==
+getAll br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getAll()Ljava/util/List;

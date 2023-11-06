@@ -1,0 +1,11 @@
+br.com.fiap.api.pedidos.dataprovider.repository.impl.ClientRepositoryImpl#registerClient(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/core/Client;
+java.util.Optional#isPresent()Z
+br.com.fiap.api.pedidos.core.exception.ClientAlreadyRegistered#<init>(Ljava/lang/String;)V
+br.com.fiap.api.pedidos.core.exception.ClientAlreadyRegistered#instance-init#
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#instance-init#
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#<init>(Lbr/com/fiap/api/pedidos/core/Client;)V
+==
+save org.springframework.data.repository.CrudRepository#save(Ljava/lang/Object;)Ljava/lang/Object;
+findByClientCpf br.com.fiap.api.pedidos.dataprovider.repository.ClientRepositoryJpa#findByClientCpf(Ljava/lang/String;)Ljava/util/Optional;
+getClientCpf br.com.fiap.api.pedidos.core.Client#getClientCpf()Ljava/lang/String;
+toClient br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#toClient()Lbr/com/fiap/api/pedidos/core/Client;

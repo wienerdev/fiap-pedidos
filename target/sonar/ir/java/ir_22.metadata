@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.core.usecase.impl.payments.MercadoPagoWebhookUseCaseImpl#handleTestCreated(Ljava/util/Map;)Ljava/lang/String;
+java.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+==
+info org.slf4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V

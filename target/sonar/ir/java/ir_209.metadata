@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.Client#toResponse()Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#instance-init#
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V

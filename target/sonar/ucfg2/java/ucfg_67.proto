@@ -1,0 +1,154 @@
+
+pbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#toOrder()Lbr/com/fiap/api/pedidos/core/Order;{
+q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/dataprovider/repository/entity/OrderEntity.java6 6("4*‚
+2=J =(Nn
+l
+=J =(N)
+%9#br.com.fiap.api.pedidos.core.Client"__id*/
+
+__unknown_file (
+
+%11
+<nulltype>*
+1*œ
+3=+ =(/Õ
+Ò
+=+ =(<J
+%12Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity"__id*t
+
+__unknown_file (X*VD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+clientEntity¤¡
+=+ =(G*
+%10#br.com.fiap.api.pedidos.core.Client"sbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#toClient()Lbr/com/fiap/api/pedidos/core/Client;*h
+
+__unknown_file (L
+J
+%12Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity2
+toClient()ˆ
+…
+=+ =(G)
+%9#br.com.fiap.api.pedidos.core.Client"__id*H
+
+__unknown_file (,
+*
+%10#br.com.fiap.api.pedidos.core.Client*
+1*ý
+47 7(š
+—
+7 7(%
+%0java.util.UUID"__id*o
+
+__unknown_file (S*QD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"	
+orderId§
+¤
+8 8(&
+%1java.lang.Boolean"__id*y
+
+__unknown_file (]*[D
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+isPaymentReceivedÐ
+Í
+9 9( F
+%2@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum"__id*s
+
+__unknown_file (W*UD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+orderStatus 
+
+: :(0
+%3java.util.List"__id*u
+
+__unknown_file (Y*WD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+orderProducts¯
+¬
+: :(1
+%4java.util.List"rbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#toProductList(Ljava/util/List;)Ljava/util/List;*b
+
+__unknown_file (F"D
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity*2
+
+__unknown_file (
+
+%3java.util.List¢
+Ÿ
+; ;($
+%5java.util.List"__id*w
+
+__unknown_file ([*YD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+orderProductIdsŸ
+œ
+< <(
+%6java.lang.Double"__id*r
+
+__unknown_file (V*TD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+
+orderPriceÔ
+Ñ
+= =(!I
+%7Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity"__id*t
+
+__unknown_file (X*VD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity"
+clientEntityØ
+Õ
+= =()
+%8boolean"	__compare*"
+
+__unknown_file (
+!=*g
+
+__unknown_file (K
+I
+%7Cbr.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity*"
+
+__unknown_file (
+""*
+2
+3*”
+17 =(O[Y
+7 7()
+%13"br.com.fiap.api.pedidos.core.Order""br.com.fiap.api.pedidos.core.Orderî
+ë
+7 =(O
+%14"Öbr.com.fiap.api.pedidos.core.Order#<init>(Ljava/util/UUID;ZLbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/List;Ljava/util/List;Ljava/lang/Double;Lbr/com/fiap/api/pedidos/core/Client;)V*G
+
+__unknown_file (+
+)
+%13"br.com.fiap.api.pedidos.core.Order*2
+
+__unknown_file (
+
+%0java.util.UUID*5
+
+__unknown_file (
+
+%1java.lang.Boolean*d
+
+__unknown_file (H
+F
+%2@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum*2
+
+__unknown_file (
+
+%4java.util.List*2
+
+__unknown_file (
+
+%5java.util.List*4
+
+__unknown_file (
+
+%6java.lang.Double*G
+
+__unknown_file (+
+)
+%9#br.com.fiap.api.pedidos.core.Client"7
+7 =(P+
+)
+%13"br.com.fiap.api.pedidos.core.OrderBFD
+Bbr.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntityH

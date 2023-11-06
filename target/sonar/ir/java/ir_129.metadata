@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.OrderController#getById(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Order;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/OrderResponse;
+org.springframework.http.ResponseEntity#instance-init#
+java.util.Optional#get()Ljava/lang/Object;
+==
+getOrderById br.com.fiap.api.pedidos.core.usecase.OrderUseCase#getOrderById(Ljava/util/UUID;)Ljava/util/Optional;

@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.configuration.MapperConfiguration#modelMapper()Lorg/modelmapper/ModelMapper;
+org.modelmapper.ModelMapper#<init>()V
+org.modelmapper.ModelMapper#instance-init#
+==
+getConfiguration org.modelmapper.ModelMapper#getConfiguration()Lorg/modelmapper/config/Configuration;
+setMatchingStrategy org.modelmapper.config.Configuration#setMatchingStrategy(Lorg/modelmapper/spi/MatchingStrategy;)Lorg/modelmapper/config/Configuration;

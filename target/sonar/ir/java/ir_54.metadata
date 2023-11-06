@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#getProductById(Ljava/util/UUID;)Ljava/util/Optional;
+==
+getById br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#getById(Ljava/util/UUID;)Ljava/util/Optional;

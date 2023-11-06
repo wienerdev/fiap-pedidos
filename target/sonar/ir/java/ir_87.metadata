@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#toOrder()Lbr/com/fiap/api/pedidos/core/Order;
+br.com.fiap.api.pedidos.core.Order#<init>(Ljava/util/UUID;ZLbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;Ljava/util/List;Ljava/util/List;Ljava/lang/Double;Lbr/com/fiap/api/pedidos/core/Client;)V
+br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity#toProductList(Ljava/util/List;)Ljava/util/List;
+br.com.fiap.api.pedidos.core.Order#instance-init#
+==
+toClient br.com.fiap.api.pedidos.dataprovider.repository.entity.ClientEntity#toClient()Lbr/com/fiap/api/pedidos/core/Client;

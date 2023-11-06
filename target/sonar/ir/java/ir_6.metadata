@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.ProductController#getById(Ljava/util/UUID;)Lorg/springframework/http/ResponseEntity;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ProductResponse#fromEntityToResponse(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ProductResponse;
+org.springframework.http.ResponseEntity#instance-init#
+java.util.Optional#get()Ljava/lang/Object;
+==
+getProductById br.com.fiap.api.pedidos.core.usecase.ProductUseCase#getProductById(Ljava/util/UUID;)Ljava/util/Optional;

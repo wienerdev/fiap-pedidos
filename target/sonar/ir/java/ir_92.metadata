@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.entity.PaymentEntity#<init>(Lbr/com/fiap/api/pedidos/core/Payment;)V
+==
+getOrder br.com.fiap.api.pedidos.core.Payment#getOrder()Lbr/com/fiap/api/pedidos/core/Order;
+getPaymentMethod br.com.fiap.api.pedidos.core.Payment#getPaymentMethod()Ljava/lang/String;
+getPaymentId br.com.fiap.api.pedidos.core.Payment#getPaymentId()Ljava/util/UUID;
+toEntity br.com.fiap.api.pedidos.core.Order#toEntity()Lbr/com/fiap/api/pedidos/dataprovider/repository/entity/OrderEntity;

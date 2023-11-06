@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.entrypoint.controller.ClientController#create(Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/request/CreateClientRequest;)Lorg/springframework/http/ResponseEntity;
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest#toClient()Lbr/com/fiap/api/pedidos/core/Client;
+null
+br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse#fromClientResponse(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/entrypoint/controller/dto/response/ClientResponse;
+org.springframework.http.ResponseEntity#instance-init#
+==
+saveClient br.com.fiap.api.pedidos.core.usecase.ClientUseCase#saveClient(Lbr/com/fiap/api/pedidos/core/Client;)Lbr/com/fiap/api/pedidos/core/Client;

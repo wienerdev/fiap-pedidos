@@ -1,0 +1,7 @@
+br.com.fiap.api.pedidos.dataprovider.repository.entity.ProductEntity#<init>(Lbr/com/fiap/api/pedidos/core/Product;)V
+==
+getPrice br.com.fiap.api.pedidos.core.Product#getPrice()Ljava/math/BigDecimal;
+getCategory br.com.fiap.api.pedidos.core.Product#getCategory()Ljava/lang/String;
+getProductId br.com.fiap.api.pedidos.core.Product#getProductId()Ljava/util/UUID;
+getProductName br.com.fiap.api.pedidos.core.Product#getProductName()Ljava/lang/String;
+getProductDesc br.com.fiap.api.pedidos.core.Product#getProductDesc()Ljava/lang/String;

@@ -1,0 +1,79 @@
+
+.br.com.fiap.api.pedidos.core.Order#hashCode()I[
+Q/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/Order.javac c("1*ô
+1d d(¶³
+d d((
+%0java.util.UUID"?br.com.fiap.api.pedidos.core.Order#getOrderId()Ljava/util/UUID;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderId()‡
+„
+d* d(;
+%1java.lang.Boolean"__id*Y
+
+__unknown_file (=*;$
+"br.com.fiap.api.pedidos.core.Order"
+isPaymentReceived¢Ÿ
+d= d(MF
+%2@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum"ubr.com.fiap.api.pedidos.core.Order#getOrderStatus()Lbr/com/fiap/api/pedidos/dataprovider/enumeration/OrderStatusEnum;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderStatus()Â¿
+dO d(a
+%3java.util.List"Ebr.com.fiap.api.pedidos.core.Order#getOrderProducts()Ljava/util/List;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderProducts()ÆÃ
+dc d(w
+%4java.util.List"Gbr.com.fiap.api.pedidos.core.Order#getOrderProductIds()Ljava/util/List;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderProductIds()Á¾
+	dy d(ˆ
+%5java.lang.Double"Dbr.com.fiap.api.pedidos.core.Order#getOrderPrice()Ljava/lang/Double;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getOrderPrice()àÝ
+
+dŠ d(•)
+%6#br.com.fiap.api.pedidos.core.Client"Sbr.com.fiap.api.pedidos.core.Order#getClient()Lbr/com/fiap/api/pedidos/core/Client;*B
+
+__unknown_file (&$
+"br.com.fiap.api.pedidos.core.Order2getClient()²
+¯
+	d d(–	
+%7int",java.util.Objects#hash([Ljava/lang/Object;)I*1
+
+__unknown_file ("
+java.util.Objects*2
+
+__unknown_file (
+
+%0java.util.UUID*5
+
+__unknown_file (
+
+%1java.lang.Boolean*d
+
+__unknown_file (H
+F
+%2@br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum*2
+
+__unknown_file (
+
+%3java.util.List*2
+
+__unknown_file (
+
+%4java.util.List*4
+
+__unknown_file (
+
+%5java.lang.Double*G
+
+__unknown_file (+
+)
+%6#br.com.fiap.api.pedidos.core.Client"
+	d d(—
+""B&$
+"br.com.fiap.api.pedidos.core.OrderHX

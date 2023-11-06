@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl#getClientByCpf(Ljava/lang/String;)Lbr/com/fiap/api/pedidos/core/Client;
+java.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;
+==
+identifyClientByCpf br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository#identifyClientByCpf(Ljava/lang/String;)Ljava/util/Optional;

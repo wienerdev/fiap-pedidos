@@ -1,0 +1,47 @@
+
+ br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl#updateProduct(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;}
+s/Users/alisson/fiap-pedidos/src/main/java/br/com/fiap/api/pedidos/core/usecase/impl/product/ProductUseCaseImpl.java, ,( "startingBlock*´
+startingBlock,  ,(1¢
+Ÿ
++ +(
+%2"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Producto
+m
+,) ,(0/
+product$br.com.fiap.api.pedidos.core.Product"__annotation*"
+
+__unknown_file (
+
+%2*
+1*ò
+1- -(Þ
+Û
+- -(L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository"__id*{
+
+__unknown_file (_*]F
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl"
+productRepositoryÂ¿
+- -()*
+%1$br.com.fiap.api.pedidos.core.Product"›br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository#update(Lbr/com/fiap/api/pedidos/core/Product;)Lbr/com/fiap/api/pedidos/core/Product;*j
+
+__unknown_file (N
+L
+%0Fbr.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository*M
+
+__unknown_file (1
+/
+product$br.com.fiap.api.pedidos.core.Product2.update(Lbr/com/fiap/api/pedidos/core/Product;)"=
+. .(1
+/
+product$br.com.fiap.api.pedidos.core.Product:;
+,! ,(0/
+product$br.com.fiap.api.pedidos.core.ProductBHF
+Dbr.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImplH

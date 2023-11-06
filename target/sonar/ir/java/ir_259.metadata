@@ -1,0 +1,3 @@
+br.com.fiap.api.pedidos.core.usecase.impl.order.OrderUseCaseImpl#orderCheckout(Ljava/lang/String;)Ljava/util/List;
+==
+getAllByClientCpf br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository#getAllByClientCpf(Ljava/lang/String;)Ljava/util/List;

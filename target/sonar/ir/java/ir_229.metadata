@@ -1,0 +1,4 @@
+br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateProductRequest#fromRequestProduct()Lbr/com/fiap/api/pedidos/core/Product;
+br.com.fiap.api.pedidos.core.Product#instance-init#
+java.util.UUID#randomUUID()Ljava/util/UUID;
+br.com.fiap.api.pedidos.core.Product#<init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/math/BigDecimal;Ljava/lang/String;)V

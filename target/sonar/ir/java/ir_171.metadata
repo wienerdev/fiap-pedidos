@@ -1,0 +1,6 @@
+br.com.fiap.api.pedidos.dataprovider.repository.impl.ProductRepositoryImpl#getAll()Ljava/util/List;
+==
+stream java.util.Collection#stream()Ljava/util/stream/Stream;
+map java.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+findAll org.springframework.data.repository.ListCrudRepository#findAll()Ljava/util/List;
+toList java.util.stream.Stream#toList()Ljava/util/List;
