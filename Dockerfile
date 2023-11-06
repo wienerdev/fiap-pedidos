@@ -6,12 +6,6 @@ RUN mkdir -p $HOME
 WORKDIR $HOME
 COPY src ${HOME}/src
 COPY pom.xml ${HOME}/pom.xml
-RUN mvn sonar:sonar \
-   -Dsonar.projectKey=alissonit_fiap-pedidos \
-   -Dsonar.organization=alissonit \
-   -Dsonar.host.url=https://sonarcloud.io \
-   -Dsonar.login=${TOKEN_SONAR}
-
 RUN mvn clean package -DskipTests
 
 FROM amazoncorretto:17-alpine-jdk
