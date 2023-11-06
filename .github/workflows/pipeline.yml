@@ -52,6 +52,6 @@ jobs:
 
       - name: Docker build
         run: |
-          docker build -t ${{ secrets.ECR_URL }}:0.0.2 --build-args APP_VERSION=api-pedidos-0.0.1-SNAPSHOT .
+          docker build -t ${{ secrets.ECR_URL }}:0.0.2 --build-arg APP_VERSION=api-pedidos-0.0.1-SNAPSHOT .
           docker push ${{ secrets.ECR_URL }}:0.0.2
         
