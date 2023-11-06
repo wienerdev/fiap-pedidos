@@ -48,6 +48,10 @@ jobs:
       
       - name: setup Docker Buildx
         uses: docker/setup-buildx-action@v1
+      
+      - name: mvn package
+        run: |
+          mvn clean package -DskipTests
 
       - name: Docker build
         run: |
