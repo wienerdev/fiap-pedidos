@@ -1,4 +1,4 @@
-name: SonarCloud Maven Analysis
+name: Pipeline fiap-pedidos
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  sonarcloud:
+  pipeline:
     runs-on: ubuntu-latest
 
     steps:
