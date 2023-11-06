@@ -19,7 +19,6 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
 
-      - name: Build and Analyze
+      - name: Analyze Sonar
         run: |
-          mvn clean install
-          mvn sonar:sonar -Dsonar.projectKey=alissonit -Dsonar.organization=alissonit_fiap-pedidos -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          mvn sonar:sonar -Dsonar.projectKey=alissonit -Dsonar.organization=alissonit_fiap-pedidos -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=${{ secrets.SONAR_TOKEN }}
