@@ -3,7 +3,7 @@ name: Pipeline fiap-pedidos
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   pipeline:
