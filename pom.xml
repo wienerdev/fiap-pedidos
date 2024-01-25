@@ -81,6 +81,14 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>7.0.1.Final</version> <!-- Use a versão apropriada conforme a necessidade -->
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.10.1</version>
+			<scope>test</scope>
+		</dependency>
+
 
 		<!-- O Hibernate Validator precisa do API de Jakarta Bean Validation. -->
 		<dependency>
@@ -88,14 +96,31 @@
 			<artifactId>jakarta.validation-api</artifactId>
 			<version>3.0.0</version> <!-- Use a versão apropriada conforme a necessidade -->
 		</dependency>
-
 		<dependency>
-			<groupId>com.mercadopago</groupId>
-			<artifactId>sdk-java</artifactId>
-			<version>2.1.0</version>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.14.0</version>
+			<scope>test</scope>
 		</dependency>
 
-    </dependencies>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.14.0</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

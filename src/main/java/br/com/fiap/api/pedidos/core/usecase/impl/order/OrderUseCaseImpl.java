@@ -68,7 +68,7 @@ public class OrderUseCaseImpl implements OrderUseCase {
         return orderRepository.getAllByClientCpf(cpf);
     }
 
-    private Double calculateOrderPrice(List<Product> products) {
+    public Double calculateOrderPrice(List<Product> products) {
         return products.stream()
                 .mapToDouble(product -> product.getPrice().doubleValue())
                 .sum();
