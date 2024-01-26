@@ -47,9 +47,10 @@ public class OrderUseCaseImpl implements OrderUseCase {
 
         order.setOrderPrice(calculateOrderPrice(products));
         order.setOrderProducts(products);
-        order.setClient(client.get());
+        client.ifPresent(order::setClient);
+        Order savedOrder = orderRepository.save(order);
 
-        return orderRepository.save(order);
+        return savedOrder;
     }
 
     @Override
