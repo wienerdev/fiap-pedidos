@@ -1,0 +1,213 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > Order</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">br.com.fiap.api.pedidos.core</a>
+</div>
+
+<h1>Coverage Summary for Class: Order (br.com.fiap.api.pedidos.core)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Order</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/20)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/29)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package br.com.fiap.api.pedidos.core;
+&nbsp;
+&nbsp;import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
+&nbsp;import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
+&nbsp;import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Objects;
+&nbsp;import java.util.UUID;
+&nbsp;
+&nbsp;public class Order {
+&nbsp;
+&nbsp;    private UUID orderId;
+&nbsp;    private Boolean isPaymentReceived;
+&nbsp;    private OrderStatusEnum orderStatus;
+&nbsp;    private List&lt;Product&gt; orderProducts;
+&nbsp;    private List&lt;UUID&gt; orderProductIds;
+&nbsp;    private Double orderPrice;
+&nbsp;    private Client client;
+&nbsp;
+<b class="nc">&nbsp;    public Order() {</b>
+&nbsp;
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    public Order(UUID orderId,boolean isPaymentReceived, OrderStatusEnum orderStatus, List&lt;Product&gt; orderProducts, List&lt;UUID&gt; orderProductIds, Double orderPrice, Client client) {</b>
+<b class="nc">&nbsp;        this.orderId = orderId;</b>
+<b class="nc">&nbsp;        this.isPaymentReceived = isPaymentReceived;</b>
+<b class="nc">&nbsp;        this.orderStatus = orderStatus;</b>
+<b class="nc">&nbsp;        this.orderProducts = orderProducts;</b>
+<b class="nc">&nbsp;        this.orderProductIds = orderProductIds;</b>
+<b class="nc">&nbsp;        this.orderPrice = orderPrice;</b>
+<b class="nc">&nbsp;        this.client = client;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;UUID&gt; getOrderProductIds() {
+<b class="nc">&nbsp;        return orderProductIds;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOrderProductIds(List&lt;UUID&gt; orderProductIds) {
+<b class="nc">&nbsp;        this.orderProductIds = orderProductIds;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public UUID getOrderId() {
+<b class="nc">&nbsp;        return orderId;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOrderId(UUID orderId) {
+<b class="nc">&nbsp;        this.orderId = orderId;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public OrderStatusEnum getOrderStatus() {
+<b class="nc">&nbsp;        return orderStatus;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOrderStatus(OrderStatusEnum orderStatus) {
+<b class="nc">&nbsp;        this.orderStatus = orderStatus;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;Product&gt; getOrderProducts() {
+<b class="nc">&nbsp;        return orderProducts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOrderProducts(List&lt;Product&gt; orderProducts) {
+<b class="nc">&nbsp;        this.orderProducts = orderProducts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Double getOrderPrice() {
+<b class="nc">&nbsp;        return orderPrice;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setOrderPrice(Double orderPrice) {
+<b class="nc">&nbsp;        this.orderPrice = orderPrice;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Client getClient() {
+<b class="nc">&nbsp;        return client;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setClient(Client client) {
+<b class="nc">&nbsp;        this.client = client;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Boolean getPaymentReceived() {
+<b class="nc">&nbsp;        return isPaymentReceived;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setPaymentReceived(Boolean paymentReceived) {
+<b class="nc">&nbsp;        isPaymentReceived = paymentReceived;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public boolean equals(Object o) {
+<b class="nc">&nbsp;        if (this == o) return true;</b>
+<b class="nc">&nbsp;        if (!(o instanceof Order order)) return false;</b>
+<b class="nc">&nbsp;        return Objects.equals(getOrderId(), order.getOrderId()) &amp;&amp; Objects.equals(isPaymentReceived, order.isPaymentReceived) &amp;&amp; getOrderStatus() == order.getOrderStatus() &amp;&amp; Objects.equals(getOrderProducts(), order.getOrderProducts()) &amp;&amp; Objects.equals(getOrderProductIds(), order.getOrderProductIds()) &amp;&amp; Objects.equals(getOrderPrice(), order.getOrderPrice()) &amp;&amp; Objects.equals(getClient(), order.getClient());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Override
+&nbsp;    public int hashCode() {
+<b class="nc">&nbsp;        return Objects.hash(getOrderId(), isPaymentReceived, getOrderStatus(), getOrderProducts(), getOrderProductIds(), getOrderPrice(), getClient());</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public OrderEntity toEntity() {
+<b class="nc">&nbsp;        return new OrderEntity(this);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public OrderResponse toResponse() {
+<b class="nc">&nbsp;        return new OrderResponse(this.orderId, this.isPaymentReceived, this.orderStatus, this.orderProducts, this.orderPrice, this.client.toEntity());</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-01-28 07:46</div>
+</div>
+</body>
+</html>

@@ -47,9 +47,10 @@ public class OrderUseCaseImpl implements OrderUseCase {
 
         order.setOrderPrice(calculateOrderPrice(products));
         order.setOrderProducts(products);
-        order.setClient(client.get());
+        client.ifPresent(order::setClient);
+        Order savedOrder = orderRepository.save(order);
 
-        return orderRepository.save(order);
+        return savedOrder;
     }
 
     @Override
@@ -68,7 +69,7 @@ public class OrderUseCaseImpl implements OrderUseCase {
         return orderRepository.getAllByClientCpf(cpf);
     }
 
-    private Double calculateOrderPrice(List<Product> products) {
+    public Double calculateOrderPrice(List<Product> products) {
         return products.stream()
                 .mapToDouble(product -> product.getPrice().doubleValue())
                 .sum();
