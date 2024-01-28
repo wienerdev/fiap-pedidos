@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features")
-@SpringBootTest(classes = ApiPedidosApplicationTests.class)
 public class CucumberTestRunner {
 
 }

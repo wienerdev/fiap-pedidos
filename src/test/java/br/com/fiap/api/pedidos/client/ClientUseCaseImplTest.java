@@ -4,9 +4,9 @@ import br.com.fiap.api.pedidos.core.Client;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.ClientRepository;
 import br.com.fiap.api.pedidos.core.exception.ClientNotFoundException;
 import br.com.fiap.api.pedidos.core.usecase.impl.client.ClientUseCaseImpl;
-import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.api.BeforeEach;
-import org.mockito.InjectMocks;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -16,56 +16,52 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class ClientUseCaseImplTest {
+class ClientUseCaseImplTest {
 
     @Mock
     private ClientRepository clientRepository;
 
-    @InjectMocks
     private ClientUseCaseImpl clientUseCase;
+    UUID idClient = UUID.randomUUID();
+    String cpf = "01374050067";
+    Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com");
 
     @BeforeEach
-    public void setup() {
-        MockitoAnnotations.initMocks(this);
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        clientUseCase = new ClientUseCaseImpl(clientRepository);
     }
 
     @Test
-    public void testGetClientByCpf() {
-        // Arrange
-        String cpf = "01374050067";
-        Client expectedClient = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
-        when(clientRepository.identifyClientByCpf(cpf)).thenReturn(Optional.of(expectedClient));
+    void testGetClientByCpf() {
+        // Given
+        when(clientRepository.identifyClientByCpf(cpf)).thenReturn(Optional.of(client));
 
-        // Act
-        Client actualClient = clientUseCase.getClientByCpf(cpf);
+        // When
+        Client result = clientUseCase.getClientByCpf(cpf);
 
-        // Assert
-        assertEquals(expectedClient, actualClient);
+        // Then
+        assertEquals(client, result);
+        verify(clientRepository, times(1)).identifyClientByCpf(cpf);
     }
 
     @Test
-    public void testGetClientByCpf_ClientNotFound() {
-        // Arrange
-        String cpf = "98765432100";
+    void testGetClientByCpf_ClientNotFound() {
         when(clientRepository.identifyClientByCpf(cpf)).thenReturn(Optional.empty());
 
-        // Act and Assert
+        // When/Then
         assertThrows(ClientNotFoundException.class, () -> clientUseCase.getClientByCpf(cpf));
+        verify(clientRepository, times(1)).identifyClientByCpf(cpf);
     }
 
     @Test
-    public void testSaveClient() {
-        // Arrange
-        Client clientToSave = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
+    void testSaveClient() {
 
-        // Act
-        Client savedClient = clientUseCase.saveClient(clientToSave);
+        // When
+        Client result = clientUseCase.saveClient(client);
 
-        // Assert
-        assertNotNull(savedClient);
-        assertEquals(clientToSave, savedClient);
-
-        // Verify that the repository's registerClient method was called
-        verify(clientRepository, times(1)).registerClient(clientToSave);
+        // Then
+        assertEquals(client, result);
+        verify(clientRepository, times(1)).registerClient(client);
     }
 }

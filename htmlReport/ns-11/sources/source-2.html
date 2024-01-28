@@ -1,0 +1,90 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > OrderRepositoryJpa</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">br.com.fiap.api.pedidos.dataprovider.repository</a>
+</div>
+
+<h1>Coverage Summary for Class: OrderRepositoryJpa (br.com.fiap.api.pedidos.dataprovider.repository)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">OrderRepositoryJpa</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package br.com.fiap.api.pedidos.dataprovider.repository;
+&nbsp;
+&nbsp;import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
+&nbsp;import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
+&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+&nbsp;import org.springframework.data.jpa.repository.Modifying;
+&nbsp;import org.springframework.data.jpa.repository.Query;
+&nbsp;import org.springframework.stereotype.Repository;
+&nbsp;import org.springframework.transaction.annotation.Transactional;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.UUID;
+&nbsp;
+&nbsp;@Repository
+&nbsp;public interface OrderRepositoryJpa extends JpaRepository&lt;OrderEntity, UUID&gt; {
+&nbsp;
+&nbsp;    @Transactional
+&nbsp;    @Modifying
+&nbsp;    @Query(&quot;UPDATE OrderEntity o SET o.orderStatus = ?1 WHERE o.orderId = ?2&quot;)
+&nbsp;    void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
+&nbsp;
+&nbsp;    List&lt;OrderEntity&gt; getAllByClientEntityClientCpf(String cpf);
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-01-28 07:46</div>
+</div>
+</body>
+</html>

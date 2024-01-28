@@ -1,133 +1,129 @@
 package br.com.fiap.api.pedidos.product;
+
 import br.com.fiap.api.pedidos.core.Product;
+import br.com.fiap.api.pedidos.core.dataprovider.repository.ProductRepository;
 import br.com.fiap.api.pedidos.core.usecase.ProductUseCase;
+import br.com.fiap.api.pedidos.core.usecase.impl.product.ProductUseCaseImpl;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class ProductUseCaseImplTest {
+@SpringBootTest
+@Transactional
+@ActiveProfiles("teste")
+class ProductUseCaseImplTest {
 
-      private final ProductUseCase productUseCase;
+    @Mock
+    private ProductRepository productRepository;
 
+    private ProductUseCase productUseCase;
 
-    public ProductUseCaseImplTest(ProductUseCase productUseCase) {
-        this.productUseCase = productUseCase;
-    }
+    UUID idSave = UUID.randomUUID();
+    UUID idSaveList1 = UUID.randomUUID();
+    UUID idSaveList2 = UUID.randomUUID();
+    Product product = new Product(idSave, "Laptop", "Powerful laptop", BigDecimal.valueOf(1000), "Category1");
+    List<Product> products;
 
     @BeforeEach
-    public void setup() {
-        MockitoAnnotations.initMocks(this);
-    }
-
-    @Test
-    public void testGetAllProducts() {
-        // Arrange
-        List<Product> expectedProducts = Arrays.asList(
-                new Product(UUID.randomUUID(), "Product1","produto teste1",new BigDecimal(100), "Category1"),
-                new Product(UUID.randomUUID(), "Product2","produto teste2",new BigDecimal(200), "Category2")
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        productUseCase = new ProductUseCaseImpl(productRepository);
+        products = Arrays.asList(
+                new Product(idSaveList1, "Product1", "produto teste1", new BigDecimal(100), "Category1"),
+                new Product(idSaveList1, "Product2", "produto teste2", new BigDecimal(200), "Category2")
         );
-       // when(productRepository.getAll()).thenReturn(expectedProducts);
+        productUseCase.saveProduct(new Product(idSaveList1, "Product1", "produto teste1", new BigDecimal(100), "Category1"));
+        productUseCase.saveProduct(new Product(idSaveList2, "Product2", "produto teste2", new BigDecimal(200), "Category2"));
 
-        // Act
-        List<Product> actualProducts = productUseCase.getAllProducts();
-
-        // Assert
-        assertEquals(expectedProducts, actualProducts);
     }
 
     @Test
-    public void testGetByCategory() {
-        // Arrange
-        String category = "Category1";
-        List<Product> expectedProducts = Arrays.asList(
-                new Product(UUID.randomUUID(), "Product1","produto teste1",new BigDecimal(100), "Category1"),
-                new Product(UUID.randomUUID(), "Product2","produto teste2",new BigDecimal(200), "Category1")
-        );
-        //when(productRepository.getByCategory(category)).thenReturn(expectedProducts);
+    void testGetAllProducts() {
+        // Given
+        List<Product> productList = new ArrayList<>();
+        when(productRepository.getAll()).thenReturn(productList);
 
-        // Act
-        List<Product> actualProducts = productUseCase.getByCategory(category);
+        // When
+        List<Product> result = productUseCase.getAllProducts();
 
-        // Assert
-        assertEquals(expectedProducts, actualProducts);
+        // Then
+        assertEquals(productList, result);
+        verify(productRepository, times(1)).getAll();
     }
 
     @Test
-    public void testGetProductById() {
-        // Arrange
-        UUID productId = UUID.randomUUID();
-        Product expectedProduct = new Product(UUID.randomUUID(), "Product2","produto teste2",new BigDecimal(200), "Category1");
-       // when(productRepository.getById(productId)).thenReturn(Optional.of(expectedProduct));
+    void testGetByCategory() {
+        // Given
+        String category = "electronics";
+        List<Product> productList = new ArrayList<>();
+        when(productRepository.getByCategory(category)).thenReturn(productList);
 
-        // Act
-        Optional<Product> actualProduct = productUseCase.getProductById(productId);
+        // When
+        List<Product> result = productUseCase.getByCategory(category);
 
-        // Assert
-        assertTrue(actualProduct.isPresent());
-        assertEquals(expectedProduct, actualProduct.get());
+        // Then
+        assertEquals(productList, result);
+        verify(productRepository, times(1)).getByCategory(category);
     }
 
     @Test
-    public void testSaveProduct() {
-        // Arrange
-        Product productToSave =  new Product(UUID.randomUUID(), "Product2","produto teste2",new BigDecimal(200), "Category1");
-       // when(productRepository.save(productToSave)).thenReturn(productToSave);
+    void testGetProductById() {
+        // Given
+        when(productRepository.getById(idSave)).thenReturn(Optional.of(product));
 
-        // Act
-        Product savedProduct = productUseCase.saveProduct(productToSave);
+        // When
+        Optional<Product> result = productUseCase.getProductById(idSave);
 
-        // Assert
-        assertNotNull(savedProduct);
-        assertEquals(productToSave, savedProduct);
+        // Then
+        assertTrue(result.isPresent());
+        assertEquals(product, result.get());
+        verify(productRepository, times(1)).getById(idSave);
     }
 
     @Test
-    public void testUpdateProduct() {
-        // Arrange
-        Product productToUpdate = new Product(UUID.randomUUID(), "Product2","produto teste2",new BigDecimal(200), "Category1");
+    void testSaveProduct() {
+        // Given
+        Product product = new Product(UUID.randomUUID(), "Laptop", "Powerful laptop", BigDecimal.valueOf(1000), "Category1");
+        when(productRepository.save(product)).thenReturn(product);
 
-        // Act
-        Product updatedProduct = productUseCase.updateProduct(productToUpdate);
+        // When
+        Product result = productUseCase.saveProduct(product);
 
-        // Assert
-        assertNotNull(updatedProduct);
-        assertEquals(productToUpdate, updatedProduct);
-
-        // Verify that the repository's update method was called
-        //verify(productRepository, times(1)).update(productToUpdate);
+        // Then
+        assertEquals(product, result);
+        verify(productRepository, times(1)).save(product);
     }
 
     @Test
-    public void testDeleteProduct_Success() {
-        // Arrange
-        UUID productId = UUID.randomUUID();
+    void testUpdateProduct() {
+        // When
+        Product result = productUseCase.updateProduct(product);
 
-        // Act
-        BaseResponse response = productUseCase.deleteProduct(productId);
-
-        // Assert
-        assertTrue(response.isSuccess());
+        // Then
+        assertEquals(product, result);
+        verify(productRepository, times(1)).update(product);
     }
 
     @Test
-    public void testDeleteProduct_Failure() {
-        // Arrange
-        UUID productId = UUID.randomUUID();
+    void testDeleteProduct() {
 
-        // Act
-        BaseResponse response = productUseCase.deleteProduct(productId);
+        // When
+        BaseResponse result = productUseCase.deleteProduct(idSave);
 
-        // Assert
-        assertFalse(!response.isSuccess());
+        // Then
+        assertTrue(result.isSuccess());
+       // assertNull(result.getMessage());
+        verify(productRepository, times(1)).delete(idSave);
     }
 }

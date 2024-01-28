@@ -1,31 +1,33 @@
 Feature: Order Management
 
   Background:
-    Given the system has orders
-
-  Scenario: Retrieve all orders
-    When the client requests all orders
-
-  Scenario: Retrieve order by ID
-    When the client requests an order by ID
-    Then the system should respond with the order details
+    Given a new order with ID "123e4567-e89b-12d3-a456-426614174001"
+    And the order has payment received as "false"
+    And the order has status "RECEIVED"
+    And the order has product IDs "456e89b1-23d4-567a-890b-123e45678901, 78901234-abcd-5678-ef01-234567890abc"
+    And the order has price "150.0"
+    And the order has a client with ID "78901234-abcd-5678-ef01-234567890abc"
 
   Scenario: Create a new order
-    Given the client provides order details
-    When the client submits a new order
-    Then the system should respond with the created order details
+    When the order is created
+    Then the order information should be valid
 
   Scenario: Update order status
-    Given there is an existing order
-    When the client updates the order status
-    Then the system should respond with a success message
+    Given the order has status "PREPARING"
+    When converting the order to a response DTO
+    Then the order response should match the expected values
 
-  Scenario: Delete an order
-    Given there is an existing order
-    When the client deletes the order
-    Then the system should respond with a success message
+  Scenario: Mark payment as received
+    Given the order has payment received as "true"
+    When converting the order to a response DTO
+    Then the order response should match the expected values
 
-  Scenario: Perform order checkout
-    Given there are orders for a specific CPF
-    When the client requests order checkout for that CPF
-    Then the system should respond with a list of order checkout details
+  Scenario: Update order products
+    Given the order has products with IDs "78901234-abcd-5678-ef01-234567890abc, 123e4567-e89b-12d3-a456-426614174001"
+    When converting the order to a response DTO
+    Then the order response should match the expected values
+
+  Scenario: Update order price
+    Given the order has price "200.0"
+    When converting the order to a response DTO
+    Then the order response should match the expected values
