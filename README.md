@@ -4,6 +4,11 @@ FiapFood 🍟
 </h1>
 <br>
 
+## ❗IMPORTANTE - Urls dos MS de Pagamento e Produção
+
+- https://github.com/wienerdev/fiap-production
+- https://github.com/RoAlencar/Fiap-Pagamento
+
 ## 💬 Sobre o repositório
 
 O FiapFood consiste em um sistema que é utilizado em lanchonetes e restaurantes, que processa todas as informações do contexto do pedido, desde a identificação do cliente, a escolha do pedido e o pagamento, até a entrega do pedido ao cliente.
