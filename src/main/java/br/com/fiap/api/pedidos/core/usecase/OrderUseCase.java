@@ -21,4 +21,6 @@ public interface OrderUseCase {
 
     List<Order> orderCheckout(String cpf);
 
+    Boolean isPaymentReceivedByOrderId(UUID orderId);
+
 }

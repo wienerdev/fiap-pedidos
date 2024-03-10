@@ -69,6 +69,11 @@ public class OrderUseCaseImpl implements OrderUseCase {
         return orderRepository.getAllByClientCpf(cpf);
     }
 
+    @Override
+    public Boolean isPaymentReceivedByOrderId(UUID orderId) {
+        return orderRepository.isPaymentReceivedByOrderId(orderId);
+    }
+
     public Double calculateOrderPrice(List<Product> products) {
         return products.stream()
                 .mapToDouble(product -> product.getPrice().doubleValue())

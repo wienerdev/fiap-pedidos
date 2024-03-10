@@ -20,4 +20,5 @@ public interface OrderRepositoryJpa extends JpaRepository<OrderEntity, UUID> {
     void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
 
     List<OrderEntity> getAllByClientEntityClientCpf(String cpf);
+
 }
