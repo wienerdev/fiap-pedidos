@@ -122,6 +122,7 @@
 		</dependency>
 
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
@@ -131,6 +132,13 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+=======
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>1.4.7.RELEASE</version>
+		</dependency>
+
+>>>>>>> ed5f64231cb217506729f806fae82dbce32188b8
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

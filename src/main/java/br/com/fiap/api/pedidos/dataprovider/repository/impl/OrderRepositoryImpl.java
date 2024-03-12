@@ -57,13 +57,23 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     @Override
     public void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId) {
-        orderRepository.updateByOrderStatusAndOrderId(orderStatus,orderId);
+        OrderEntity order = getById(orderId).toEntity();
+        if (orderStatus == OrderStatusEnum.PAID) {
+            order.setIsPaymentReceived(true);
+        }
+        orderRepository.save(order);
     }
 
     @Override
     public List<Order> getAllByClientCpf(String cpf) {
         List<OrderEntity> entities =  orderRepository.getAllByClientEntityClientCpf(cpf);
         return entities.stream().map(OrderEntity::toOrder).collect(Collectors.toList());
+    }
+
+    @Override
+    public Boolean isPaymentReceivedByOrderId(UUID orderId) {
+        Order order = getById(orderId);
+        return order.getPaymentReceived();
     }
 
 }

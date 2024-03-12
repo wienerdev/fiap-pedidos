@@ -19,5 +19,7 @@ public interface OrderRepository {
     void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
 
     List<Order> getAllByClientCpf(String cpf);
+
+    Boolean isPaymentReceivedByOrderId(UUID orderId);
 }
 

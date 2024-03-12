@@ -30,14 +30,14 @@ public class ProductController {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
                 productGateway.getAllProducts().stream()
-                        .map(product -> ProductResponse.fromEntityToResponse(product))
+                        .map(ProductResponse::fromEntityToResponse)
                         .toList()), HttpStatus.OK);
     }
 
     @GetMapping("/category/{category}")
     public ResponseEntity<BaseResponse<Iterable<ProductResponse>>> getAll(@PathVariable String category) {
         List<ProductResponse> listProdCategory = productGateway.getByCategory(category).stream()
-                .map(product -> ProductResponse.fromEntityToResponse(product))
+                .map(ProductResponse::fromEntityToResponse)
                 .toList();
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
@@ -62,7 +62,6 @@ public class ProductController {
 
     @PutMapping
     public ResponseEntity<BaseResponse<ProductResponse>> update(@RequestBody UpdateProductRequest request) {
-        //return productGateway.updateProduct(request);
         Product entity = UpdateProductRequest.fromRequestProduct(request);
         productGateway.updateProduct(entity);
 

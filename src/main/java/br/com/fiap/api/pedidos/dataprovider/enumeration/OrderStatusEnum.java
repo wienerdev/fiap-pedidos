@@ -8,6 +8,7 @@ import lombok.Getter;
 public enum OrderStatusEnum {
 
     RECEIVED("The order was received."),
+    PAID("The order was paid."),
     PREPARING("In Progress."),
     DONE("The order has been done."),
     FINISHED("The order has been finished."),

@@ -43,6 +43,11 @@ public class OrderController {
                 OrderResponse.fromEntityToResponse(orderUseCase.getOrderById(id).get())), HttpStatus.OK);
     }
 
+    @GetMapping("/payment-received/{id}")
+    public ResponseEntity<Boolean> getPaymentReceivedById(@PathVariable UUID id) {
+        return new ResponseEntity<>(orderUseCase.isPaymentReceivedByOrderId(id), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<BaseResponse<OrderResponse>> create(@RequestBody CreateOrderRequest request){
         Order orderSave = orderUseCase.saveOrder(CreateOrderRequest.fromResponseToOrder(request));
