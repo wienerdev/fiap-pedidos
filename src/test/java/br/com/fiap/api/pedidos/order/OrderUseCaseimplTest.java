@@ -146,7 +146,7 @@ public class OrderUseCaseimplTest {
             return savedEntity;
         });
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         Order result = orderRepositoryImpl.save(order);

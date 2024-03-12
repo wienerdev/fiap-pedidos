@@ -8,6 +8,8 @@ import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.UpdateOrderRequ
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderCheckoutResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/orders")
+@Slf4j
 public class OrderController {
     
     private final OrderUseCase orderUseCase;
@@ -46,6 +49,7 @@ public class OrderController {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
                 OrderResponse.fromEntityToResponse(orderSave)), HttpStatus.CREATED);
+
     }
 
 

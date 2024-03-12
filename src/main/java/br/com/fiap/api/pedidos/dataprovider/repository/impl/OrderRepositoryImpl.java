@@ -2,6 +2,7 @@ package br.com.fiap.api.pedidos.dataprovider.repository.impl;
 
 import br.com.fiap.api.pedidos.core.Order;
 import br.com.fiap.api.pedidos.core.dataprovider.repository.OrderRepository;
+import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderEvent;
 import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 import br.com.fiap.api.pedidos.dataprovider.repository.OrderRepositoryJpa;
 import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
@@ -17,9 +18,14 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     private final OrderRepositoryJpa orderRepository;
 
-    public OrderRepositoryImpl(OrderRepositoryJpa orderRepository) {
+    private final SendCreatedOrderImpl sendCreatedOrder;
+
+
+    public OrderRepositoryImpl(OrderRepositoryJpa orderRepository, SendCreatedOrderImpl sendCreatedOrder) {
         this.orderRepository = orderRepository;
+        this.sendCreatedOrder = sendCreatedOrder;
     }
+
 
     @Override
     public List<Order> getAll() {
@@ -38,7 +44,9 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Override
     public Order save(Order order) {
         OrderEntity entity = new OrderEntity(order);
-        return orderRepository.save(entity).toOrder();
+        Order oderSave = orderRepository.save(entity).toOrder();
+        sendCreatedOrder.send(oderSave, OrderEvent.CREATE_ORDER);
+        return oderSave;
     }
 
 

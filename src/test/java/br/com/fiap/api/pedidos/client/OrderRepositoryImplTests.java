@@ -9,7 +9,6 @@ import br.com.fiap.api.pedidos.dataprovider.repository.OrderRepositoryJpa;
 import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
 import br.com.fiap.api.pedidos.dataprovider.repository.impl.OrderRepositoryImpl;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -42,7 +41,7 @@ class OrderRepositoryImplTests {
         List<OrderEntity> orderEntities = Collections.singletonList(order.toEntity());
         when(orderRepository.findAll()).thenReturn(orderEntities);
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         List<Order> result = orderRepositoryImpl.getAll();
@@ -59,7 +58,7 @@ class OrderRepositoryImplTests {
         OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
         when(orderRepository.findById(orderId)).thenReturn(Optional.of(order.toEntity()));
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         Order result = orderRepositoryImpl.getById(orderId);
@@ -76,7 +75,7 @@ class OrderRepositoryImplTests {
         OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
         when(orderRepository.findById(orderId)).thenReturn(Optional.empty());
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When & Then
         assertThrows(RuntimeException.class, () -> orderRepositoryImpl.getById(orderId));
@@ -93,7 +92,7 @@ class OrderRepositoryImplTests {
             return savedEntity;
         });
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         Order result = orderRepositoryImpl.save(order);
@@ -110,7 +109,7 @@ class OrderRepositoryImplTests {
         // Given
         OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         orderRepositoryImpl.delete(orderId);
@@ -125,7 +124,7 @@ class OrderRepositoryImplTests {
         OrderStatusEnum orderStatus = OrderStatusEnum.DONE;
         OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
 
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository);
+        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort);
 
         // When
         orderRepositoryImpl.updateByOrderStatusAndOrderId(orderStatus, orderId);
