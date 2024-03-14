@@ -2,6 +2,7 @@ package br.com.fiap.api.pedidos.dataprovider.configuration.Kafka;
 
 
 import br.com.fiap.api.pedidos.dataprovider.configuration.message.OrderMessage;
+import br.com.fiap.api.pedidos.dataprovider.configuration.message.PaymentMessage;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ public class KafkaSaleProducerConfig {
     public ProducerFactory<String, OrderMessage> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(BOOTSTRAP_SERVERS_CONFIG,"localhost:9092");
-        configProps.put(GROUP_ID_CONFIG, "Order");
+        configProps.put(GROUP_ID_CONFIG, "orders");
         configProps.put(KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(VALUE_SERIALIZER_CLASS_CONFIG, CustomSerializer.class);
         return new DefaultKafkaProducerFactory<>(configProps);
@@ -32,5 +33,21 @@ public class KafkaSaleProducerConfig {
     public KafkaTemplate<String, OrderMessage> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
+
+    @Bean
+    public ProducerFactory<String, PaymentMessage> producerFactoryPayment() {
+        Map<String, Object> configProps = new HashMap<>();
+        configProps.put(BOOTSTRAP_SERVERS_CONFIG,"localhost:9092");
+        configProps.put(GROUP_ID_CONFIG, "payment");
+        configProps.put(KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put(VALUE_SERIALIZER_CLASS_CONFIG, CustomSerializerPayment.class);
+        return new DefaultKafkaProducerFactory<>(configProps);
+    }
+    @Bean
+    public KafkaTemplate<String, PaymentMessage> kafkaPayment() {
+        return new KafkaTemplate<>(producerFactoryPayment());
+    }
+
+
 
 }

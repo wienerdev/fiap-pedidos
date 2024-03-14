@@ -26,7 +26,7 @@ public class ClientRepositoryImpl implements ClientRepository {
         if (!clientEntity.isPresent()) {
             throw new ClientNotFoundException("client not found");
         }
-            return Optional.ofNullable(clientEntity.get().toClient());
+        return Optional.ofNullable(clientEntity.get().toClient());
 
     }
 

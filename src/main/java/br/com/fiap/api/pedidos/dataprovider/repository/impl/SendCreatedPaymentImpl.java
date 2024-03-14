@@ -5,23 +5,24 @@ import br.com.fiap.api.pedidos.dataprovider.configuration.message.OrderMessage;
 import br.com.fiap.api.pedidos.dataprovider.configuration.message.PaymentMessage;
 import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderEvent;
 import br.com.fiap.api.pedidos.dataprovider.repository.SendCreatedOrderOutputPort;
+import br.com.fiap.api.pedidos.dataprovider.repository.SendCreatedPaymentOutputPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 
 @Component
-public class SendCreatedOrderImpl implements SendCreatedOrderOutputPort {
+public class SendCreatedPaymentImpl implements SendCreatedPaymentOutputPort {
 
     @Autowired
-    private KafkaTemplate<String, OrderMessage> kafkaOrder;
+    private KafkaTemplate<String, PaymentMessage> kafkaPayment;
+
 
     @Override
-    public void send(OrderMessage order, OrderEvent event) {
-        var orderMessage = new OrderMessage(order.getProductionId(), order.getClientCpf(), order.getOrderId(), order.getIsPaymentReceived(),
-                order.getOrderPrice(), order.getProductId(), event);
-        kafkaOrder.send("tp-saga-orders", orderMessage);
+    public void send(PaymentMessage payment, OrderEvent event) {
+        payment.setOrderEvent(OrderEvent.PROCESSING_PAYMENT);
+        payment.setPaymentMethod("Débito");
+        kafkaPayment.send("tp-saga-payment", payment);
     }
-
 
 }
