@@ -50,5 +50,7 @@ Com a aplicação rodando, acesse o localhost (porta 4200), e navegue pelo siste
 * [Site oficial do Spring Initialzr para setup do projeto](https://start.spring.io/)
 * [SDKMan! para gerenciamento e instalação do Java e Maven](https://sdkman.io/)
 * [Site oficial do MySQL](https://www.mysql.com/)
+* 
+![image](https://github.com/wienerdev/fiap-pedidos/assets/43960331/f7eba8ef-ee89-4110-b9a3-677dfac46454)
 
 ---
