@@ -29,7 +29,7 @@ public class OrderEntity {
             inverseJoinColumns = @JoinColumn(name = "productId")
     )
     private List<ProductEntity> orderProducts;
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     private List<UUID> orderProductIds;
     private Double orderPrice;
     @OneToOne(optional = true)

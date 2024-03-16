@@ -19,6 +19,7 @@ public interface OrderRepositoryJpa extends JpaRepository<OrderEntity, UUID> {
     @Query("UPDATE OrderEntity o SET o.orderStatus = ?1 WHERE o.orderId = ?2")
     void updateByOrderStatusAndOrderId(OrderStatusEnum orderStatus, UUID orderId);
 
+    @Transactional
     List<OrderEntity> getAllByClientEntityClientCpf(String cpf);
 
 }

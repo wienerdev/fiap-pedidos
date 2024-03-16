@@ -40,7 +40,7 @@ public class ProductRepositoryImpl implements ProductRepository {
     @Override
     public Optional<Product> getById(UUID id) {
         Optional<ProductEntity> productEntity = this.productRepository.findById(id);
-            return Optional.ofNullable(productEntity.map(ProductEntity::toProduct).orElse(null));
+        return Optional.ofNullable(productEntity.map(ProductEntity::toProduct).orElse(null));
 
     }
 
