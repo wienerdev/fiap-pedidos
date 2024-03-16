@@ -11,6 +11,8 @@ import br.com.fiap.api.pedidos.dataprovider.enumeration.OrderStatusEnum;
 import br.com.fiap.api.pedidos.dataprovider.repository.OrderRepositoryJpa;
 import br.com.fiap.api.pedidos.dataprovider.repository.entity.OrderEntity;
 import br.com.fiap.api.pedidos.dataprovider.repository.impl.OrderRepositoryImpl;
+import br.com.fiap.api.pedidos.dataprovider.repository.impl.SendCreatedOrderImpl;
+import br.com.fiap.api.pedidos.dataprovider.repository.impl.SendCreatedPaymentImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -132,6 +134,8 @@ public class OrderUseCaseimplTest {
 
         List<Order> expectedOrders = Arrays.asList(orderToSave);
         OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
+        SendCreatedOrderImpl sendCreatedOrderOutputPort = new SendCreatedOrderImpl();
+        SendCreatedPaymentImpl sendCreatedPayment= new SendCreatedPaymentImpl();
         Order order = new Order(
                 orderId,
                 false,

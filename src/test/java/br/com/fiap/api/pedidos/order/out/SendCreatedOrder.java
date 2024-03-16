@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.UUID;
+
 @Component
 public class SendCreatedOrder implements SendCreatedOrderOutputPort {
 
@@ -15,9 +18,10 @@ public class SendCreatedOrder implements SendCreatedOrderOutputPort {
     private KafkaTemplate<String, OrderMessage> kafkaTemplate;
 
     @Override
-    public void send(Order order, OrderEvent event) {
-        var orderMessage = new OrderMessage(order, event);
-        kafkaTemplate.send("tp-saga-order", orderMessage);
+    public void send(OrderMessage order, OrderEvent event) {
+//        var orderMessage = new OrderMessage(UUID.randomUUID().toString(), order.getClient().getClientCpf(),
+//                order.getOrderId(), true, order.getOrderPrice(), order.getOrderProductIds(), event);
+        kafkaTemplate.send("tp-saga-order", order);
     }
 
 }
