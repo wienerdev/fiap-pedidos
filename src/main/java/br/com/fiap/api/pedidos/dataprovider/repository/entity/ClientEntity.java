@@ -24,14 +24,20 @@ public class ClientEntity {
 
     private String clientEmail;
 
+    private String clientAddress;
+
+    private String clientPhoneNumber;
+
     public ClientEntity() {
     }
 
-    public ClientEntity(UUID clientId, String clientCpf, String clientName, String clientEmail) {
+    public ClientEntity(UUID clientId, String clientCpf, String clientName, String clientEmail, String clientAddress, String clientPhoneNumber) {
         this.clientId = clientId;
         this.clientCpf = clientCpf;
         this.clientName = clientName;
         this.clientEmail = clientEmail;
+        this.clientAddress = clientAddress;
+        this.clientPhoneNumber = clientPhoneNumber;
     }
 
     public ClientEntity(Client client) {
@@ -39,6 +45,8 @@ public class ClientEntity {
         this.clientName = client.getClientName();
         this.clientEmail = client.getClientEmail();
         this.clientCpf = client.getClientCpf();
+        this.clientAddress = client.getClientAddress();
+        this.clientPhoneNumber = client.getClientPhoneNumber();
     }
 
     public Client toClient() {
@@ -46,6 +54,8 @@ public class ClientEntity {
                 this.clientId,
                 this.clientCpf,
                 this.clientName,
-                this.clientEmail);
+                this.clientEmail,
+                this.clientAddress,
+                this.clientPhoneNumber);
     }
 }

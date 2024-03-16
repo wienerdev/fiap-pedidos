@@ -32,7 +32,7 @@ class OrderTest {
     Double orderPrice = 100.0;
 
     List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
-    Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
+    Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938");
     @Test
     void testToEntity() {
         // Given
@@ -56,7 +56,7 @@ class OrderTest {
 
         // Mock the toEntity method of the client since it's called in toResponse
         Client mockClient = mock(Client.class);
-        when(mockClient.toEntity()).thenReturn(new ClientEntity(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br"));
+        when(mockClient.toEntity()).thenReturn(new ClientEntity(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938"));
         order.setClient(mockClient);
 
         // When

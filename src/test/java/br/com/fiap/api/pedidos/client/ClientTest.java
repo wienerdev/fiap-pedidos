@@ -25,8 +25,10 @@ class ClientTest {
         String clientCpf = "123456789";
         String clientName = "John Doe";
         String clientEmail = "johndoe@example.com";
+        String clientAddress = "Street 01";
+        String clientPhoneNumber = "1921992";
 
-        client = new Client(clientId, clientCpf, clientName, clientEmail);
+        client = new Client(clientId, clientCpf, clientName, clientEmail, clientAddress, clientPhoneNumber);
     }
 
     @Test
@@ -83,13 +85,13 @@ class ClientTest {
 
     @Test
     void testToResponse() {
-        ClientResponse expected = new ClientResponse(client.getClientId(), client.getClientCpf(), client.getClientName(), client.getClientEmail());
+        ClientResponse expected = new ClientResponse(client.getClientId(), client.getClientCpf(), client.getClientName(), client.getClientEmail(), client.getClientAddress(), client.getClientPhoneNumber());
         assertEquals(expected, client.toResponse());
     }
 
     @Test
     void testToEntity() {
-        ClientEntity expected = new ClientEntity(client.getClientId(), client.getClientCpf(), client.getClientName(), client.getClientEmail());
+        ClientEntity expected = new ClientEntity(client.getClientId(), client.getClientCpf(), client.getClientName(), client.getClientEmail(), client.getClientAddress(), client.getClientPhoneNumber());
         assertEquals(expected.getClientId(), client.toEntity().getClientId());
     }
 }

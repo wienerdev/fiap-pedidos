@@ -26,7 +26,7 @@ public class ClientSteps {
     @Dado("que existe um cliente com CPF {string}")
     public void existeUmClienteComCpf(String cpf) {
         Mockito.when(clientRepository.identifyClientByCpf(cpf)).thenReturn(
-                Optional.of(new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br")));
+                Optional.of(new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938")));
     }
 
     @Quando("o cliente solicita a recuperação do cliente por CPF")
@@ -44,7 +44,7 @@ public class ClientSteps {
     }
     @Dado("que existe um CPF inválido {string}")//1
     public void que_existe_um_cpf_inválido(String cpf) {
-        Mockito.when(clientRepository.identifyClientByCpf(cpf)).thenReturn(Optional.of(new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br")));
+        Mockito.when(clientRepository.identifyClientByCpf(cpf)).thenReturn(Optional.of(new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938")));
     }
 
     @Então("a resposta deve indicar que o cliente não foi encontrado")//2
@@ -59,7 +59,7 @@ public class ClientSteps {
     }
     @Dado("o cliente solicita a criação de um novo cliente")
     public void cria_novo_cliente() {
-        Client clientToSave = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
+        Client clientToSave = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938");
         Client savedClient = clientRepository.registerClient(clientToSave);
         assertNotNull(savedClient);
         assertEquals(clientToSave, savedClient);
@@ -67,7 +67,7 @@ public class ClientSteps {
     }
     @Quando("a resposta deve conter os detalhes do cliente criado")
     public void resposta_detalhes_cliente() {
-        Client clientToSave = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
+        Client clientToSave = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938");
         Client savedClient = clientRepository.registerClient(clientToSave);
         Optional<Client> clientResult = clientRepository.identifyClientByCpf("01374050067");
         Assert.assertNotNull(clientResult);

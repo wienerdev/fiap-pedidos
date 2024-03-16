@@ -63,7 +63,7 @@ public class OrderSteps {
 
     @Given("the order has a client with ID {string}")
     public void givenTheOrderHasClientWithID(String clientId) {
-        order.setClient(new Client(UUID.fromString(clientId), null, null, null));
+        order.setClient(new Client(UUID.fromString(clientId), null, null, null, null, null));
     }
 
     @When("the order is created")

@@ -3,6 +3,7 @@ package br.com.fiap.api.pedidos.entrypoint.controller;
 import br.com.fiap.api.pedidos.core.Client;
 import br.com.fiap.api.pedidos.core.usecase.ClientUseCase;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.CreateClientRequest;
+import br.com.fiap.api.pedidos.entrypoint.controller.dto.request.DeleteClientDataRequest;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.BaseResponse;
 import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.ClientResponse;
 import org.springframework.http.HttpStatus;
@@ -36,5 +37,12 @@ public class ClientController {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
                ClientResponse.fromClientResponse(client)), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping
+    public ResponseEntity<BaseResponse<String>> delete(@RequestBody DeleteClientDataRequest request) {
+        return new ResponseEntity<>(new BaseResponse<>(
+                true,
+                        clientGateway.deleteClient(request)), HttpStatus.OK);
     }
 }

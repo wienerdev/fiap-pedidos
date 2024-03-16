@@ -32,7 +32,7 @@ class ClientControllerTest {
 
     UUID idClient = UUID.randomUUID();
     String cpf = "01374050067";
-    Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com");
+    Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com", "Street 01", "1921992");
 
     @BeforeEach
     void setUp() {
@@ -43,7 +43,7 @@ class ClientControllerTest {
     @Test
     void testGetByCpf() {
         // Given
-        Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com");
+        Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com", "Street 01", "1921992");
         when(clientUseCase.getClientByCpf(cpf)).thenReturn(client);
 
         // When
