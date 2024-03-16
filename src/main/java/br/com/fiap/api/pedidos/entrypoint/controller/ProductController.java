@@ -25,8 +25,8 @@ public class ProductController {
     }
 
 
-    @GetMapping
-    public ResponseEntity<BaseResponse<List<ProductResponse>>> getAll() {
+    @GetMapping("/menu")
+    public ResponseEntity<BaseResponse<List<ProductResponse>>> getMenu() {
         return new ResponseEntity<>(new BaseResponse<>(
                 true,
                 productGateway.getAllProducts().stream()

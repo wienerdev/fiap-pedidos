@@ -124,7 +124,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>1.4.7.RELEASE</version>
+			<version>4.0.1</version>
 		</dependency>
 
 	</dependencies>
