@@ -14,7 +14,6 @@ import br.com.fiap.api.pedidos.entrypoint.controller.dto.response.OrderResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.webjars.NotFoundException;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -31,7 +30,7 @@ class OrderControllerTest {
             new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2")
     );
     List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
-    Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
+    Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "92389382938");
     Order order = new Order(
             orderId,
             false,

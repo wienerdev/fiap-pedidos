@@ -60,7 +60,7 @@ class ProductControllerTest {
         when(productGateway.getAllProducts()).thenReturn(products);
 
         // When
-        ResponseEntity<BaseResponse<List<ProductResponse>>> response = productController.getAll();
+        ResponseEntity<BaseResponse<Iterable<ProductResponse>>> response = productController.getAll("test");
 
         // Then
         assertEquals(HttpStatus.OK, response.getStatusCode());

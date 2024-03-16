@@ -23,5 +23,4 @@ public class SendCreatedOrder implements SendCreatedOrderOutputPort {
 //                order.getOrderId(), true, order.getOrderPrice(), order.getOrderProductIds(), event);
         kafkaTemplate.send("tp-saga-order", order);
     }
-
 }

@@ -40,4 +40,9 @@ public class ClientRepositoryImpl implements ClientRepository {
         ClientEntity clientEntitySave = new ClientEntity(client);
         return clientRepository.save(clientEntitySave).toClient();
     }
+
+    @Override
+    public void deleteClient(String clientName, String clientAddress, String phoneNumber) {
+        clientRepository.deleteClientEntityByClientNameAndClientAddressAndClientPhoneNumber(clientName, clientAddress, phoneNumber);
+    }
 }

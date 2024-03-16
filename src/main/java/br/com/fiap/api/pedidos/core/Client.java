@@ -7,22 +7,39 @@ import java.util.UUID;
 
 public class Client {
     private UUID clientId;
-
     private String clientCpf;
-
     private String clientName;
-
+    private String clientAddress;
+    private String clientPhoneNumber;
     private String clientEmail;
 
-    public Client(UUID clientId, String clientCpf, String clientName, String clientEmail) {
+    public Client(UUID clientId, String clientCpf, String clientName,String clientEmail, String clientAddress, String clientPhoneNumber) {
         this.clientId = clientId;
         this.clientCpf = clientCpf;
         this.clientName = clientName;
         this.clientEmail = clientEmail;
+        this.clientAddress = clientAddress;
+        this.clientPhoneNumber = clientPhoneNumber;
     }
 
     public Client() {
 
+    }
+
+    public String getClientAddress() {
+        return clientAddress;
+    }
+
+    public void setClientAddress(String clientAddress) {
+        this.clientAddress = clientAddress;
+    }
+
+    public String getClientPhoneNumber() {
+        return clientPhoneNumber;
+    }
+
+    public void setClientPhoneNumber(String clientPhoneNumber) {
+        this.clientPhoneNumber = clientPhoneNumber;
     }
 
     public UUID getClientId() {
@@ -57,11 +74,12 @@ public class Client {
         this.clientEmail = clientEmail;
     }
 
+
     public ClientResponse toResponse() {
-        return new ClientResponse(this.clientId, this.clientCpf, this.clientName, this.clientEmail);
+        return new ClientResponse(this.clientId, this.clientCpf, this.clientName, this.clientEmail, this.clientAddress, this.clientPhoneNumber);
     }
 
     public ClientEntity toEntity() {
-        return new ClientEntity(this.clientId, this.clientCpf, this.clientName, this.clientEmail);
+        return new ClientEntity(this.clientId, this.clientCpf, this.clientName, this.clientEmail, this.clientAddress, this.clientPhoneNumber);
     }
 }

@@ -24,7 +24,7 @@ class ClientUseCaseImplTest {
     private ClientUseCaseImpl clientUseCase;
     UUID idClient = UUID.randomUUID();
     String cpf = "01374050067";
-    Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com");
+    Client client = new Client(idClient, cpf, "John Doe", "john.doe@example.com", "Street 01", "92389382938");
 
     @BeforeEach
     void setUp() {
