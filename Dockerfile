@@ -14,4 +14,4 @@ ENV APP_HOME="/opt/app"
 WORKDIR ${APP_HOME}
 COPY --from=build /usr/app/target/${JAR_FILE} ${JAR_FILE}
 EXPOSE 8080
-ENTRYPOINT java -jar ${JAR_FILE} 
+ENTRYPOINT java -jar ${JAR_FILE}
