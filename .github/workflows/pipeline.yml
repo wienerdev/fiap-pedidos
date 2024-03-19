@@ -44,6 +44,10 @@ jobs:
 
       - name: Analyze Sonar
         run: |
+          mvn install -DskipTests
+
+      - name: Analyze Sonar
+        run: |
           mvn sonar:sonar -Dsonar.projectKey=alissonit_fiap-pedidos -Dsonar.organization=alissonit -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=${{ secrets.SONAR_TOKEN }}
       
       - name: mvn package
