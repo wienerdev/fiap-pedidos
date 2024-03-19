@@ -28,9 +28,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-
 public class OrderUseCaseimplTest {
-
 
     @InjectMocks
     private OrderUseCaseImpl orderUseCase;
@@ -44,7 +42,6 @@ public class OrderUseCaseimplTest {
     @Mock
     private ClientRepository clientRepository;
 
-
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -54,17 +51,20 @@ public class OrderUseCaseimplTest {
 
     List<Product> products = Arrays.asList(
             new Product(UUID.randomUUID(), "Product1", "Description1", new BigDecimal(100), "Category1"),
-            new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2")
-    );
-    Client client = new Client(orderId, "01374050067", "John Doe", "alexandre.dias@meta.com.br", "Street 01", "1921992");
+            new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2"));
+    Client client = new Client(orderId, "01374050067", "John Doe", "alexandre.dias@meta.com.br", "Street 01",
+            "1921992");
     List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
+
     @Test
     void getAllOrders() {
         // Arrange
         List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
-        Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br", "Street 01", "1921992");
+        Client client = new Client(UUID.randomUUID(), "01374050067", "John Doe", "alexandre.dias@meta.com.br",
+                "Street 01", "1921992");
 
-        List<Order> expectedOrders = Arrays.asList( new Order(orderId, false, OrderStatusEnum.RECEIVED, products, productIds, 10.00, client));
+        List<Order> expectedOrders = Arrays
+                .asList(new Order(orderId, false, OrderStatusEnum.RECEIVED, products, productIds, 10.00, client));
         when(orderUseCase.getAllOrders()).thenReturn(expectedOrders);
 
         // Act
@@ -77,7 +77,8 @@ public class OrderUseCaseimplTest {
     @Test
     void getOrderById() {
         // Arrange
-        Client client = new Client(UUID.randomUUID(), "01374050067", "John Doe", "alexandre.dias@meta.com.br", "Street 01", "1921992");
+        Client client = new Client(UUID.randomUUID(), "01374050067", "John Doe", "alexandre.dias@meta.com.br",
+                "Street 01", "1921992");
         List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
         Order orderToSave = new Order(
                 orderId,
@@ -87,81 +88,87 @@ public class OrderUseCaseimplTest {
                 productIds,
                 10.00,
                 client);
-//
+        //
         // Act
         Optional<Order> actualOrder = orderUseCase.getOrderById(orderId);
 
         // Assert
-       // assertTrue(actualOrder.isPresent());
-      //  assertEquals(orderToSave.getOrderId(), actualOrder.get().getOrderId());
+        // assertTrue(actualOrder.isPresent());
+        // assertEquals(orderToSave.getOrderId(), actualOrder.get().getOrderId());
     }
 
-
-    /*@Test
-    void saveOrder() {
-//        // Arrange
-//        UUID orderId = UUID.randomUUID();
-//        Client client = new Client(UUID.randomUUID(),"01374050067", "John Doe","alexandre.dias@meta.com.br");
-//        List<UUID> productIds = Arrays.asList(UUID.randomUUID(), UUID.randomUUID());
-//        List<Product> products = Arrays.asList(
-//                new Product(UUID.randomUUID(), "Product1", "Description1", new BigDecimal(100), "Category1"),
-//                new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2")
-//        );
-//        Order orderToSave = new Order(
-//                orderId,
-//                false,
-//                OrderStatusEnum.RECEIVED,
-//                products,
-//                productIds,
-//                10.00,
-//                client);
-//
-//        // Act
-//        Order savedOrder = orderUseCase.saveOrder(orderToSave);
-
-        // Assert
-//        assertNotNull(savedOrder);
-   //     assertEquals(orderToSave, savedOrder);
-   //     assertEquals(products, savedOrder.getOrderProducts());
-        Order orderToSave = new Order(
-                orderId,
-                false,
-                OrderStatusEnum.RECEIVED,
-                products,
-                productIds,
-                10.00,
-                client);
-
-        List<Order> expectedOrders = Arrays.asList(orderToSave);
-        OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
-        SendCreatedOrderImpl sendCreatedOrderOutputPort = new SendCreatedOrderImpl();
-        SendCreatedPaymentImpl sendCreatedPayment= new SendCreatedPaymentImpl();
-        Order order = new Order(
-                orderId,
-                false,
-                OrderStatusEnum.RECEIVED,
-                products,
-                productIds,
-                10.00,
-                client);
-        when(orderRepository.save(any(OrderEntity.class))).thenAnswer(invocation -> {
-            OrderEntity savedEntity = invocation.getArgument(0);
-            savedEntity.setOrderId(UUID.randomUUID());
-            return savedEntity;
-        });
-
-        OrderRepository orderRepositoryImpl = new OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort, sendCreatedPayment);
-
-        // When
-        Order result = orderRepositoryImpl.save(order);
-
-        // Then
-        assertNotNull(result.getOrderId());
-        assertEquals(order.getPaymentReceived(), result.getPaymentReceived());
-        // Add more assertions as needed
-        verify(orderRepository, times(1)).save(any(OrderEntity.class));
-    }*/
-
+    /*
+     * @Test
+     * void saveOrder() {
+     * // // Arrange
+     * // UUID orderId = UUID.randomUUID();
+     * // Client client = new Client(UUID.randomUUID(),"01374050067",
+     * "John Doe","alexandre.dias@meta.com.br");
+     * // List<UUID> productIds = Arrays.asList(UUID.randomUUID(),
+     * UUID.randomUUID());
+     * // List<Product> products = Arrays.asList(
+     * // new Product(UUID.randomUUID(), "Product1", "Description1", new
+     * BigDecimal(100), "Category1"),
+     * // new Product(UUID.randomUUID(), "Product2", "Description2", new
+     * BigDecimal(200), "Category2")
+     * // );
+     * // Order orderToSave = new Order(
+     * // orderId,
+     * // false,
+     * // OrderStatusEnum.RECEIVED,
+     * // products,
+     * // productIds,
+     * // 10.00,
+     * // client);
+     * //
+     * // // Act
+     * // Order savedOrder = orderUseCase.saveOrder(orderToSave);
+     * 
+     * // Assert
+     * // assertNotNull(savedOrder);
+     * // assertEquals(orderToSave, savedOrder);
+     * // assertEquals(products, savedOrder.getOrderProducts());
+     * Order orderToSave = new Order(
+     * orderId,
+     * false,
+     * OrderStatusEnum.RECEIVED,
+     * products,
+     * productIds,
+     * 10.00,
+     * client);
+     * 
+     * List<Order> expectedOrders = Arrays.asList(orderToSave);
+     * OrderRepositoryJpa orderRepository = mock(OrderRepositoryJpa.class);
+     * SendCreatedOrderImpl sendCreatedOrderOutputPort = new SendCreatedOrderImpl();
+     * SendCreatedPaymentImpl sendCreatedPayment= new SendCreatedPaymentImpl();
+     * Order order = new Order(
+     * orderId,
+     * false,
+     * OrderStatusEnum.RECEIVED,
+     * products,
+     * productIds,
+     * 10.00,
+     * client);
+     * when(orderRepository.save(any(OrderEntity.class))).thenAnswer(invocation -> {
+     * OrderEntity savedEntity = invocation.getArgument(0);
+     * savedEntity.setOrderId(UUID.randomUUID());
+     * return savedEntity;
+     * });
+     * 
+     * OrderRepository orderRepositoryImpl = new
+     * OrderRepositoryImpl(orderRepository, sendCreatedOrderOutputPort,
+     * sendCreatedPayment);
+     * 
+     * // When
+     * Order result = orderRepositoryImpl.save(order);
+     * 
+     * // Then
+     * assertNotNull(result.getOrderId());
+     * assertEquals(order.getPaymentReceived(), result.getPaymentReceived());
+     * // Add more assertions as needed
+     * verify(orderRepository, times(1)).save(any(OrderEntity.class));
+     * }
+     */
 
     @Test
     void updateOrder() {
@@ -189,13 +196,12 @@ public class OrderUseCaseimplTest {
         // Arrange
         List<Product> products = Arrays.asList(
                 new Product(UUID.randomUUID(), "Product1", "Description1", new BigDecimal(100), "Category1"),
-                new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2")
-        );
+                new Product(UUID.randomUUID(), "Product2", "Description2", new BigDecimal(200), "Category2"));
 
         // Act
-        //double totalPrice = orderUseCase.calculateOrderPrice(products);
+        // double totalPrice = orderUseCase.calculateOrderPrice(products);
 
         // Assert
-//        assertEquals(0.01, totalPrice, 0.01);
+        // assertEquals(0.01, totalPrice, 0.01);
     }
 }
