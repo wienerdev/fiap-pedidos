@@ -119,6 +119,8 @@ Evidência de deploy do serviço de produção:
 
 ![screenshot](/images/apigateway.png)
 
+![screenshot](/images/apigateway_2.png)
+
 ## Execução no SONAR:
 
 ![screenshot](/images/sonar.png)
