@@ -129,6 +129,10 @@ Produção:
 
 ![screenshot](/images/swagger_producao.png)
 
+## RDS Mysql
+
+![screenshot](/images/mysql.png)
+
 ## MongoDB Atlas
 
 Métricas de acesso:
