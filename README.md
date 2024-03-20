@@ -111,11 +111,19 @@ Evidência de deploy do serviço de produção:
 
 ![screenshot](/images/deploy_producao.png)
 
-Execução no SONAR:
+## RDS Mysql
+
+![screenshot](/images/mysql.png)
+
+## API Gateway
+
+![screenshot](/images/apigateway.png)
+
+## Execução no SONAR:
 
 ![screenshot](/images/sonar.png)
 
-Evidência aplicação em execução:
+## Evidência aplicação em execução:
 
 Pedido:
 
@@ -128,10 +136,6 @@ Pagamento:
 Produção:
 
 ![screenshot](/images/swagger_producao.png)
-
-## RDS Mysql
-
-![screenshot](/images/mysql.png)
 
 ## MongoDB Atlas
 
