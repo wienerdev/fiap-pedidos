@@ -31,22 +31,19 @@ public class KafkaConsumerConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String CONFLUENT_CLOUD_BOOTSTRAP_SERVERS_VALUE;
 
-    @Value("${spring.kafka.properties.sasl.jaas.config}")
-    private String SASL_JAAS_CONFIG_VALUE;
+    @Value("${confluent.cloud.api.key}")
+    private String CONFLUENT_CLOUD_API_KEY;
 
-    @Value("${spring.kafka.properties.sasl.mechanism}")
-    private String SASL_SSL_VALUE;
-
-    @Value("${spring.kafka.properties.security.protocol}")
-    private String SASL_MECHANISM_VALUE;
+    @Value("${confluent.cloud.api.secret}")
+    private String CONFLUENT_CLOUD_API_SECRET;
 
     @Bean
     public ConsumerFactory<String, PaymentMessage> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(BOOTSTRAP_SERVERS_CONFIG, CONFLUENT_CLOUD_BOOTSTRAP_SERVERS_VALUE);
-        props.put(SASL_JAAS_CONFIG, SASL_JAAS_CONFIG_VALUE);
-        props.put(SECURITY_PROTOCOL_CONFIG, SASL_SSL_VALUE);
-        props.put(SASL_MECHANISM, SASL_MECHANISM_VALUE);
+        props.put(SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\""+CONFLUENT_CLOUD_API_KEY+"\" password=\""+CONFLUENT_CLOUD_API_SECRET+"\";");
+        props.put(SECURITY_PROTOCOL_CONFIG, "SASL_SSL");
+        props.put(SASL_MECHANISM, "PLAIN");
         props.put(KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(VALUE_DESERIALIZER_CLASS_CONFIG, CustomDeserializer.class);
         props.put(AUTO_OFFSET_RESET_CONFIG, "earliest");
